@@ -17,7 +17,8 @@ MDStudio(Markdown 편집기)의 소개·개인정보 처리방침·이용약관�
 설명서 원본은 lumiStudio 저장소의 `apps/md-studio/resources/help/ko/*.md` 입니다. 원본이 바뀌면 다시 만들어 `guide/` 를 같이 커밋합니다.
 Pandoc(3.x)이 필요합니다(스크립트를 돌릴 때만 — 올린 페이지에는 필요 없습니다).
 
-    python build_guide.py E:\works\PROJECTS\lumiStudiopps\md-studioesources\help\ko --pandoc <pandoc.exe 경로>
+    python build_guide.py E:/works/PROJECTS/lumiStudio/apps/md-studio/resources/help/ko --pandoc <pandoc.exe 경로>
+esources\help\ko --pandoc <pandoc.exe 경로>
 
 쪽 사이 링크(`02-layout.md`)는 `.html` 로 고쳐 씁니다. 「부록: 단축키」 쪽은 앱이 실행 중에 만들어 파일이 없으므로 웹에는 없습니다.
 
