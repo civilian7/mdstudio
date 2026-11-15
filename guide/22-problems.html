@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>문제와 자동 수정 — MDStudio 사용 설명서</title>
+<meta name="description" content="MDStudio 사용 설명서: 문제와 자동 수정">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="../">MDStudio</a>
+<a href="../#features">기능</a>
+<a href="01-start.html" aria-current="page">사용 설명서</a>
+<a href="../privacy.html">처리방침</a>
+<a href="../terms.html">이용약관</a>
+</div></header>
+<main><div class="wrap guide">
+<nav class="toc" aria-label="설명서 목차">
+<ul>
+<li><a href="01-start.html">시작하기</a></li>
+<li><a href="02-first-document.html">첫 문서 만들기</a></li>
+<li><a href="03-layout.html">화면 구성</a></li>
+<li><a href="10-documents.html">문서 열기와 저장</a></li>
+<li><a href="11-import.html">다른 형식 문서 열기</a></li>
+<li><a href="12-recovery.html">세션 복원·자동 저장·복구 사본</a></li>
+<li><a href="13-format.html">서식</a></li>
+<li><a href="14-editing.html">편집</a></li>
+<li><a href="15-tables.html">표</a></li>
+<li><a href="16-insert.html">그림·링크·기호·다이어그램·수식</a></li>
+<li><a href="17-find.html">찾기와 바꾸기</a></li>
+<li><a href="18-templates.html">템플릿과 스니펫</a></li>
+<li><a href="20-preview.html">미리보기와 보기 형태</a></li>
+<li><a href="21-outline.html">목차</a></li>
+<li><a href="22-problems.html" aria-current="page">문제와 자동 수정</a></li>
+<li><a href="23-explorer.html">탐색기·찾기</a></li>
+<li><a href="30-export.html">내보내기</a></li>
+<li><a href="31-textbundle.html">TextBundle·TextPack</a></li>
+<li><a href="40-ai.html">AI</a></li>
+<li><a href="41-mcp.html">AI 에이전트 연결(MCP)</a></li>
+<li><a href="42-plugins.html">플러그인</a></li>
+<li><a href="44-terminal.html">터미널</a></li>
+<li><a href="50-settings.html">설정</a></li>
+<li><a href="51-keymap.html">단축키 바꾸기</a></li>
+<li><a href="52-markdown.html">마크다운 문법 요약</a></li>
+</ul>
+</nav>
+<article>
+<h1 id="문제와-자동-수정">문제와 자동 수정</h1>
+<p>마크다운 문법과 모양의 문제를 문서를 쓰는 동안 찾아 보여 주고, 고칠 수 있는 문제는 한 번에 수정합니다.</p>
+<h2 id="문제-창-열기">문제 창 열기</h2>
+<ol type="1">
+<li><strong>보기 &gt; 도구 창 &gt; 문제</strong>(Ctrl+Alt+P)를 선택합니다.</li>
+<li>아래 도구 창에 현재 문서의 문제 목록이 나타납니다. 탭 이름 옆 숫자가 문제 수입니다.</li>
+</ol>
+<ul>
+<li>편집기에서는 문제 자리에 물결 밑줄이 그어지고, 글을 고치면 잠시 뒤 다시 검사합니다.</li>
+</ul>
+<h2 id="목록-읽고-이동하기">목록 읽고 이동하기</h2>
+<p>목록의 열은 심각도·메시지·수정·규칙·위치입니다. 심각도는 오류·경고·정보 세 가지입니다. 수정 열에 렌치 아이콘이 있으면 고칠 수 있는 문제입니다.</p>
+<ul>
+<li>줄을 클릭하면 편집기의 커서가 그 자리로 가고 초점은 목록에 남습니다.</li>
+<li>줄을 더블클릭하거나 Enter를 누르면 편집기로 가서 그 문제의 설명 카드가 열립니다.</li>
+<li>도구 줄의 오류·경고·정보 아이콘을 클릭하면 그 심각도를 숨기거나 다시 보입니다.</li>
+<li>검색란(「문제 찾기」)에 단어를 입력하면 메시지·규칙·줄 번호에 그 단어가 모두 든 문제만 남습니다.</li>
+<li>줄을 오른쪽 클릭하면 이동·미리보기·이 문제 수정·빠른 수정·메시지 복사 메뉴가 나옵니다.</li>
+</ul>
+<p>문서 안에서 다음 문제와 이전 문제로 옮기려면 Ctrl+F8, Ctrl+Shift+F8을 누릅니다. 메뉴에는 없으므로 명령 팔레트(Ctrl+K)에서 「다음 문제」·「이전 문제」로도 찾습니다.</p>
+<blockquote>
+<p><strong>참고:</strong> 한 문서에 문제가 5,000건을 넘으면 심한 것부터 5,000건만 표시합니다. 고치면 나머지가 이어서 나타납니다.</p>
+</blockquote>
+<h2 id="문제-고치기">문제 고치기</h2>
+<ul>
+<li>문제 하나: 목록의 렌치 아이콘을 클릭하거나, 줄을 선택하고 **[선택 수정]**을 클릭합니다. 편집기에서 밑줄 친 줄을 오른쪽 클릭하거나 줄 번호를 오른쪽 클릭해 나오는 「이 문제 수정」도 같습니다. 그 문제만 고쳐지고, 실행 취소(Ctrl+Z) 한 번으로 돌아옵니다.</li>
+<li>문서 전체: <strong>도구 &gt; 문제 자동 수정</strong>(F7)을 선택하거나 문제 창의 **[자동 수정]**을 클릭합니다. 고친 건수와 두고 간 건수, 직접 수정해야 하는 건수가 알림으로 나옵니다. 고칠 문제가 없으면 「수정할 문제가 없습니다」가 나옵니다.</li>
+<li>깨진 링크: 줄을 선택하고 **[선택 수정]**을 클릭하면 빠른 수정 목록이 열립니다. 링크 해제(텍스트만 남김)나 그림 제거를 선택합니다.</li>
+</ul>
+<p>읽기 전용 문서에서는 문서 전체 수정을 쓸 수 없습니다.</p>
+<h2 id="검사하는-규칙">검사하는 규칙</h2>
+<table>
+<thead>
+<tr>
+<th>규칙</th>
+<th>찾는 문제</th>
+<th>심각도</th>
+<th>수정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MD001</td>
+<td>제목 수준이 한 번에 둘 이상 올라감</td>
+<td>경고</td>
+<td>직접</td>
+</tr>
+<tr>
+<td>MD009</td>
+<td>줄 끝 공백(두 칸은 줄바꿈이라 제외)</td>
+<td>정보</td>
+<td>자동</td>
+</tr>
+<tr>
+<td>MD010</td>
+<td>탭 문자</td>
+<td>정보</td>
+<td>자동</td>
+</tr>
+<tr>
+<td>MD011</td>
+<td>뒤바뀐 링크 <code>(글)[주소]</code></td>
+<td>오류</td>
+<td>자동</td>
+</tr>
+<tr>
+<td>MD012</td>
+<td>빈 줄이 3줄 이상 연속</td>
+<td>정보</td>
+<td>자동</td>
+</tr>
+<tr>
+<td>MD018</td>
+<td><code>#</code> 뒤에 공백 없음</td>
+<td>경고</td>
+<td>자동</td>
+</tr>
+<tr>
+<td>MD019</td>
+<td><code>#</code> 뒤에 공백이 여러 개</td>
+<td>정보</td>
+<td>자동</td>
+</tr>
+<tr>
+<td>MD022</td>
+<td>제목 위아래에 빈 줄 없음</td>
+<td>정보</td>
+<td>문제 하나만</td>
+</tr>
+<tr>
+<td>MD023</td>
+<td>제목 앞에 들여쓰기</td>
+<td>정보</td>
+<td>자동</td>
+</tr>
+<tr>
+<td>MD024</td>
+<td>중복된 제목</td>
+<td>경고</td>
+<td>직접</td>
+</tr>
+<tr>
+<td>MD025</td>
+<td>최상위 제목(H1)이 둘 이상</td>
+<td>경고</td>
+<td>직접</td>
+</tr>
+<tr>
+<td>MD026</td>
+<td>제목 끝 문장 부호</td>
+<td>정보</td>
+<td>직접</td>
+</tr>
+<tr>
+<td>MD034</td>
+<td><code>&lt;&gt;</code>로 감싸지 않은 URL</td>
+<td>정보</td>
+<td>직접</td>
+</tr>
+<tr>
+<td>MD040</td>
+<td>코드 블록에 언어 없음</td>
+<td>경고</td>
+<td>자동</td>
+</tr>
+<tr>
+<td>MD042</td>
+<td>링크 대상이 비어 있음</td>
+<td>경고</td>
+<td>직접</td>
+</tr>
+<tr>
+<td>MD045</td>
+<td>그림에 대체 텍스트 없음</td>
+<td>경고</td>
+<td>직접</td>
+</tr>
+<tr>
+<td>MD047</td>
+<td>파일 끝에 줄 바꿈 없음</td>
+<td>정보</td>
+<td>직접</td>
+</tr>
+<tr>
+<td>MD057</td>
+<td>링크한 파일이 없음</td>
+<td>오류</td>
+<td>빠른 수정</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>자동</strong>은 F7과 **[자동 수정]**이 고치는 규칙입니다. 코드 블록 안의 공백과 탭은 건드리지 않습니다.</li>
+<li><strong>문제 하나만</strong>은 **[선택 수정]**으로만 고칩니다. <strong>직접</strong>은 문서를 보고 직접 고칩니다.</li>
+<li>MD057은 저장한 적 있는 문서에서만 검사합니다.</li>
+</ul>
+<h2 id="문제-검사-켜고-끄기">문제 검사 켜고 끄기</h2>
+<ol type="1">
+<li><strong>도구 &gt; 설정 &gt; 편집기</strong>를 엽니다.</li>
+<li>「기능」 묶음에서 「마크다운 린트(편집기 밑줄·문제 창)」를 선택하거나 해제합니다.</li>
+<li>**[확인]**을 클릭합니다.</li>
+</ol>
+<p>끄면 편집기의 밑줄과 문제 목록이 모두 사라지고, 문제 창에 「마크다운 린트가 꺼져 있습니다」가 나옵니다.</p>
+<h2 id="관련-페이지">관련 페이지</h2>
+<ul>
+<li>문제 창의 위치는 <a href="03-layout.html">화면 구성</a>을 봅니다.</li>
+<li>설정 목록은 <a href="50-settings.html">설정</a>을 봅니다.</li>
+<li>링크와 그림은 <a href="16-insert.html">그림·링크·기호·다이어그램·수식</a>을 봅니다.</li>
+</ul>
+
+<p class="pn"><a href="21-outline.html">← 목차</a> &nbsp;·&nbsp; <a href="23-explorer.html">탐색기·찾기 →</a></p>
+</article>
+</div></main>
+<footer class="site"><div class="wrap">앱 안 설명서(F1)와 같은 내용입니다. 앱 버전에 따라 화면이 조금 다를 수 있습니다. 「부록: 단축키」 쪽은 앱 안에서만 볼 수 있습니다(현재 키맵 그대로 나옵니다). · <a href="../privacy.html">개인정보 처리방침</a> · <a href="../terms.html">이용약관</a></div></footer>
+</body>
+</html>

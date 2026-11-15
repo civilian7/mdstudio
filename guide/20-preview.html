@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>미리보기와 보기 형태 — MDStudio 사용 설명서</title>
+<meta name="description" content="MDStudio 사용 설명서: 미리보기와 보기 형태">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="../">MDStudio</a>
+<a href="../#features">기능</a>
+<a href="01-start.html" aria-current="page">사용 설명서</a>
+<a href="../privacy.html">처리방침</a>
+<a href="../terms.html">이용약관</a>
+</div></header>
+<main><div class="wrap guide">
+<nav class="toc" aria-label="설명서 목차">
+<ul>
+<li><a href="01-start.html">시작하기</a></li>
+<li><a href="02-first-document.html">첫 문서 만들기</a></li>
+<li><a href="03-layout.html">화면 구성</a></li>
+<li><a href="10-documents.html">문서 열기와 저장</a></li>
+<li><a href="11-import.html">다른 형식 문서 열기</a></li>
+<li><a href="12-recovery.html">세션 복원·자동 저장·복구 사본</a></li>
+<li><a href="13-format.html">서식</a></li>
+<li><a href="14-editing.html">편집</a></li>
+<li><a href="15-tables.html">표</a></li>
+<li><a href="16-insert.html">그림·링크·기호·다이어그램·수식</a></li>
+<li><a href="17-find.html">찾기와 바꾸기</a></li>
+<li><a href="18-templates.html">템플릿과 스니펫</a></li>
+<li><a href="20-preview.html" aria-current="page">미리보기와 보기 형태</a></li>
+<li><a href="21-outline.html">목차</a></li>
+<li><a href="22-problems.html">문제와 자동 수정</a></li>
+<li><a href="23-explorer.html">탐색기·찾기</a></li>
+<li><a href="30-export.html">내보내기</a></li>
+<li><a href="31-textbundle.html">TextBundle·TextPack</a></li>
+<li><a href="40-ai.html">AI</a></li>
+<li><a href="41-mcp.html">AI 에이전트 연결(MCP)</a></li>
+<li><a href="42-plugins.html">플러그인</a></li>
+<li><a href="44-terminal.html">터미널</a></li>
+<li><a href="50-settings.html">설정</a></li>
+<li><a href="51-keymap.html">단축키 바꾸기</a></li>
+<li><a href="52-markdown.html">마크다운 문법 요약</a></li>
+</ul>
+</nav>
+<article>
+<h1 id="미리보기와-보기-형태">미리보기와 보기 형태</h1>
+<p>마크다운 문서는 원문을 고치는 소스 편집기와 서식대로 그린 미리보기로 봅니다. 둘의 배치는 보기 형태로 정합니다.</p>
+<h2 id="언제-무엇을-쓰나">언제 무엇을 쓰나</h2>
+<table>
+<thead>
+<tr>
+<th>보기 형태</th>
+<th>보이는 것</th>
+<th>이럴 때</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>편집기만</td>
+<td>소스 편집기. 실시간 미리보기·편집기 나누기를 쓸 수 있습니다</td>
+<td>원문을 많이 고칠 때, 한 문서의 두 곳을 함께 볼 때</td>
+</tr>
+<tr>
+<td>편집기 + 미리보기</td>
+<td>왼쪽 소스 편집기, 오른쪽 미리보기</td>
+<td>고치면서 결과를 바로 확인할 때</td>
+</tr>
+<tr>
+<td>미리보기만</td>
+<td>미리보기. 편집 명령은 흐려집니다</td>
+<td>완성된 문서를 읽거나 찾을 때</td>
+</tr>
+</tbody>
+</table>
+<h2 id="보기-형태-바꾸기">보기 형태 바꾸기</h2>
+<ul>
+<li><strong>보기 &gt; 보기 형태 &gt; 편집기만</strong>·<strong>보기 &gt; 보기 형태 &gt; 편집기 + 미리보기</strong>·<strong>보기 &gt; 보기 형태 &gt; 미리보기만</strong> 중 하나를 선택합니다. 편집기 도구 모음 맨 앞의 보기 형태 버튼도 같습니다.</li>
+<li><strong>보기 &gt; 보기 형태 &gt; 보기 형태 전환</strong>(F9)은 편집기만 → 편집기 + 미리보기 → 미리보기만 차례로 넘깁니다.</li>
+<li>텍스트·소스 코드 문서에는 미리보기가 없어 이 명령들이 흐려집니다.</li>
+<li>여는 문서를 늘 미리보기만으로 보려면 <strong>도구 &gt; 설정 &gt; 일반</strong>에서 「문서를 미리보기로 열기」를 체크합니다.</li>
+</ul>
+<p>미리보기는 입력을 멈추고 잠시 뒤 다시 그려집니다. 미리보기의 할 일 상자를 클릭하면 원문의 <code>[ ]</code>·<code>[x]</code>가 바뀝니다.</p>
+<h2 id="미리보기만-보기에서-읽기">미리보기만 보기에서 읽기</h2>
+<ul>
+<li>미리보기를 클릭한 뒤 ↑·↓·Page Up·Page Down·Space·Home·End 키로 스크롤합니다.</li>
+<li>편집기 도구 모음에는 복사·모두 선택·찾기 칸·내보내기만 남고, 찾기는 미리보기 안에서 찾습니다.</li>
+<li>미리보기를 오른쪽 클릭하면 복사·모두 선택·찾기·다음 찾기·이전 찾기·내보내기가 나옵니다.</li>
+</ul>
+<h2 id="실시간-미리보기-켜기">실시간 미리보기 켜기</h2>
+<p>편집기만 보기에서 소스 편집기 안에 서식을 그대로 그립니다. 커서가 닿은 표기만 원문으로 보입니다.</p>
+<ol type="1">
+<li><strong>보기 &gt; 보기 형태 &gt; 편집기만</strong>을 선택합니다.</li>
+<li>상태 표시줄의 눈 아이콘 「실시간 미리보기」를 클릭합니다. <strong>보기 &gt; 편집기 표시 &gt; 실시간 미리보기</strong>도 같습니다.</li>
+</ol>
+<ul>
+<li>굵게·링크·제목은 그 모양으로, 목록 기호·할 일 상자·인용·표·수식·다이어그램은 그림으로 보입니다.</li>
+<li>다른 보기 형태에서는 그리지 않고 상태 표시줄 칸도 숨습니다. 편집기만으로 돌아오면 다시 그립니다.</li>
+<li><strong>도구 &gt; 설정 &gt; 편집기</strong>의 「실시간 미리보기(편집기만 보기)」도 같은 설정입니다.</li>
+</ul>
+<h2 id="스크롤-맞추기">스크롤 맞추기</h2>
+<ul>
+<li>편집기 + 미리보기에서 편집기를 스크롤하면 미리보기가 편집기 맨 윗줄의 내용으로 따라갑니다.</li>
+<li>반대로 편집기가 따라갈지는 <strong>도구 &gt; 설정 &gt; 미리보기</strong>의 「미리보기를 스크롤하면 편집기도 따라 스크롤」로 정합니다.</li>
+<li>미리보기를 더블클릭하면 편집기 커서가 그 자리의 원문 줄로 갑니다.</li>
+</ul>
+<h2 id="편집기-나누기">편집기 나누기</h2>
+<p>같은 문서를 한 탭에서 두 칸으로 봅니다. 편집기만 보기에서만 됩니다.</p>
+<ul>
+<li><strong>보기 &gt; 편집기 나누기 &gt; 위아래로 나누기</strong>(<code>Ctrl+Shift+\</code>)</li>
+<li><strong>보기 &gt; 편집기 나누기 &gt; 좌우로 나누기</strong>(<code>Ctrl+Alt+\</code>)</li>
+<li><strong>보기 &gt; 편집기 나누기 &gt; 나누기 해제</strong></li>
+</ul>
+<p>두 칸은 내용과 실행 취소가 같고, 커서·선택·스크롤은 칸마다 따로입니다. 같은 방향으로 다시 나누거나 구분선을 더블클릭하면 합쳐집니다. 다른 보기 형태로 바꿔도 합쳐집니다.</p>
+<h2 id="큰-문서와-그리지-않는-것">큰 문서와 그리지 않는 것</h2>
+<ul>
+<li>큰 문서는 미리보기가 편집기에서 보는 부분 둘레만 그립니다. 멀리 스크롤하면 잠시 뒤 그 둘레가 그려집니다.</li>
+<li>그림은 문서 폴더 안의 파일만 보입니다. 웹 주소, 폴더 밖, 저장하지 않은 문서의 그림은 깨진 그림 표시로 나옵니다.</li>
+<li>중첩이 지나치게 깊은 문서는 서식 없이 원문 그대로 보입니다.</li>
+<li>다른 문서 임베드(<code>![[문서]]</code>)는 4단계, 한 문서에 64개까지 펼칩니다.</li>
+</ul>
+<h2 id="확대축소하기">확대·축소하기</h2>
+<ul>
+<li><strong>보기 &gt; 글꼴 크게</strong>(Ctrl+=), <strong>보기 &gt; 글꼴 작게</strong>(Ctrl+-), <strong>보기 &gt; 글꼴 크기 기본값으로</strong>(Ctrl+0)를 선택합니다.</li>
+<li>상태 표시줄의 −·+ 버튼과 슬라이더도 같습니다. 배율을 클릭하면 기본 크기로 돌아갑니다.</li>
+<li>편집기와 미리보기 본문 글자만 바뀌고 메뉴 같은 화면 글꼴은 그대로입니다.</li>
+<li>한도와 배율 유지는 <strong>도구 &gt; 설정 &gt; 일반</strong>의 「확대 상한」·「확대 비율 기억」으로 정합니다.</li>
+</ul>
+<h2 id="관련-페이지">관련 페이지</h2>
+<ul>
+<li><a href="03-layout.html">화면 구성</a></li>
+<li><a href="52-markdown.html">마크다운 문법 요약</a></li>
+<li><a href="17-find.html">찾기와 바꾸기</a></li>
+<li><a href="50-settings.html">설정</a></li>
+</ul>
+
+<p class="pn"><a href="18-templates.html">← 템플릿과 스니펫</a> &nbsp;·&nbsp; <a href="21-outline.html">목차 →</a></p>
+</article>
+</div></main>
+<footer class="site"><div class="wrap">앱 안 설명서(F1)와 같은 내용입니다. 앱 버전에 따라 화면이 조금 다를 수 있습니다. 「부록: 단축키」 쪽은 앱 안에서만 볼 수 있습니다(현재 키맵 그대로 나옵니다). · <a href="../privacy.html">개인정보 처리방침</a> · <a href="../terms.html">이용약관</a></div></footer>
+</body>
+</html>
