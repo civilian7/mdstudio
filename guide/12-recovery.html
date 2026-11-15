@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>세션 복원·자동 저장·복구 사본 — MDStudio 사용 설명서</title>
+<meta name="description" content="MDStudio 사용 설명서: 세션 복원·자동 저장·복구 사본">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="../">MDStudio</a>
+<a href="../#features">기능</a>
+<a href="01-start.html" aria-current="page">사용 설명서</a>
+<a href="../privacy.html">처리방침</a>
+<a href="../terms.html">이용약관</a>
+</div></header>
+<main><div class="wrap guide">
+<nav class="toc" aria-label="설명서 목차">
+<ul>
+<li><a href="01-start.html">시작하기</a></li>
+<li><a href="02-first-document.html">첫 문서 만들기</a></li>
+<li><a href="03-layout.html">화면 구성</a></li>
+<li><a href="10-documents.html">문서 열기와 저장</a></li>
+<li><a href="11-import.html">다른 형식 문서 열기</a></li>
+<li><a href="12-recovery.html" aria-current="page">세션 복원·자동 저장·복구 사본</a></li>
+<li><a href="13-format.html">서식</a></li>
+<li><a href="14-editing.html">편집과 이동</a></li>
+<li><a href="16-insert.html">삽입</a></li>
+<li><a href="18-templates.html">템플릿과 스니펫</a></li>
+<li><a href="23-explorer.html">탐색기·찾기</a></li>
+<li><a href="30-export.html">내보내기</a></li>
+<li><a href="31-textbundle.html">TextBundle·TextPack</a></li>
+<li><a href="40-ai.html">AI</a></li>
+<li><a href="41-mcp.html">AI 에이전트 연결(MCP)</a></li>
+<li><a href="42-plugins.html">플러그인</a></li>
+<li><a href="44-terminal.html">터미널</a></li>
+<li><a href="50-settings.html">설정</a></li>
+<li><a href="51-keymap.html">단축키 바꾸기</a></li>
+<li><a href="52-markdown.html">마크다운 문법 요약</a></li>
+</ul>
+</nav>
+<article>
+<h1 id="세션-복원자동-저장복구-사본">세션 복원·자동 저장·복구 사본</h1>
+<p>MDStudio 는 열어 둔 탭을 기억했다가 다음 실행 때 다시 엽니다. 저장하지 않은 내용은 복구 사본으로 남겨, 비정상 종료 뒤에도 되살립니다.</p>
+<h2 id="무엇이-언제-남는가">무엇이 언제 남는가</h2>
+<table>
+<thead>
+<tr>
+<th>기능</th>
+<th>남기는 것</th>
+<th>언제</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>세션</td>
+<td>열린 탭·커서 위치·탭 고정·탭 그룹 나누기·탐색기 폴더</td>
+<td>탭 상태가 바뀔 때와 끝낼 때</td>
+</tr>
+<tr>
+<td>자동 저장</td>
+<td>한 번 저장한 문서의 내용을 그 파일에</td>
+<td>설정한 간격마다</td>
+</tr>
+<tr>
+<td>복구 사본</td>
+<td>저장하지 않은 문서의 내용(이름 없는 새 문서 포함)</td>
+<td>문서를 고치는 동안 짧은 간격으로</td>
+</tr>
+</tbody>
+</table>
+<h2 id="지난-탭-다시-열기">지난 탭 다시 열기</h2>
+<p>세션 복원은 늘 켜져 있습니다.</p>
+<ul>
+<li>실행하면 지난번 탭이 같은 차례로 다시 열리고, 커서와 고정 상태도 돌아옵니다.</li>
+<li>디스크에서 사라진 파일의 탭은 다시 열지 않습니다.</li>
+<li>이름 없는 새 문서는 세션에 들어가지 않습니다. 내용을 입력했으면 끝낼 때 저장할지 묻습니다.</li>
+<li>파일을 지정해 실행하면 그 파일만 열고 지난 탭은 다시 열지 않습니다.</li>
+</ul>
+<h2 id="자동-저장-켜기">자동 저장 켜기</h2>
+<ol type="1">
+<li><strong>도구 &gt; 설정 &gt; 문서</strong>를 엽니다.</li>
+<li>「자동 저장 간격(초)」에 초 단위 간격을 입력합니다. 0 이면 자동 저장을 하지 않습니다.</li>
+<li>**[확인]**을 클릭합니다.</li>
+</ol>
+<p>자동 저장은 한 번 저장해 파일이 있는 문서만 저장합니다. 외부에서 바뀐 파일은 덮어쓰지 않습니다. 자동 저장이 실패하면 그 문서마다 한 번 알립니다.</p>
+<h2 id="비정상-종료-뒤-복구하기">비정상 종료 뒤 복구하기</h2>
+<ol type="1">
+<li>MDStudio 를 다시 실행합니다. 복구 사본이 있으면 저절로 되살아납니다.</li>
+<li>「내용을 확인하고 저장하세요」 알림이 나오면 되살아난 탭을 확인합니다.</li>
+<li><strong>파일 &gt; 저장</strong>(Ctrl+S)으로 저장합니다.</li>
+</ol>
+<ul>
+<li>같은 파일의 탭이 열려 있으면 그 탭에 되살린 내용이 들어가고 수정됨으로 표시됩니다. 디스크의 파일은 저장하기 전까지 그대로입니다.</li>
+<li>그 밖의 문서는 이름 없는 문서도 포함해 새 문서 탭으로 열립니다.</li>
+<li>복구 사본은 문서를 저장하거나 탭을 닫으면 지워집니다. 정상적으로 끝내도 지워집니다.</li>
+<li>복구 사본은 암호화해 복구 사본 폴더에 둡니다.</li>
+</ul>
+<blockquote>
+<p><strong>주의:</strong> 「복구 사본을 암호화할 수 없어 만들지 못했습니다」 알림이 나오면 그 실행 동안은 복구 사본이 없습니다. 자주 저장합니다.</p>
+</blockquote>
+<h2 id="외부에서-바뀐-파일-처리하기">외부에서 바뀐 파일 처리하기</h2>
+<p>다른 프로그램이 열린 파일을 바꾸면 MDStudio 가 알아챕니다.</p>
+<ul>
+<li>앱에서 고친 것이 없으면 묻지 않고 다시 불러옵니다.</li>
+<li>앱에서도 고쳤으면 <strong>도구 &gt; 설정 &gt; 문서</strong>의 「외부에서 수정했을 때」 설정을 따릅니다.
+<ul>
+<li>「묻기」: 「파일이 바뀌었습니다」 창에서 **[예]**는 다시 불러오기, **[아니요]**는 지금 내용을 그대로 둡니다. 다른 탭의 문서는 그 탭을 선택할 때 묻습니다.</li>
+<li>「다시 불러오기」: 저장하지 않은 변경을 버리고 디스크 내용으로 바꿉니다.</li>
+<li>「그대로 두기」: 지금 내용을 그대로 둡니다.</li>
+</ul></li>
+<li>파일이 삭제돼도 탭의 내용은 그대로 남습니다. 저장하면 파일이 다시 만들어집니다.</li>
+<li>외부에서 바뀐 파일을 저장하면 설정과 관계없이 묻습니다. **[덮어쓰기]**나 **[다시 불러오기]**를 선택합니다.</li>
+</ul>
+<h2 id="지난-탭-없이-시작하기">지난 탭 없이 시작하기</h2>
+<p>실행할 때 <code>--clean</code> 을 붙이면 지난 탭과 복구 사본을 다시 열지 않고 시작합니다. 복구 사본은 지워지지 않으므로 다음에 <code>--clean</code> 없이 실행하면 되살아납니다.</p>
+<h2 id="관련-페이지">관련 페이지</h2>
+<ul>
+<li>열기·저장·인코딩은 <a href="10-documents.html">문서 열기와 저장</a>을 봅니다.</li>
+<li>설정 창의 다른 항목은 <a href="50-settings.html">설정</a>을 봅니다.</li>
+</ul>
+
+<p class="pn"><a href="11-import.html">← 다른 형식 문서 열기</a> &nbsp;·&nbsp; <a href="13-format.html">서식 →</a></p>
+</article>
+</div></main>
+<footer class="site"><div class="wrap">앱 안 설명서(F1)와 같은 내용입니다. 앱 버전에 따라 화면이 조금 다를 수 있습니다. 「부록: 단축키」 쪽은 앱 안에서만 볼 수 있습니다(현재 키맵 그대로 나옵니다). · <a href="../privacy.html">개인정보 처리방침</a> · <a href="../terms.html">이용약관</a></div></footer>
+</body>
+</html>
