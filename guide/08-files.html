@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>탐색기·찾기 — MDStudio 사용 설명서</title>
+<meta name="description" content="MDStudio 사용 설명서: 탐색기·찾기">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="../">MDStudio</a>
+<a href="../#features">기능</a>
+<a href="01-start.html" aria-current="page">사용 설명서</a>
+<a href="../privacy.html">처리방침</a>
+<a href="../terms.html">이용약관</a>
+</div></header>
+<main><div class="wrap guide">
+<nav class="toc" aria-label="설명서 목차">
+<ul>
+<li><a href="01-start.html">시작하기</a></li>
+<li><a href="02-layout.html">화면 구성</a></li>
+<li><a href="03-documents.html">문서 열기와 저장</a></li>
+<li><a href="04-format.html">서식</a></li>
+<li><a href="05-editing.html">편집과 이동</a></li>
+<li><a href="06-insert.html">삽입</a></li>
+<li><a href="07-export.html">내보내기</a></li>
+<li><a href="08-files.html" aria-current="page">탐색기·찾기</a></li>
+<li><a href="10-templates.html">템플릿과 스니펫</a></li>
+<li><a href="11-ai.html">AI</a></li>
+<li><a href="12-scripts.html">플러그인</a></li>
+<li><a href="13-mcp.html">AI 에이전트 연결(MCP)</a></li>
+<li><a href="14-settings.html">설정</a></li>
+<li><a href="15-keymap.html">단축키 바꾸기</a></li>
+<li><a href="16-markdown.html">마크다운 문법 요약</a></li>
+<li><a href="17-terminal.html">터미널</a></li>
+</ul>
+</nav>
+<article>
+<h1 id="탐색기찾기">탐색기·찾기</h1>
+<h2 id="탐색기">탐색기</h2>
+<p><strong>파일 &gt; 폴더 열기...</strong> 또는 탐색기 루트 줄 오른쪽 클릭 &gt; **폴더 열기...**로 폴더를 엽니다(탐색기가 닫혀 있으면 열립니다). 탐색기는 VS Code 탐색기처럼 동작합니다. 파일은 더블클릭하거나 Enter로 열고, 폴더는 한 번 클릭하면 펼치거나 접습니다.</p>
+<ul>
+<li>키: ↑↓·PgUp/PgDn·Home/End로 이동, ←(펼친 폴더는 접기, 아니면 부모로)·→(접힌 폴더는 펼치기, 펼쳐 있으면 첫 자식으로), Enter = 열기, F2 = 이름 바꾸기, Delete = 휴지통(확인), Ctrl+C/X/V = 복사·잘라내기·붙여넣기(폴더째, 같은 이름이 있으면 <code>이름 (2)</code>), Shift+Alt+C = 경로 복사, Shift+Alt+R = 파일 탐색기에서 보기. Ctrl·Shift를 누르고 클릭해 여러 항목을 선택할 수 있습니다.</li>
+<li>이름 바꾸기(F2)와 새 파일·새 폴더는 트리 안에서 바로 입력합니다. Enter로 확정, Esc로 취소하고, 다른 곳을 클릭하면 확정됩니다.</li>
+<li>명령은 오른쪽 클릭 메뉴에 있습니다(헤더에 버튼을 따로 두지 않습니다): 새 파일·새 폴더·잘라내기·복사·붙여넣기·이름 바꾸기·휴지통으로·경로 복사·상대 경로 복사·파일 탐색기에서 보기·새로 고침·숨김 파일 보이기·폴더 모두 접기·폴더 펼치기·폴더 열기·작업 폴더에서 닫기. 누른 자리(파일·폴더·루트 줄·빈 자리)에 맞는 항목만 나옵니다.</li>
+<li>트리는 두 구역입니다. <strong>작업 폴더</strong>에는 연 폴더가 고정되고(헤더의 <code>+</code>로 추가, 오른쪽 클릭 메뉴로 위로·아래로 이동, <strong>작업 폴더에서 닫기</strong>는 목록에서만 빼고 디스크는 그대로), <strong>내 컴퓨터</strong>에는 드라이브가 있어 펼칠 때 읽습니다. 구역 헤더를 클릭하거나 ←/→/Enter로 접고 펼칩니다. 내 컴퓨터의 폴더는 <strong>작업 폴더에 추가</strong>로 고정합니다.</li>
+<li>경로 막대: 조각을 클릭하면 그 폴더를 찾아 선택합니다. ↑(Alt+↑)는 작업 폴더 폴더를 상위 폴더로 바꾸거나 부모 폴더를 선택하고, 드라이브 위는 <strong>내 컴퓨터</strong>입니다.</li>
+<li>현재 문서를 바꾸면 탐색기가 그 파일까지 펼쳐 선택해 줍니다(작업 폴더 안 문서).</li>
+<li>끌어 놓으면 같은 폴더 안에서 옮깁니다. 이름을 바꾸거나 옮기면 열린 탭·최근 파일이 따라갑니다.</li>
+<li>펼친 폴더는 외부 변경을 지켜봅니다.</li>
+</ul>
+<h2 id="찾기아래-도구-창">찾기(아래 도구 창)</h2>
+<ul>
+<li><strong>파일에서 찾기</strong>(Ctrl+Shift+F), <strong>이 문서에서 찾기</strong>(Ctrl+Alt+F) — 선택한 텍스트가 검색어로 채워집니다. <strong>검색 &gt; 찾기</strong>(Ctrl+F)는 현재 문서 안 찾기이고, <strong>검색 &gt; 파일에서 찾기</strong>가 이 창을 엽니다. 이 문서에서 찾기는 같은 창의 탭이라 단축키·명령 팔레트로 부릅니다.</li>
+<li>[내용 | 파일 이름 | 이 문서] 탭, 대소문자·단어·정규식, 포함 마스크(<code>*.md</code>).</li>
+<li>결과를 클릭하면 그 줄로 가서 일치한 곳을 선택합니다.</li>
+</ul>
+
+<p class="pn"><a href="07-export.html">← 내보내기</a> &nbsp;·&nbsp; <a href="10-templates.html">템플릿과 스니펫 →</a></p>
+</article>
+</div></main>
+<footer class="site"><div class="wrap">앱 안 설명서(F1)와 같은 내용입니다. 앱 버전에 따라 화면이 조금 다를 수 있습니다. 「부록: 단축키」 쪽은 앱 안에서만 볼 수 있습니다(현재 키맵 그대로 나옵니다). · <a href="../privacy.html">개인정보 처리방침</a> · <a href="../terms.html">이용약관</a></div></footer>
+</body>
+</html>

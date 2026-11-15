@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>편집과 이동 — MDStudio 사용 설명서</title>
+<meta name="description" content="MDStudio 사용 설명서: 편집과 이동">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="../">MDStudio</a>
+<a href="../#features">기능</a>
+<a href="01-start.html" aria-current="page">사용 설명서</a>
+<a href="../privacy.html">처리방침</a>
+<a href="../terms.html">이용약관</a>
+</div></header>
+<main><div class="wrap guide">
+<nav class="toc" aria-label="설명서 목차">
+<ul>
+<li><a href="01-start.html">시작하기</a></li>
+<li><a href="02-layout.html">화면 구성</a></li>
+<li><a href="03-documents.html">문서 열기와 저장</a></li>
+<li><a href="04-format.html">서식</a></li>
+<li><a href="05-editing.html" aria-current="page">편집과 이동</a></li>
+<li><a href="06-insert.html">삽입</a></li>
+<li><a href="07-export.html">내보내기</a></li>
+<li><a href="08-files.html">탐색기·찾기</a></li>
+<li><a href="10-templates.html">템플릿과 스니펫</a></li>
+<li><a href="11-ai.html">AI</a></li>
+<li><a href="12-scripts.html">플러그인</a></li>
+<li><a href="13-mcp.html">AI 에이전트 연결(MCP)</a></li>
+<li><a href="14-settings.html">설정</a></li>
+<li><a href="15-keymap.html">단축키 바꾸기</a></li>
+<li><a href="16-markdown.html">마크다운 문법 요약</a></li>
+<li><a href="17-terminal.html">터미널</a></li>
+</ul>
+</nav>
+<article>
+<h1 id="편집과-이동">편집과 이동</h1>
+<h2 id="찾기바꾸기">찾기·바꾸기</h2>
+<p>찾기 Ctrl+F, 바꾸기 Ctrl+H, 다음·이전 찾기 F3 / Shift+F3. 여러 파일에서 찾기는 <a href="08-files.html">탐색기·찾기</a>.</p>
+<h2 id="이동">이동</h2>
+<table>
+<thead>
+<tr>
+<th>명령</th>
+<th>단축키</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>줄로 이동</td>
+<td>Ctrl+G</td>
+</tr>
+<tr>
+<td>마지막 편집 위치로</td>
+<td>Ctrl+Shift+Q</td>
+</tr>
+<tr>
+<td>다음 / 이전 제목</td>
+<td>Alt+PageDown / Alt+PageUp</td>
+</tr>
+<tr>
+<td>문서로 이동(열린·최근 문서 선택)</td>
+<td>Ctrl+T</td>
+</tr>
+</tbody>
+</table>
+<h2 id="북마크">북마크</h2>
+<ul>
+<li><strong>북마크 설정/해제</strong> Ctrl+F2 — 비어 있는 가장 작은 번호(1~9)를 씁니다.</li>
+<li><strong>다음 / 이전 북마크</strong> F2 / Shift+F2, 번호로 이동 Ctrl+1~9, 번호 지정 Ctrl+Shift+1~9.</li>
+<li>줄 번호 왼쪽 북마크 칸을 클릭해도 켜고 끕니다. 북마크는 이번 실행 동안만 남습니다.</li>
+</ul>
+<h2 id="접기">접기</h2>
+<p>접기 여백(줄 번호 옆)을 오른쪽 클릭하면 이 구역 접기·펼치기, 모두 접기·펼치기, 제목 수준까지 접기 ▸ 가 나옵니다. 키는 접기·펼치기 Ctrl+Alt+← / → 이고, 나머지는 명령 팔레트(Ctrl+K)에도 있습니다. 접기 여백은 <strong>도구 &gt; 설정... &gt; 편집기</strong>에서 끌 수 있습니다.</p>
+<h2 id="줄-편집">줄 편집</h2>
+<p><strong>편집</strong> 메뉴에 줄 복제·줄 지우기·줄 위로·아래로 옮기기·들여쓰기·내어쓰기·줄 주석이 있고, 나머지는 단축키와 명령 팔레트(Ctrl+K)로 씁니다: 줄 지우기(Ctrl+Shift+K), 줄 끝까지 지우기(Ctrl+Shift+Y), 위에 새 줄, 줄 위로 옮기기·줄 아래로 옮기기(Alt+↑ / ↓), 들여쓰기·내어쓰기(Ctrl+] / Ctrl+[), 줄 주석 켜기/끄기(Ctrl+/). 들여쓰기·내어쓰기와 Tab·Shift+Tab 은 줄 종류에 맞게 동작합니다: 제목 줄은 제목 수준, 목록 줄은 목록 단계, 코드 블록 안은 공백, 보통 문단과 표에서는 아무것도 하지 않습니다. 주석은 <code>&lt;!-- … --&gt;</code> 입니다. 대문자로·소문자로·대소문자 뒤집기는 명령 팔레트(Ctrl+K)에서 찾습니다. <strong>검색 &gt; 짝으로 이동</strong>(Ctrl+M)은 커서가 있는 짝의 반대편으로 갑니다: HTML 태그(<code>&lt;div&gt;</code> ↔︎ <code>&lt;/div&gt;</code>), 코드 블록의 여는 줄 ↔︎ 닫는 줄, 수식 <code>$$</code> 줄, HTML 주석(<code>&lt;!--</code> ↔︎ <code>--&gt;</code>), 괄호 <code>() [] {}</code>. 편집기 오른쪽 클릭 메뉴에는 늘 <strong>줄 복제</strong>·<strong>줄 지우기</strong>가 있고, 선택한 텍스트가 있으면 <strong>같은 단어 모두 선택</strong>·<strong>선택한 줄마다 커서</strong>도 나옵니다.</p>
+<h2 id="여러-커서와-열-블록">여러 커서와 열 블록</h2>
+<p>메뉴 막대에는 없고 단축키와 명령 팔레트(Ctrl+K)로 씁니다.</p>
+<ul>
+<li><strong>단어 선택</strong>, <strong>다음 같은 단어 선택</strong>(Alt+J), <strong>마지막 선택 해제</strong>(Alt+Shift+J), <strong>같은 단어 모두 선택</strong>(Ctrl+Alt+J): 같은 단어마다 커서를 두고 한 번에 고칩니다(대소문자 구분).</li>
+<li><strong>선택한 줄마다 커서</strong>(Alt+Shift+G), <strong>위에 커서 추가</strong>·<strong>아래에 커서 추가</strong>(Ctrl+Alt+↑ / ↓), Alt+클릭으로 커서를 추가합니다.</li>
+<li><strong>열 블록</strong>(사각형 선택): Alt+Shift+끌기, 또는 열 블록 위로·아래로 넓히기(Alt+Shift+↑ / ↓, ← / →·Home·End·PageUp·PageDown도 됩니다). 한글은 두 칸으로 셉니다. 입력·지우기·복사·붙여넣기는 줄마다 합니다.</li>
+<li><strong>열 블록 선택 모드</strong>(편집 메뉴): 켜면 수정 키 없이 끌어도 열 블록이 됩니다. 켜져 있는 동안 상태 표시줄에 <code>열 블록</code> 칩이 보이고, 클릭하면 끕니다. 이번 실행 동안만 유지됩니다.</li>
+<li>Esc 는 여러 커서·열 블록을 끝내고 커서 하나만 남깁니다(열 블록 선택 모드는 켜진 채).</li>
+</ul>
+<p>마우스 동작과 숨은 기능은 이 설명서 끝 <strong>부록: 단축키</strong> 페이지의 「제스처와 숨은 기능」 표에 모아 두었습니다.</p>
+<h2 id="자동-완성">자동 완성</h2>
+<p>Ctrl+Space. <code>```</code> 뒤에서는 코드 블록 언어 이름, <code>[[#</code> 뒤에서는 이 문서의 제목이 나옵니다.</p>
+<h2 id="문서-정리-도구">문서 정리 도구</h2>
+<ul>
+<li><strong>서식 &gt; 제목 ▸ &gt; 제목 번호...</strong>: 제목 앞에 <code>1.</code> <code>1.1</code> 같은 번호를 붙이거나 뗍니다(서식 8가지).</li>
+<li><strong>도구 &gt; 문제 자동 수정</strong>(F7): 줄 끝 공백·탭·빈 줄 겹침 같은 흔한 마크다운 문제를 고칩니다. 코드 블록 안은 건드리지 않습니다.</li>
+<li><strong>도구 &gt; 박스 트리 맞추기</strong>: <code>```boxtree</code> 블록의 들여쓰기를 <code>├─ │ └─</code> 선으로 바꿉니다.</li>
+<li><strong>파일 &gt; 문서 정보</strong>: 글자·단어·문단·제목·링크 수와 읽는 시간.</li>
+</ul>
+
+<p class="pn"><a href="04-format.html">← 서식</a> &nbsp;·&nbsp; <a href="06-insert.html">삽입 →</a></p>
+</article>
+</div></main>
+<footer class="site"><div class="wrap">앱 안 설명서(F1)와 같은 내용입니다. 앱 버전에 따라 화면이 조금 다를 수 있습니다. 「부록: 단축키」 쪽은 앱 안에서만 볼 수 있습니다(현재 키맵 그대로 나옵니다). · <a href="../privacy.html">개인정보 처리방침</a> · <a href="../terms.html">이용약관</a></div></footer>
+</body>
+</html>

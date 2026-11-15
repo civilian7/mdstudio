@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI — MDStudio 사용 설명서</title>
+<meta name="description" content="MDStudio 사용 설명서: AI">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="../">MDStudio</a>
+<a href="../#features">기능</a>
+<a href="01-start.html" aria-current="page">사용 설명서</a>
+<a href="../privacy.html">처리방침</a>
+<a href="../terms.html">이용약관</a>
+</div></header>
+<main><div class="wrap guide">
+<nav class="toc" aria-label="설명서 목차">
+<ul>
+<li><a href="01-start.html">시작하기</a></li>
+<li><a href="02-layout.html">화면 구성</a></li>
+<li><a href="03-documents.html">문서 열기와 저장</a></li>
+<li><a href="04-format.html">서식</a></li>
+<li><a href="05-editing.html">편집과 이동</a></li>
+<li><a href="06-insert.html">삽입</a></li>
+<li><a href="07-export.html">내보내기</a></li>
+<li><a href="08-files.html">탐색기·찾기</a></li>
+<li><a href="10-templates.html">템플릿과 스니펫</a></li>
+<li><a href="11-ai.html" aria-current="page">AI</a></li>
+<li><a href="12-scripts.html">플러그인</a></li>
+<li><a href="13-mcp.html">AI 에이전트 연결(MCP)</a></li>
+<li><a href="14-settings.html">설정</a></li>
+<li><a href="15-keymap.html">단축키 바꾸기</a></li>
+<li><a href="16-markdown.html">마크다운 문법 요약</a></li>
+<li><a href="17-terminal.html">터미널</a></li>
+</ul>
+</nav>
+<article>
+<h1 id="ai">AI</h1>
+<h2 id="준비">준비</h2>
+<p><strong>도구 &gt; 설정... &gt; AI</strong> 에서 제공자(Anthropic 또는 OpenAI 호환 — Ollama 같은 로컬 서버 포함), 주소, 모델을 선택하고 API 키를 입력한 뒤 **[키 저장]**을 클릭합니다. 키는 운영체제의 키 저장소(윈도우 자격 증명 관리자)에만 저장되고 설정 파일·로그에는 남지 않습니다. 로컬 서버(127.0.0.1)는 키 없이 쓸 수 있습니다.</p>
+<p>등록 목록의 한 줄에는 제공자 이름·모델·키 상태(키 등록됨·키 없음·키 없이 사용)·기본 배지가 보이고, 줄에 마우스를 올리면 주소(설치된 CLI는 감지 위치)가 툴팁으로 뜹니다. 목록의 "자동 감지" 구분선 아래에는 설치된 CLI가 있습니다. 작업별 제공자 목록에서 키가 없는 제공자나 설치되지 않은 CLI는 흐리게 보여 선택할 수 없습니다. 이 화면은 입력하는 즉시 저장됩니다.</p>
+<h2 id="설치된-cli-쓰기claude-codecodexgemini-cli">설치된 CLI 쓰기(Claude Code·Codex·Gemini CLI)</h2>
+<p>이 PC 에 <strong>Claude Code CLI</strong>(<code>claude</code>), <strong>Codex CLI</strong>(<code>codex</code>), <strong>Gemini CLI</strong>(<code>gemini</code>, npm <code>@google/gemini-cli</code>)가 설치돼 있으면 "자동 감지" 아래에 나타나고 API 키 없이 쓸 수 있습니다. MDStudio 는 CLI 를 설치하거나 로그인시키지 않습니다 — CLI 의 로그인·설정을 그대로 씁니다. 처음 보낼 때 문서가 어디로 가는지 알리는 확인 창이 한 번 뜹니다.</p>
+<ul>
+<li><strong>Gemini CLI</strong>: 먼저 터미널에서 <code>gemini</code> 를 한 번 실행해 로그인하거나(Google 계정), 환경 변수 <code>GEMINI_API_KEY</code> 를 설정해 둡니다. 로그인·키가 없으면 채팅에 인증 오류가 표시됩니다. 모델 칸을 비우면 Gemini CLI 의 기본 모델을 씁니다.</li>
+<li>에이전트 모드에서 Gemini CLI 는 MDStudio 의 문서 도구를 그 대화에만 붙여 씁니다(사용자의 <code>~/.gemini/settings.json</code> 은 고치지 않습니다). 문서를 고치는 도구는 권한 카드에서 허용했을 때만 있고, 고친 것은 아래 「보안」 절처럼 검토하거나 확인한 뒤에만 들어갑니다.</li>
+</ul>
+<h2 id="로컬-서버-연결ollamalm-studio">로컬 서버 연결(Ollama·LM Studio)</h2>
+<p>로컬 서버를 쓰면 문서가 이 PC 밖으로 나가지 않습니다.</p>
+<ol type="1">
+<li>Ollama(ollama.com) 또는 LM Studio 를 설치합니다.</li>
+<li>모델을 다운로드합니다. 예: <code>ollama pull qwen3:8b</code></li>
+<li><strong>도구 &gt; 설정... &gt; AI</strong> 에서 <strong>Ollama / OpenAI 호환</strong>을 선택하고 주소를 확인합니다.
+<ul>
+<li>Ollama: <code>http://127.0.0.1:11434/v1</code></li>
+<li>LM Studio: <code>http://127.0.0.1:1234/v1</code></li>
+</ul></li>
+<li>모델 입력란에 다운로드한 모델 이름을 넣고 **[연결 테스트]**를 클릭합니다. 이 PC 주소는 키가 필요 없습니다.</li>
+<li>늘 이 서버를 쓰려면 등록 목록에서 그 줄을 선택하고 **[기본으로 쓰기]**를 클릭합니다.</li>
+</ol>
+<h2 id="선택한-텍스트를-ai-로-수정하기">선택한 텍스트를 AI 로 수정하기</h2>
+<p>텍스트를 선택한 뒤 <strong>AI 채팅</strong> 창의 버튼이나 <code>/</code> 명령(<code>/요약</code>·<code>/교정</code>·<code>/다듬기</code> …), 또는 명령 팔레트(Ctrl+K)에서 요약·번역(영어/한국어)·문체 다듬기·쉽게 쓰기·제목 추천·<strong>제목·목록으로 정리</strong>(선택한 텍스트를 제목·목록·단락으로 나눔)를 선택합니다. <strong>교정</strong>·<strong>문서 구조 다듬기</strong>(제목 수준·절 차례·긴 단락)·<strong>링크 제안</strong>은 선택한 텍스트가 없으면 문서 전체를 씁니다. 답은 <strong>미리보기</strong> 창에 먼저 나오고, **[넣기]**를 클릭해야 문서에 들어갑니다(자동으로 바꾸지 않음). 넣은 것은 Ctrl+Z 한 번으로 실행 취소할 수 있습니다.</p>
+<h2 id="ai-채팅">AI 채팅</h2>
+<p><strong>보기 &gt; 도구 창 &gt; AI 채팅</strong>(Ctrl+Alt+I)은 오른쪽 도구 창입니다. 「현재 문서 보내기」를 켜면 질문과 함께 현재 문서(선택한 텍스트가 있으면 선택한 텍스트)가 보내집니다. 꺼 두면 질문만 보냅니다.</p>
+<h2 id="보안">보안</h2>
+<ul>
+<li>보낸 문서는 <strong>자료</strong>로만 다뤄집니다. 문서 안에 적힌 지시는 AI 에게 명령이 아닙니다.</li>
+<li>AI 의 답이 문서를 바꾸는 일은 사용자가 [넣기]를 클릭할 때만 일어납니다.</li>
+<li>에이전트 모드의 권한 카드에서 <strong>문서 수정 도구도 허용</strong>을 켜면 AI 가 문서를 고치는 도구(텍스트 넣기·바꾸기·절 옮기기·문서 속성 등)를 호출할 수 있습니다. 꺼 두면 읽기만 합니다.</li>
+<li>문서를 고치는 도구는 호출할 때마다 미리보기가 든 확인 창이 뜨고 **[허용]**을 클릭해야 바뀝니다(기본).</li>
+<li>권한 카드에서 <strong>고친 것을 모아 답이 끝난 뒤 한 번에 검토</strong>를 켜면 고친 것을 모아서 검토합니다. 대화 중에는 문서가 바뀌지 않고, 답이 끝나면 <strong>편집 제안 검토</strong> 창에 고친 것이 차례대로 나옵니다. 적용할 것만 체크로 남기고 **[확인]**을 클릭하면 문서마다 한 번에 들어갑니다(Ctrl+Z 한 번으로 실행 취소). 거른 제안이 바꾼 자리를 다시 고친 제안은 함께 빠집니다. [취소]하면 아무것도 바뀌지 않습니다.</li>
+</ul>
+
+<p class="pn"><a href="10-templates.html">← 템플릿과 스니펫</a> &nbsp;·&nbsp; <a href="12-scripts.html">플러그인 →</a></p>
+</article>
+</div></main>
+<footer class="site"><div class="wrap">앱 안 설명서(F1)와 같은 내용입니다. 앱 버전에 따라 화면이 조금 다를 수 있습니다. 「부록: 단축키」 쪽은 앱 안에서만 볼 수 있습니다(현재 키맵 그대로 나옵니다). · <a href="../privacy.html">개인정보 처리방침</a> · <a href="../terms.html">이용약관</a></div></footer>
+</body>
+</html>

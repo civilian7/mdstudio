@@ -64,3 +64,20 @@ footer.site .wrap{padding-top:16px;padding-bottom:24px}
 .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;text-align:left}
 .facts strong{display:block;font-size:16px}
 .facts span{color:var(--muted);font-size:15px}
+
+/* ---- 사용 설명서 ---- */
+.wrap.guide{max-width:1040px;display:grid;grid-template-columns:200px 1fr;gap:32px;padding-top:28px;padding-bottom:48px}
+.guide .toc{position:sticky;top:12px;align-self:start;font-size:14px}
+.guide .toc ul{list-style:none;margin:0;padding:0}
+.guide .toc a{display:block;padding:4px 8px;border-radius:4px;color:var(--muted)}
+.guide .toc a:hover{background:var(--soft);text-decoration:none}
+.guide .toc a[aria-current]{background:var(--soft);color:var(--fg);font-weight:600}
+.guide article{min-width:0}
+.guide article h1{font-size:28px;margin-top:0}
+.guide article h2{font-size:21px;border-bottom:1px solid var(--line);padding-bottom:4px}
+.guide article pre{background:var(--soft);border:1px solid var(--line);border-radius:6px;padding:10px 12px;overflow-x:auto;font-size:14px}
+.guide article code{font-family:Consolas,'D2Coding',monospace;font-size:.92em;background:var(--soft);padding:1px 4px;border-radius:3px}
+.guide article pre code{background:none;padding:0}
+.guide article table{display:block;overflow-x:auto}
+.guide .pn{margin-top:36px;padding-top:12px;border-top:1px solid var(--line);font-size:15px}
+@media (max-width:760px){.wrap.guide{grid-template-columns:1fr}.guide .toc{position:static}.guide .toc ul{display:flex;flex-wrap:wrap;gap:4px}}

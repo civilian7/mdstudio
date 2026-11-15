@@ -7,8 +7,19 @@ MDStudio(Markdown 편집기)의 소개·개인정보 처리방침·이용약관�
 | `index.html` | 소개 |
 | `privacy.html` | 개인정보 처리방침 (Microsoft Store 제출 시 이 주소를 입력) |
 | `terms.html` | 이용약관 (앱의 `resources/legal/terms-ko.html` 과 같은 본문) |
+| `guide/` | 사용 설명서 16쪽(앱 안 설명서 F1 과 같은 내용). `build_guide.py` 가 만든 결과이므로 직접 고치지 않는다 |
+| `build_guide.py` | 설명서 Markdown → `guide/*.html` 변환 스크립트 |
 | `style.css` | 공통 스타일(밝게·어둡게 자동) |
 | `.nojekyll` | GitHub Pages 가 파일을 그대로 서비스하게 함 |
+
+## 사용 설명서 다시 만들기
+
+설명서 원본은 lumiStudio 저장소의 `apps/md-studio/resources/help/ko/*.md` 입니다. 원본이 바뀌면 다시 만들어 `guide/` 를 같이 커밋합니다.
+Pandoc(3.x)이 필요합니다(스크립트를 돌릴 때만 — 올린 페이지에는 필요 없습니다).
+
+    python build_guide.py E:\works\PROJECTS\lumiStudiopps\md-studioesources\help\ko --pandoc <pandoc.exe 경로>
+
+쪽 사이 링크(`02-layout.md`)는 `.html` 로 고쳐 씁니다. 「부록: 단축키」 쪽은 앱이 실행 중에 만들어 파일이 없으므로 웹에는 없습니다.
 
 ## 올리기 전에 채울 자리
 
