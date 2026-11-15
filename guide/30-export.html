@@ -33,7 +33,8 @@
 <li><a href="20-preview.html">미리보기와 보기 형태</a></li>
 <li><a href="21-outline.html">목차</a></li>
 <li><a href="22-problems.html">문제와 자동 수정</a></li>
-<li><a href="23-explorer.html">탐색기·찾기</a></li>
+<li><a href="23-explorer.html">탐색기</a></li>
+<li><a href="24-tabs-windows.html">탭·탭 그룹·도구 창</a></li>
 <li><a href="30-export.html" aria-current="page">내보내기</a></li>
 <li><a href="31-textbundle.html">TextBundle·TextPack</a></li>
 <li><a href="40-ai.html">AI</a></li>
@@ -47,63 +48,101 @@
 </nav>
 <article>
 <h1 id="내보내기">내보내기</h1>
-<h2 id="내보내기-1">내보내기</h2>
-<p><strong>파일 &gt; 내보내기...</strong>(Ctrl+E) 창에서 형식을 선택합니다.</p>
+<p>문서를 PDF·HTML·Word 파일로 저장하거나, 서식 있는 HTML을 블로그 편집기에 붙여넣을 수 있습니다. 내보내기는 사본을 만들며 문서는 바뀌지 않습니다.</p>
+<h2 id="형식">형식</h2>
+<p><strong>파일 &gt; 내보내기</strong>(Ctrl+E)를 클릭하면 「내보내기」 창이 열립니다. 왼쪽 목록에서 형식을 선택하면 오른쪽에 그 형식의 칸이 나옵니다.</p>
 <table>
 <thead>
 <tr>
 <th>형식</th>
-<th>설명</th>
+<th>내용</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>PDF</td>
-<td>글꼴을 넣은 PDF. 링크·쪽 번호·표·코드·그림</td>
+<td>PDF 파일</td>
+<td>미리보기 모양대로 저장합니다. 한글 글꼴이 들어갑니다</td>
 </tr>
 <tr>
-<td>HTML</td>
-<td>파일 하나(문서 폴더 그림을 안에 담음)</td>
+<td>HTML 파일</td>
+<td>스타일과 그림을 담은 HTML 파일 하나입니다</td>
 </tr>
 <tr>
 <td>Word 문서(.docx)</td>
-<td>Pandoc 없이. 제목 1~6 스타일·목록·표·링크·그림·각주, 수식은 그림</td>
-</tr>
-<tr>
-<td>인라인 스타일 HTML</td>
-<td>블로그 편집기에 붙여 넣기용(복사)</td>
-</tr>
-<tr>
-<td>순수 HTML</td>
-<td>태그만</td>
+<td>Word나 Pandoc 없이 저장합니다</td>
 </tr>
 <tr>
 <td>TextPack 파일(.textpack)</td>
-<td>문서와 그림을 한 파일로 묶은 사본(<a href="10-documents.html">문서 열기와 저장</a>)</td>
+<td>본문과 그림을 zip 파일 하나에 담은 사본입니다. 지금 문서는 그대로입니다</td>
 </tr>
 <tr>
-<td>Pandoc</td>
-<td><strong>설정 &gt; 시스템 &gt; 외부 도구</strong>에서 「Pandoc 사용」을 켜고(기본 꺼짐) Pandoc 이 설치돼 있을 때만(odt·epub 등)</td>
+<td>Pandoc으로…</td>
+<td>Pandoc으로 저장합니다. 아래 Pandoc 형식 절을 봅니다</td>
+</tr>
+<tr>
+<td>인라인 스타일 HTML</td>
+<td>블로그 편집기에 붙여넣는 조각입니다. 복사합니다</td>
+</tr>
+<tr>
+<td>순수 HTML</td>
+<td>스타일 태그를 가진 HTML 문서입니다. 복사합니다</td>
 </tr>
 </tbody>
 </table>
-<p>왼쪽 목록에서 형식을 선택하면 오른쪽에 그 형식의 칸이 나옵니다(설정 창과 같은 모양).</p>
+<p>PDF·HTML·Word·Pandoc은 명령 팔레트(Ctrl+K)에서도 실행할 수 있습니다. 「PDF로 내보내기」처럼 이름으로 찾으며, 그 명령은 창을 그 형식으로 열어 둡니다. 이 명령들은 메뉴 막대에는 없습니다.</p>
+<h2 id="파일로-내보내기">파일로 내보내기</h2>
+<p>파일 형식은 저장 창 없이 정한 자리에 바로 씁니다.</p>
+<ol type="1">
+<li><strong>파일 &gt; 내보내기</strong>(Ctrl+E)를 클릭합니다.</li>
+<li>왼쪽 목록에서 형식을 선택합니다. 이름 칸의 확장자가 그 형식의 것으로 바뀌고, 고친 이름은 그대로 남습니다.</li>
+<li>「폴더」와 「파일 이름」을 확인합니다. 다른 폴더는 **[찾아보기...]**에서 선택합니다.</li>
+<li>저장한 파일을 바로 열려면 「내보낸 뒤 열기」를 켭니다. 실행 파일은 열지 않습니다.</li>
+<li>**[확인]**을 클릭합니다. Enter 키로도 실행합니다.</li>
+</ol>
+<p><strong>이렇게 보입니다:</strong> 창이 닫히고 「저장했습니다: …」 알림에 저장한 경로가 나옵니다.</p>
+<blockquote>
+<p><strong>참고:</strong> 같은 이름의 파일이 있으면 「파일 덮어쓰기」 창이 먼저 묻습니다. 처음 선택은 「취소」입니다.</p>
+</blockquote>
+<blockquote>
+<p><strong>참고:</strong> 쓸 수 없는 이름(<code>\ / : * ? " &lt; &gt; |</code>, <code>CON</code> 같은 예약 이름)이면 칸 아래에 이유가 나오고 **[확인]**이 흐려집니다.</p>
+</blockquote>
 <ul>
-<li><strong>파일 형식</strong>(PDF·HTML·Word·TextPack·Pandoc): <strong>폴더</strong>와 <strong>파일 이름</strong>을 확인하고 **[내보내기]**를 클릭하면 저장 창 없이 그 자리에 바로 저장합니다.
-<ul>
-<li>기본 이름은 문서 이름에 형식의 확장자를 붙인 것입니다(예: <code>보고서.pdf</code>). 형식을 바꾸면 이름은 그대로 두고 확장자만 바뀝니다.</li>
-<li>기본 폴더는 문서가 있는 폴더입니다. 저장하지 않은 새 문서면 마지막으로 내보낸 폴더를 씁니다. **[찾아보기...]**로 폴더를 선택합니다.</li>
-<li>같은 이름의 파일이 있으면 덮어쓸지 한 번 묻습니다(처음 선택은 [취소]).</li>
-<li>쓸 수 없는 이름(<code>\ / : * ? " &lt; &gt; |</code>, <code>CON</code> 같은 예약 이름, 실행 파일 확장자)이면 입력란 아래에 이유가 나오고 [내보내기]가 흐려집니다.</li>
-<li>Pandoc 은 확장자로 형식을 정하므로 확장자를 직접 적습니다(예: <code>.epub</code>).</li>
-<li><strong>내보낸 뒤 열기</strong>를 켜면 저장한 파일을 기본 프로그램으로 엽니다.</li>
-</ul></li>
-<li><strong>붙여넣기 형식</strong>(인라인 스타일 HTML·순수 HTML): 결과를 미리 보고 **[복사]**로 클립보드에 넣습니다.</li>
+<li>확장자를 적지 않으면 형식의 확장자가 붙습니다. Pandoc은 확장자로 형식을 정하므로 직접 적습니다.</li>
+<li>기본 폴더는 문서가 저장된 폴더입니다. 저장하지 않은 문서는 마지막으로 내보낸 폴더를 씁니다.</li>
+<li>마지막으로 고른 형식·폴더·「내보낸 뒤 열기」는 다음에도 그대로 남습니다.</li>
 </ul>
-<p>마지막으로 선택한 형식·폴더·「내보낸 뒤 열기」는 다음에도 그대로입니다(설정 파일 <code>[export]</code>).</p>
-<p>형식별 명령(PDF·HTML·Word·Pandoc)은 명령 팔레트(Ctrl+K)에서도 바로 실행할 수 있습니다.</p>
+<h2 id="붙여넣기-형식">붙여넣기 형식</h2>
+<p>인라인 스타일 HTML과 순수 HTML은 파일을 만들지 않고 클립보드에 복사합니다.</p>
+<ol type="1">
+<li>형식을 선택합니다. 오른쪽 미리보기에 결과가 나옵니다.</li>
+<li>**[확인]**을 클릭합니다. 창이 닫히고 「복사했습니다」 알림이 나옵니다.</li>
+<li>블로그나 HTML 편집기에 붙여넣습니다.</li>
+</ol>
+<ul>
+<li>인라인 스타일 HTML은 서식을 태그마다 style 속성에 넣습니다. 그림은 「그림 #N.」 자리 표시자로 바뀝니다.</li>
+<li>순수 HTML은 스타일 태그를 가진 온전한 HTML 문서이며, 그림을 문서 안에 넣습니다.</li>
+<li>미리보기는 긴 문서의 앞부분만 보여 줍니다(약 64KB 또는 600줄). 복사는 문서 전체를 대상으로 합니다.</li>
+</ul>
+<h2 id="pandoc-형식">Pandoc 형식</h2>
+<p>Pandoc을 쓰는 형식(ODT·EPUB 등)은 Pandoc 사용을 켜고 실행 파일을 찾을 수 있을 때만 목록에 나옵니다.</p>
+<ol type="1">
+<li><strong>설정 &gt; 시스템 &gt; 외부 도구</strong>를 열고 「Pandoc 사용」을 켭니다.</li>
+<li>「경로」 칸에 Pandoc 실행 파일을 적습니다. 칸을 비워 두면 자동으로 찾습니다.</li>
+<li>파일 이름 칸에 확장자를 직접 적습니다(예: <code>.epub</code>). 확장자가 형식을 정합니다.</li>
+</ol>
+<ul>
+<li>Pandoc이 2분 안에 끝나지 않으면 실패로 알립니다.</li>
+<li>Pandoc 2.15 이상이 필요합니다. 더 오래된 Pandoc은 쓸 수 없습니다.</li>
+</ul>
+<h2 id="관련-페이지">관련 페이지</h2>
+<ul>
+<li><a href="02-first-document.html">첫 문서 만들기</a></li>
+<li><a href="10-documents.html">문서 열기와 저장</a></li>
+<li><a href="11-import.html">다른 형식 문서 열기</a></li>
+<li><a href="31-textbundle.html">TextBundle·TextPack</a></li>
+</ul>
 
-<p class="pn"><a href="23-explorer.html">← 탐색기·찾기</a> &nbsp;·&nbsp; <a href="31-textbundle.html">TextBundle·TextPack →</a></p>
+<p class="pn"><a href="24-tabs-windows.html">← 탭·탭 그룹·도구 창</a> &nbsp;·&nbsp; <a href="31-textbundle.html">TextBundle·TextPack →</a></p>
 </article>
 </div></main>
 <footer class="site"><div class="wrap">앱 안 설명서(F1)와 같은 내용입니다. 앱 버전에 따라 화면이 조금 다를 수 있습니다. 「부록: 단축키」 쪽은 앱 안에서만 볼 수 있습니다(현재 키맵 그대로 나옵니다). · <a href="../privacy.html">개인정보 처리방침</a> · <a href="../terms.html">이용약관</a></div></footer>
