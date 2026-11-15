@@ -5,18 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MDStudio — Markdown 편집기</title>
 <meta name="description" content="MDStudio는 Windows용 Markdown 편집기입니다. 내 PC에서 동작하고, 문서를 수집하지 않습니다.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/icon-256.png">
+<meta name="theme-color" content="#2f6fdb">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MDStudio — Markdown 편집기">
+<meta property="og:description" content="쓰는 대로 바로 보이는 Windows용 Markdown 편집기. 문서는 내 PC에만 둡니다.">
+<meta property="og:image" content="https://civilian7.github.io/mdstudio/assets/og-image.png">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="landing">
+<a class="skip" href="#main">본문으로 건너뛰기</a>
 <header class="site"><div class="wrap">
 <a class="brand" href="./">MDStudio</a>
 <a href="#features">기능</a>
 <a href="guide/01-start.html">사용 설명서</a>
+<a href="support.html">지원</a>
 <a href="#privacy">개인정보</a>
 <a href="privacy.html">처리방침</a>
 <a href="terms.html">이용약관</a>
 </div></header>
-<main>
+<main id="main">
 
 <section class="hero"><div class="wrap">
 <h1>MDStudio</h1>
@@ -27,15 +38,10 @@
 </div>
 <p class="sub">Windows 10 버전 1809 이상 · 64비트</p>
 
-<div class="shot" aria-hidden="true">
-<div class="bar"><i></i><i></i><i></i></div>
-<div class="cols">
-<div class="src"><b>#</b> 주간 보고<br><br>- [x] 일정 정리<br>- [ ] 표 정리<br><br>| 항목 | 상태 |<br>|---|---|<br>| 문서 | <b>**완료**</b> |</div>
-<div class="view"><h4>주간 보고</h4>☑ 일정 정리<br>☐ 표 정리
-<table><thead><tr><th>항목</th><th>상태</th></tr></thead><tbody><tr><td>문서</td><td><strong>완료</strong></td></tr></tbody></table></div>
-</div>
-</div>
-<p class="sub">편집기와 미리보기 구성을 단순하게 그린 그림입니다.</p>
+<figure class="shotfig">
+<img src="assets/screenshot-split.png" width="1212" height="860" alt="MDStudio 화면: 왼쪽에서 Markdown을 쓰면 오른쪽 미리보기에 제목, 할 일 목록, 표, 수식, 코드, 흐름도가 바로 그려집니다.">
+<figcaption>왼쪽에서 쓰면 오른쪽 미리보기에 바로 그려집니다. 표, 수식, 코드, mermaid 흐름도까지.</figcaption>
+</figure>
 </div></section>
 
 <section class="section" id="features"><div class="wrap">
@@ -48,6 +54,14 @@
 <div class="feat"><h3>잃지 않는 문서</h3><p>탭과 세션을 복원하고, 저장하지 않은 글은 암호화한 복구 사본으로 남깁니다. 바깥에서 파일이 바뀌면 알려 줍니다.</p></div>
 <div class="feat"><h3>템플릿과 스니펫</h3><p>회의·보고·기술 문서·글쓰기 템플릿과 자주 쓰는 블록을 바로 넣을 수 있습니다.</p></div>
 <div class="feat"><h3>내장 터미널</h3><p>문서가 있는 폴더에서 PowerShell, cmd, bash를 아래 창에서 바로 씁니다.</p></div>
+</div>
+</div></section>
+
+<section class="section"><div class="wrap">
+<h2>화면 둘러보기</h2>
+<div class="pair">
+<figure><img loading="lazy" src="assets/screenshot-preview.png" width="1212" height="860" alt="미리보기 전용 화면. 문서가 한 칸에 크게 보입니다."><figcaption>미리보기만 크게 보기 (F9로 보기 형태 전환)</figcaption></figure>
+<figure><img loading="lazy" src="assets/screenshot-export.png" width="679" height="614" alt="내보내기 창. PDF, HTML, Word, TextPack 형식을 고를 수 있습니다."><figcaption>PDF·HTML·Word 등으로 내보내기 (Ctrl+E)</figcaption></figure>
 </div>
 </div></section>
 
@@ -66,11 +80,11 @@
 <p class="lede">앱 안 설명서(F1)와 같은 내용을 웹에서도 볼 수 있습니다.</p>
 <div class="grid3">
 <div class="feat"><h3><a href="guide/01-start.html">시작하기</a></h3><p>첫 문서를 쓰고 저장하기까지.</p></div>
-<div class="feat"><h3><a href="guide/16-markdown.html">마크다운 문법 요약</a></h3><p>표준·GFM·확장 문법 한눈에.</p></div>
-<div class="feat"><h3><a href="guide/07-export.html">내보내기</a></h3><p>PDF·HTML·Word 로 내보내는 법.</p></div>
-<div class="feat"><h3><a href="guide/11-ai.html">AI</a></h3><p>제공자와 키를 설정해 쓰기.</p></div>
-<div class="feat"><h3><a href="guide/12-scripts.html">플러그인</a></h3><p>반복 작업을 자동화하기.</p></div>
-<div class="feat"><h3><a href="guide/13-mcp.html">AI 에이전트 연결</a></h3><p>MCP 로 Claude Desktop 등과 연결.</p></div>
+<div class="feat"><h3><a href="guide/52-markdown.html">마크다운 문법 요약</a></h3><p>표준·GFM·확장 문법 한눈에.</p></div>
+<div class="feat"><h3><a href="guide/30-export.html">내보내기</a></h3><p>PDF·HTML·Word 로 내보내는 법.</p></div>
+<div class="feat"><h3><a href="guide/40-ai.html">AI</a></h3><p>제공자와 키를 설정해 쓰기.</p></div>
+<div class="feat"><h3><a href="guide/42-plugins.html">플러그인</a></h3><p>반복 작업을 자동화하기.</p></div>
+<div class="feat"><h3><a href="guide/41-mcp.html">AI 에이전트 연결</a></h3><p>MCP 로 Claude Desktop 등과 연결.</p></div>
 </div>
 <p><a href="guide/01-start.html">전체 목차 보기 →</a></p>
 </div></section>

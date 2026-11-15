@@ -5,7 +5,7 @@
 
 - 설명서 폴더: lumiStudio 저장소의 `apps/md-studio/resources/help/ko`
 - 변환은 Pandoc(gfm → html5)이 한다. 결과 HTML 을 커밋하므로 Pandoc 은 이 스크립트를 돌릴 때만 필요하다.
-- 쪽 사이 링크(`02-layout.md`)는 `02-layout.html` 로 고친다. 앱이 실행 중에 만드는 「부록: 단축키」 쪽은 파일이 없어 여기에 없다.
+- 쪽 사이 링크(`03-layout.md`)는 `03-layout.html` 로 고친다. 앱이 실행 중에 만드는 「부록: 단축키」 쪽은 파일이 없어 여기에 없다.
 """
 import argparse, html, re, shutil, subprocess, sys
 from pathlib import Path
