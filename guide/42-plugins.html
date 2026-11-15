@@ -19,6 +19,7 @@
 <nav class="toc" aria-label="설명서 목차">
 <ul>
 <li><a href="01-start.html">시작하기</a></li>
+<li><a href="02-first-document.html">첫 문서 만들기</a></li>
 <li><a href="03-layout.html">화면 구성</a></li>
 <li><a href="10-documents.html">문서 열기와 저장</a></li>
 <li><a href="13-format.html">서식</a></li>
@@ -39,12 +40,12 @@
 <article>
 <h1 id="플러그인">플러그인</h1>
 <p><strong>플러그인</strong>은 자바스크립트로 짠 작은 확장입니다. 현재 문서를 읽고 고치는 일을 실행 한 번으로 되풀이합니다. AI 와 달리 결과가 늘 같고, 돈이 들지 않으며, 문서를 밖으로 보내지 않습니다. 여러 문서에 같은 정리를 할 때 알맞습니다.</p>
-<p>플러그인은 <strong><code>.js</code> 파일 하나</strong>입니다. 플러그인 폴더에 파일을 넣으면 바로 목록에 나타납니다. 따로 등록하지 않습니다. 앱과 함께 <strong>기본 플러그인 33개</strong>가 설치되고(아래 「기본 플러그인」), 직접 만들거나(「새 플러그인 만들기」) 다른 사람이 보낸 <code>.lumiplugin</code> 파일로 설치할 수 있습니다(「설치와 내보내기」).</p>
+<p>플러그인은 <strong><code>.js</code> 파일 하나</strong>입니다. 플러그인 폴더에 파일을 넣으면 바로 목록에 나타납니다. 따로 등록하지 않습니다. 앱과 함께 <strong>기본 플러그인 33개</strong>가 설치되고(아래 기본 플러그인 절), 직접 만들거나(새 플러그인 만들기 절) 다른 사람이 보낸 <code>.lumiplugin</code> 파일로 설치할 수 있습니다(설치와 내보내기 절).</p>
 <h2 id="플러그인-매니저">플러그인 매니저</h2>
 <p>왼쪽 사이드바에서 AI 채팅 아래의 <strong>플러그인</strong> 버튼을 클릭하면 오른쪽에 플러그인 매니저가 열립니다.</p>
 <ul>
 <li><strong>위 도구 모음</strong>: 검색란(플러그인 찾기), <strong>새로 만들기</strong>, <strong>AI로 만들기</strong>, <strong>플러그인 설치(.lumiplugin)...</strong>, <strong>내 플러그인 폴더 열기</strong>.</li>
-<li><strong>목록</strong>: 그룹별로 묶여 있습니다(아래 「목록과 그룹」).</li>
+<li><strong>목록</strong>: 그룹별로 묶여 있습니다(아래 목록과 그룹 절).</li>
 <li><strong>가운데 도구 모음</strong>: 선택한 플러그인을 <strong>실행</strong>, <strong>코드 편집...</strong>, <strong>복사본 만들기</strong>, <strong>내보내기...</strong>, <strong>비밀값...</strong> 넣기, <strong>폴더 열기</strong>, <strong>삭제</strong>합니다.</li>
 <li><strong>아래</strong>: 선택한 플러그인의 설명, 할 수 있는 일(권한 배지), 접속할 곳, 실행하는 법, 최근 실행 결과입니다.</li>
 </ul>
@@ -192,7 +193,7 @@
 <li>앱과 함께 설치된 기본 플러그인은 묻지 않습니다.</li>
 </ul>
 <h2 id="새-플러그인-만들기">새 플러그인 만들기</h2>
-<p>매니저의 <strong>새로 만들기</strong>를 클릭하면 <strong>새 플러그인</strong> 창이 뜹니다. 여기서 정한 값이 플러그인 맨 위의 머리 주석이 됩니다. 창 아래 <strong>미리 보기</strong>에 값을 바꿀 때마다 만들어질 머리 주석이 보입니다.</p>
+<p>매니저의 <strong>새로 만들기</strong>를 클릭하면 <strong>새 플러그인</strong> 창이 뜹니다. 여기서 정한 값이 플러그인 맨 위의 머리 주석이 됩니다. 창 아래 <strong>미리보기</strong>에 값을 바꿀 때마다 만들어질 머리 주석이 보입니다.</p>
 <table>
 <thead>
 <tr>
@@ -383,7 +384,7 @@
 <td>정리·서식</td>
 <td>한영 사이 띄어쓰기</td>
 <td><code>cjk-spacing.js</code></td>
-<td>붙어 있는 한글과 영문 낱말 사이에 빈칸을 넣습니다</td>
+<td>붙어 있는 한글과 영문 단어 사이에 빈칸을 넣습니다</td>
 </tr>
 <tr>
 <td>정리·서식</td>
@@ -503,7 +504,7 @@
 <td>만들기</td>
 <td>블로그 앞맺음</td>
 <td><code>blog-front-matter.js</code></td>
-<td>블로그 글 맨 위의 YAML 앞맺음을 만들거나 빠진 칸을 채웁니다</td>
+<td>블로그 글 맨 위의 YAML 문서 속성(프런트매터)을 만들거나 빠진 칸을 채웁니다</td>
 </tr>
 <tr>
 <td>만들기</td>
@@ -515,13 +516,13 @@
 <td>통계·모으기</td>
 <td>문서 통계</td>
 <td><code>doc-stats.js</code></td>
-<td>글자 수(공백 포함·제외)·낱말·문단 수·읽는 시간·제목별 글자 수를 보고서 새 탭으로 엽니다</td>
+<td>글자 수(공백 포함·제외)·단어·문단 수·읽는 시간·제목별 글자 수를 보고서 새 탭으로 엽니다</td>
 </tr>
 <tr>
 <td>통계·모으기</td>
 <td>폴더 통계</td>
 <td><code>folder-stats.js</code></td>
-<td>폴더 안 마크다운 파일마다 글자·낱말·제목 수·읽는 시간을 세어 보고서 새 탭으로 엽니다</td>
+<td>폴더 안 마크다운 파일마다 글자·단어·제목 수·읽는 시간을 세어 보고서 새 탭으로 엽니다</td>
 </tr>
 <tr>
 <td>통계·모으기</td>
@@ -533,7 +534,7 @@
 <td>일괄</td>
 <td>앞맺음 일괄 편집</td>
 <td><code>front-matter-batch.js</code></td>
-<td>폴더 안 모든 마크다운 파일의 앞맺음 한 칸을 넣고·바꾸고·지웁니다(기본은 미리 보기 보고서만)</td>
+<td>폴더 안 모든 마크다운 파일의 문서 속성(프런트매터) 한 칸을 넣고·바꾸고·지웁니다(기본은 미리보기 보고서만)</td>
 </tr>
 <tr>
 <td>일괄</td>
@@ -550,7 +551,7 @@
 </tbody>
 </table>
 <h3 id="예제-문서로-시험해-보기">예제 문서로 시험해 보기</h3>
-<p>기본 플러그인 33개를 직접 돌려 볼 수 있는 <strong>예제 문서 묶음</strong>이 앱에 들어 있습니다. 플러그인 매니저 위 도구 줄의 [예제 문서] 단추를 누르면 묶음이 설정 폴더의 <code>plugin-samples/&lt;언어&gt;</code> 로 <strong>복사</strong>되고, 그 폴더가 탐색기에 열리며 <code>README.md</code> 가 열립니다. README 의 표에 플러그인마다 어느 문서를 열어 무엇을 해 보면 되는지, 기대 결과가 어떤지 적혀 있습니다. 문서는 일부러 어지럽혀 두었으니 마음껏 고쳐도 됩니다. 앱에 든 원본은 읽기 전용이라 그대로입니다.</p>
+<p>기본 플러그인 33개를 직접 돌려 볼 수 있는 <strong>예제 문서 묶음</strong>이 앱에 들어 있습니다. 플러그인 매니저 위 도구 줄의 [예제 문서] 버튼를 누르면 묶음이 설정 폴더의 <code>plugin-samples/&lt;언어&gt;</code> 로 <strong>복사</strong>되고, 그 폴더가 탐색기에 열리며 <code>README.md</code> 가 열립니다. README 의 표에 플러그인마다 어느 문서를 열어 무엇을 해 보면 되는지, 기대 결과가 어떤지 적혀 있습니다. 문서는 일부러 어지럽혀 두었으니 마음껏 고쳐도 됩니다. 앱에 든 원본은 읽기 전용이라 그대로입니다.</p>
 <p>이미 복사해 둔 예제가 있으면 덮어쓰지 않고 묻습니다. [예]는 묶음의 파일을 처음 상태로 다시 받고(직접 더한 파일은 그대로 둡니다), [아니요]는 지금 있는 것을 그대로 엽니다. 「외부 링크 검사」와 「웹 문서 스크랩」은 인터넷에 접속하며 시험용 주소(<code>example.com</code>)만 씁니다.</p>
 <h2 id="헤더-주석">헤더 주석</h2>
 <p>플러그인의 이름·그룹·권한 같은 정보는 따로 파일을 두지 않고 <strong>스크립트 맨 위의 주석</strong>에 적습니다. 직접 고쳐도 되고, 편집 탭의 <strong>플러그인 정보</strong> 버튼으로 양식에서 고쳐도 됩니다.</p>
@@ -594,7 +595,7 @@ sc.operation(&#39;run&#39;, async ({ url, heading }) =&gt; {
 </tr>
 <tr>
 <td><code>@permissions</code></td>
-<td>쓸 기능의 범주(아래 「sc API 참고」). 적지 않으면 텍스트 읽기·수정</td>
+<td>쓸 기능의 범주(아래 sc API 참고 절). 적지 않으면 텍스트 읽기·수정</td>
 </tr>
 <tr>
 <td><code>@network</code></td>
@@ -610,7 +611,7 @@ sc.operation(&#39;run&#39;, async ({ url, heading }) =&gt; {
 </tr>
 <tr>
 <td><code>@event 이벤트</code></td>
-<td>이벤트가 일어나면 자동으로 실행합니다(<code>document.saved</code>·<code>document.opened</code>·<code>document.closed</code>, 아래 「이벤트로 자동 실행하기」)</td>
+<td>이벤트가 일어나면 자동으로 실행합니다(<code>document.saved</code>·<code>document.opened</code>·<code>document.closed</code>, 아래 이벤트로 자동 실행하기 절)</td>
 </tr>
 <tr>
 <td><code>@mcp on</code> · <code>@agent 설명</code></td>
@@ -695,7 +696,7 @@ sc.operation(&#39;run&#39;, async ({ url, heading }) =&gt; {
 <tr>
 <td><code>lumimd.stats.get</code></td>
 <td><code>text.read</code></td>
-<td>글자·낱말·줄 수</td>
+<td>글자·단어·줄 수</td>
 </tr>
 <tr>
 <td><code>lumimd.lint.list</code></td>
@@ -720,7 +721,7 @@ sc.operation(&#39;run&#39;, async ({ url, heading }) =&gt; {
 <tr>
 <td><code>lumimd.corrections.get</code></td>
 <td>(없음)</td>
-<td>설치한 교정 사전 <code>{tables: [{name, pairs: [[틀린, 바른], …]}]}</code>(데이터 팩)</td>
+<td>설치한 교정 사전 <code>{tables: [{name, pairs: [[틀린, 바른], …]}]}</code></td>
 </tr>
 </tbody>
 </table>
