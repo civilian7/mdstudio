@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MDStudio 개인정보 처리방침</title>
+<meta name="description" content="MDStudio 개인정보 처리방침">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="./">MDStudio</a>
+<a href="./">소개</a>
+<a href="privacy.html" aria-current="page">개인정보 처리방침</a>
+<a href="terms.html">이용약관</a>
+</div></header>
+<main><div class="wrap">
+
+<h1>MDStudio 개인정보 처리방침</h1>
+<p class="meta">시행일: <span class="todo">[시행일]</span><br>게시자: <span class="todo">[게시자 이름]</span> (<span class="todo">[연락처 이메일]</span>)</p>
+
+<h2>1. 요약</h2>
+<p>MDStudio는 사용자의 PC에서 동작하는 Markdown 편집기입니다. <strong>게시자는 사용자의 문서나 개인정보를 수집하지 않으며, 게시자가 운영하는 서버로 전송되는 정보는 없습니다.</strong> 계정 가입이 없고, 사용 통계나 광고 식별자를 보내지 않습니다.</p>
+<p>아래는 사용자가 직접 켜거나 실행했을 때만 PC 밖으로 정보가 나가는 기능과, PC 안에 저장되는 정보입니다.</p>
+
+<h2>2. 사용자가 실행했을 때 외부로 전송되는 정보</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>기능</th><th>보내는 곳</th><th>보내는 내용</th><th>언제</th></tr></thead>
+<tbody>
+<tr><td>AI 채팅·AI 편집</td><td>사용자가 설정한 AI 제공자(Anthropic, OpenAI, Google 등) 또는 사용자가 지정한 주소</td><td>사용자가 보낸 질문과, 사용자가 고른 문서 내용</td><td>AI 기능을 사용할 때만. API 키는 사용자가 입력합니다</td></tr>
+<tr><td>CLI 에이전트 모드</td><td>사용자의 PC에 설치된 AI CLI(Claude Code, Codex, Gemini)</td><td>위와 같음(전송은 해당 CLI가 합니다)</td><td>에이전트 모드를 사용할 때만</td></tr>
+<tr><td>웹 문서 가져오기, 웹 그림 내려받기</td><td>사용자가 입력했거나 문서에 적힌 웹 주소</td><td>해당 주소로의 요청</td><td>그 명령을 실행할 때만</td></tr>
+<tr><td>링크 검사 등 네트워크 권한이 있는 플러그인</td><td>플러그인이 선언한 주소</td><td>플러그인이 보내는 요청</td><td>사용자가 플러그인 실행을 허용했을 때만</td></tr>
+</tbody></table></div>
+<p>AI 제공자로 전송된 내용은 각 제공자의 개인정보 처리방침에 따라 처리됩니다.</p>
+
+<h2>3. PC 안에만 저장되는 정보</h2>
+<ul>
+<li><strong>설정·세션</strong>: 설정, 열었던 파일 목록, 창 배치. 사용자 폴더에 저장됩니다.</li>
+<li><strong>API 키·토큰</strong>: 운영체제의 자격 증명 저장소(Windows 자격 증명 관리자)에 저장됩니다.</li>
+<li><strong>복구 사본</strong>: 저장하지 않은 문서의 사본을 암호화해 사용자 폴더에 둡니다. 정상 종료하면 지웁니다.</li>
+<li><strong>로그</strong>: 오류 진단용 기록. 파일 경로가 포함될 수 있습니다. 기본 30일 뒤 지워지며 설정에서 끄거나 기간을 바꿀 수 있습니다.</li>
+<li><strong>크래시 덤프</strong>: 프로그램이 비정상 종료했을 때의 진단 파일. 실행 중이던 메모리 일부(문서 조각 포함 가능)가 들어갈 수 있습니다. PC에만 보관되고 자동으로 전송되지 않으며, 최근 10개·30일까지만 보관합니다. 설정에서 끌 수 있습니다.</li>
+<li><strong>사용자 정보(이름·소속·이메일)</strong>: 사용자가 설정에 입력한 경우 문서 서식에 쓰입니다. AI 앱에 제공하는 기능은 기본으로 꺼져 있습니다.</li>
+</ul>
+
+<h2>4. 로컬 MCP 서버</h2>
+<p>사용자가 켠 경우에만, 같은 PC의 AI 앱이 문서에 접근할 수 있도록 로컬 주소(127.0.0.1)에서 서버가 동작합니다. 기본은 꺼져 있고 외부 네트워크에서는 접속할 수 없으며, 토큰으로 보호됩니다.</p>
+
+<h2>5. 제3자 제공·위탁</h2>
+<p>게시자는 사용자의 정보를 수집하지 않으므로 제3자에게 제공하거나 처리를 위탁하지 않습니다.</p>
+
+<h2>6. 아동</h2>
+<p>MDStudio는 아동을 대상으로 정보를 수집하지 않습니다.</p>
+
+<h2>7. 변경</h2>
+<p>이 방침이 바뀌면 이 페이지에 새 시행일과 함께 올립니다.</p>
+
+<h2>8. 문의</h2>
+<p><span class="todo">[연락처 이메일]</span></p>
+
+</div></main>
+<footer class="site"><div class="wrap">© <span class="todo">[게시자 이름]</span> · <a href="./">소개</a> · <a href="terms.html">이용약관</a></div></footer>
+</body>
+</html>
