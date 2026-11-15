@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>표 — MDStudio 사용 설명서</title>
+<meta name="description" content="MDStudio 사용 설명서: 표">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="../">MDStudio</a>
+<a href="../#features">기능</a>
+<a href="01-start.html" aria-current="page">사용 설명서</a>
+<a href="../privacy.html">처리방침</a>
+<a href="../terms.html">이용약관</a>
+</div></header>
+<main><div class="wrap guide">
+<nav class="toc" aria-label="설명서 목차">
+<ul>
+<li><a href="01-start.html">시작하기</a></li>
+<li><a href="02-first-document.html">첫 문서 만들기</a></li>
+<li><a href="03-layout.html">화면 구성</a></li>
+<li><a href="10-documents.html">문서 열기와 저장</a></li>
+<li><a href="11-import.html">다른 형식 문서 열기</a></li>
+<li><a href="12-recovery.html">세션 복원·자동 저장·복구 사본</a></li>
+<li><a href="13-format.html">서식</a></li>
+<li><a href="14-editing.html">편집</a></li>
+<li><a href="15-tables.html" aria-current="page">표</a></li>
+<li><a href="16-insert.html">그림·링크·기호·다이어그램·수식</a></li>
+<li><a href="18-templates.html">템플릿과 스니펫</a></li>
+<li><a href="23-explorer.html">탐색기·찾기</a></li>
+<li><a href="30-export.html">내보내기</a></li>
+<li><a href="31-textbundle.html">TextBundle·TextPack</a></li>
+<li><a href="40-ai.html">AI</a></li>
+<li><a href="41-mcp.html">AI 에이전트 연결(MCP)</a></li>
+<li><a href="42-plugins.html">플러그인</a></li>
+<li><a href="44-terminal.html">터미널</a></li>
+<li><a href="50-settings.html">설정</a></li>
+<li><a href="51-keymap.html">단축키 바꾸기</a></li>
+<li><a href="52-markdown.html">마크다운 문법 요약</a></li>
+</ul>
+</nav>
+<article>
+<h1 id="표">표</h1>
+<p>마크다운 표를 넣고, 창에서 고치고, 줄을 가지런히 맞춥니다. HTML 표와 박스 표(┌─┐)도 다룹니다.</p>
+<h2 id="표-넣기">표 넣기</h2>
+<ol type="1">
+<li>표를 넣을 자리에 커서를 둡니다.</li>
+<li>**서식 &gt; 표...**를 클릭합니다. 「표 삽입」 창에 칸 격자가 나옵니다.</li>
+<li>격자에서 마우스를 움직이거나 방향키를 눌러 크기를 정합니다. 처음 크기는 3행 × 3열이고, 격자 아래에 선택한 크기가 보입니다.</li>
+<li>칸을 클릭하거나 **[확인]**을 클릭합니다.</li>
+</ol>
+<p><strong>이렇게 보입니다:</strong> 빈 표가 들어가고 커서가 첫 칸에 놓입니다. 표 앞뒤에는 빈 줄이 맞춰집니다.</p>
+<ul>
+<li>행 수는 머리글 행을 포함하고, 첫 행이 머리글입니다. 격자는 최대 10행 × 10열입니다.</li>
+</ul>
+<h2 id="표-편집-창으로-고치기">표 편집 창으로 고치기</h2>
+<ol type="1">
+<li>고칠 표 안에 커서를 둡니다.</li>
+<li>표 편집을 엽니다. 방법은 셋 중 하나입니다.
+<ul>
+<li>Ctrl+Shift+T 또는 Ctrl+Enter를 누릅니다.</li>
+<li>표 위에서 오른쪽 클릭하고 표 편집 항목을 선택합니다.</li>
+<li>명령 팔레트(Ctrl+K)에서 「표 편집」을 실행합니다.</li>
+</ul></li>
+<li>칸을 고칩니다. 아래 표를 참고합니다.</li>
+<li>**[확인]**을 클릭합니다.</li>
+</ol>
+<p><strong>이렇게 보입니다:</strong> 표가 한 번에 다시 쓰이고, 문서에서 Ctrl+Z 한 번으로 원래대로 돌아갑니다. 고친 것이 없으면 문서는 그대로입니다.</p>
+<p>열 제목은 A, B, … 로 보이고, 열에 정렬이 있으면 제목 옆에 <code>--:</code> 같은 표시가 붙습니다.</p>
+<table>
+<thead>
+<tr>
+<th>하려는 일</th>
+<th>방법</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>칸 고치기</td>
+<td>칸을 선택하고 글자를 입력하거나 F2를 누릅니다. 한글도 바로 시작됩니다.</td>
+</tr>
+<tr>
+<td>칸 확정</td>
+<td>Enter 또는 Tab을 누릅니다. 창은 닫히지 않습니다.</td>
+</tr>
+<tr>
+<td>칸 안 줄바꿈</td>
+<td>칸을 고치는 중 Shift+Enter를 누릅니다. 표에는 <code>&lt;br&gt;</code>로 적힙니다.</td>
+</tr>
+<tr>
+<td>행 넣기·지우기</td>
+<td>도구 모음, 오른쪽 클릭 메뉴, Alt+Insert(아래에 행 추가), Ctrl+Y(행 삭제)</td>
+</tr>
+<tr>
+<td>열 넣기·지우기</td>
+<td>도구 모음, 오른쪽 클릭 메뉴, Alt+Shift+Insert(오른쪽에 열 추가), Ctrl+Shift+Y(열 삭제)</td>
+</tr>
+<tr>
+<td>행·열 옮기기</td>
+<td>Ctrl+Alt+↑/↓(행), Ctrl+Alt+←/→(열)</td>
+</tr>
+<tr>
+<td>정렬</td>
+<td>도구 모음에서 왼쪽·가운데·오른쪽 정렬이나 정렬 해제를 선택합니다. 선택한 열 모두에 적용됩니다.</td>
+</tr>
+<tr>
+<td>복사</td>
+<td>Ctrl+C. 선택한 범위가 탭으로 구분한 텍스트로 복사됩니다.</td>
+</tr>
+<tr>
+<td>붙여넣기</td>
+<td>Ctrl+V. 엑셀·탭 구분 텍스트를 선택한 칸부터 덮어쓰고, 모자라면 행·열을 늘립니다.</td>
+</tr>
+<tr>
+<td>내용 지우기</td>
+<td>Delete</td>
+</tr>
+<tr>
+<td>실행 취소·다시 실행</td>
+<td>Ctrl+Z, Ctrl+Shift+Z</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>도구 모음의 Enter 드롭다운에서 Enter를 누른 뒤 커서를 어디로 옮길지 정합니다. 제자리, 오른쪽 셀, 아래 행 중에서 선택합니다.</li>
+<li>머리글 행은 삭제할 수 없고, 열은 하나가 남습니다.</li>
+<li>칸 안의 <code>|</code>는 <code>\|</code>로, 줄바꿈은 <code>&lt;br&gt;</code>로 적힙니다.</li>
+<li>고친 뒤 Esc나 **[취소]**를 누르면 「수정한 내용을 버릴까요?」라고 묻습니다. 고친 것이 없으면 바로 닫힙니다.</li>
+</ul>
+<h2 id="html-표로-바꾸기">HTML 표로 바꾸기</h2>
+<p>열 폭을 정해야 할 때 마크다운 표를 HTML 표로 바꿉니다.</p>
+<ol type="1">
+<li>표 편집 창 왼쪽 아래의 **[HTML 표로 바꾸기]**를 클릭합니다. 표 위에서 오른쪽 클릭한 메뉴나 명령 팔레트(Ctrl+K)의 「HTML 표로 바꾸기」로도 바꿉니다.</li>
+<li>안내를 읽고 **[확인]**을 클릭합니다.</li>
+</ol>
+<p><strong>이렇게 보입니다:</strong> 표가 <code>&lt;table&gt;</code> 태그로 바뀝니다. 바꾼 뒤에는 표 맞추기·압축을 쓸 수 없습니다.</p>
+<h2 id="html-표-편집하기">HTML 표 편집하기</h2>
+<p>커서가 <code>&lt;table&gt;</code> 안에 있을 때 같은 표 편집 명령을 쓰면 「HTML 표 편집」 창이 열립니다.</p>
+<ul>
+<li>셀 병합: 범위를 선택하고 도구 모음의 「셀 병합」을 클릭합니다. 병합하면 왼쪽 위 셀의 내용만 남습니다. 사라질 내용이 있으면 먼저 묻습니다.</li>
+<li>병합 해제: 병합된 셀을 선택하고 「병합 해제」를 클릭합니다.</li>
+<li>「첫 줄 머리글」을 체크하면 첫 줄이 머리글이 됩니다.</li>
+<li>아래쪽 열 폭 입력란으로 커서가 있는 열의 폭을 고칩니다.</li>
+<li>병합된 셀에 덮인 자리는 고칠 수 없습니다. 병합이 있으면 행·열도 옮길 수 없으니 먼저 병합을 해제합니다.</li>
+<li>**[마크다운 표로 바꾸기]**는 열 폭이 없어지고 되돌릴 수 없다는 안내 뒤에 표를 마크다운 표로 바꿉니다. 병합된 셀이 있으면 바꿀 수 없습니다.</li>
+<li>표 안에 표가 있는 등 편집 창이 읽지 못하는 HTML 표는 이유를 알리고 문서를 그대로 둡니다. 직접 고칩니다.</li>
+</ul>
+<h2 id="표-맞추기와-압축">표 맞추기와 압축</h2>
+<p>커서를 표 안에 두고 오른쪽 클릭 메뉴나 명령 팔레트(Ctrl+K)에서 실행합니다.</p>
+<ul>
+<li>「표 맞추기」: 가장 긴 칸에 맞춰 공백을 채워 세로선을 가지런히 합니다.</li>
+<li>「표 압축」: 공백 채우기를 없애 표를 짧게 줄입니다.</li>
+</ul>
+<p>이미 그 모양이면 「이미 맞춰진 표입니다」 또는 「이미 압축된 표입니다」라고 알립니다.</p>
+<h2 id="표를-탭-구분-텍스트로-복사">표를 탭 구분 텍스트로 복사</h2>
+<p>커서를 표 안에 두고 오른쪽 클릭 메뉴나 명령 팔레트(Ctrl+K)에서 「표를 탭 구분 텍스트로 복사」를 실행합니다. 표 전체가 클립보드에 복사되어 엑셀에 붙여넣을 수 있습니다.</p>
+<h2 id="박스-표-맞추기와-선-그리기">박스 표 맞추기와 선 그리기</h2>
+<p>코드 블록 안의 ┌─┐ 모양 박스 표를 다룹니다.</p>
+<ol type="1">
+<li>맞출 줄을 선택하거나 박스 표가 든 코드 블록 안에 커서를 둡니다.</li>
+<li><strong>도구 &gt; 박스 표 맞추기</strong>(Ctrl+Shift+B)를 클릭합니다.</li>
+</ol>
+<p><strong>이렇게 보입니다:</strong> 오른쪽 테두리가 같은 폭으로 맞춰집니다. 글꼴에서 칸 폭이 맞지 않는 기호는 같은 뜻의 다른 글자로 바뀌고, 알림에 바뀐 글자가 나옵니다. 실행 취소로 원래대로 돌립니다.</p>
+<p>선은 <strong>도구 &gt; 선 그리기</strong>(Ctrl+Alt+L)로 직접 긋습니다. 켜면 소스 편집기에서 방향키로 선을 긋고, Shift+방향키로 지우고, Esc로 끝냅니다.</p>
+<blockquote>
+<p><strong>팁:</strong> 편집기 글꼴에서 한글·괘선의 폭이 영문 칸과 맞지 않으면 맞춘 표도 화면에서 어긋나 보입니다. 이때 알림이 나오면 설정에서 편집기 글꼴을 D2Coding으로 바꿉니다.</p>
+</blockquote>
+<h2 id="관련-페이지">관련 페이지</h2>
+<ul>
+<li>처음부터 표를 넣어 보려면 <a href="02-first-document.html">첫 문서 만들기</a>를 봅니다.</li>
+<li>굵게·목록 같은 서식은 <a href="13-format.html">서식</a>을 봅니다.</li>
+<li>그림·링크·다이어그램은 <a href="16-insert.html">삽입</a>을 봅니다.</li>
+<li>표 문법은 <a href="52-markdown.html">마크다운 문법 요약</a>을 봅니다.</li>
+</ul>
+
+<p class="pn"><a href="14-editing.html">← 편집</a> &nbsp;·&nbsp; <a href="16-insert.html">그림·링크·기호·다이어그램·수식 →</a></p>
+</article>
+</div></main>
+<footer class="site"><div class="wrap">앱 안 설명서(F1)와 같은 내용입니다. 앱 버전에 따라 화면이 조금 다를 수 있습니다. 「부록: 단축키」 쪽은 앱 안에서만 볼 수 있습니다(현재 키맵 그대로 나옵니다). · <a href="../privacy.html">개인정보 처리방침</a> · <a href="../terms.html">이용약관</a></div></footer>
+</body>
+</html>

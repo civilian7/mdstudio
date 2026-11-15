@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>삽입 — MDStudio 사용 설명서</title>
-<meta name="description" content="MDStudio 사용 설명서: 삽입">
+<title>그림·링크·기호·다이어그램·수식 — MDStudio 사용 설명서</title>
+<meta name="description" content="MDStudio 사용 설명서: 그림·링크·기호·다이어그램·수식">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -25,8 +25,9 @@
 <li><a href="11-import.html">다른 형식 문서 열기</a></li>
 <li><a href="12-recovery.html">세션 복원·자동 저장·복구 사본</a></li>
 <li><a href="13-format.html">서식</a></li>
-<li><a href="14-editing.html">편집과 이동</a></li>
-<li><a href="16-insert.html" aria-current="page">삽입</a></li>
+<li><a href="14-editing.html">편집</a></li>
+<li><a href="15-tables.html">표</a></li>
+<li><a href="16-insert.html" aria-current="page">그림·링크·기호·다이어그램·수식</a></li>
 <li><a href="18-templates.html">템플릿과 스니펫</a></li>
 <li><a href="23-explorer.html">탐색기·찾기</a></li>
 <li><a href="30-export.html">내보내기</a></li>
@@ -41,76 +42,91 @@
 </ul>
 </nav>
 <article>
-<h1 id="삽입">삽입</h1>
-<h2 id="표">표</h2>
+<h1 id="그림링크기호다이어그램수식">그림·링크·기호·다이어그램·수식</h1>
+<p>그림, 링크, 특수 기호, 다이어그램, 수식을 문서에 넣습니다. 표는 <a href="15-tables.html">표</a>를 봅니다.</p>
+<h2 id="그림-넣기">그림 넣기</h2>
+<ol type="1">
+<li>문서를 저장합니다. 저장하지 않은 문서는 「문서를 먼저 저장해야 그림을 넣을 폴더가 정해집니다.」 알림이 나오고 그림을 넣을 수 없습니다.</li>
+<li><strong>서식 &gt; 그림</strong>을 클릭합니다. 「그림 넣기」 창이 열립니다.</li>
+<li>창 위쪽의 폴더 아이콘(「그림 파일 열기」)을 클릭하고 그림 파일을 선택합니다.</li>
+<li>「보여줄 텍스트」를 입력합니다. 비우면 파일 이름이 들어갑니다.</li>
+<li>**[확인]**을 클릭합니다.</li>
+</ol>
+<p>그림 파일은 문서 옆 <code>&lt;문서 이름&gt;.assets</code> 폴더에 <code>&lt;문서 이름&gt;_0001.png</code> 처럼 번호를 붙여 복사됩니다. 커서 자리에는 <code>![텍스트](보고서.assets/보고서_0001.png)</code> 가 들어갑니다.</p>
 <ul>
-<li><strong>서식 &gt; 표...</strong>: 격자에서 행×열을 선택합니다.</li>
-<li><strong>표 편집</strong>(Ctrl+Shift+T, 또는 표 안에서 Ctrl+Enter): 커서가 있는 표를 그리드에서 고칩니다. 첫 행이 머리글이고, 열 제목(A, B, …) 옆에 정렬(<code>:--</code>·<code>:-:</code>·<code>--:</code>)이 보입니다.</li>
+<li>번호는 폴더의 가장 큰 번호 다음이고, 기존 파일은 덮어쓰지 않습니다.</li>
+<li>그림 위에서 끌어 영역을 선택하고 자르기 아이콘을 클릭하면 자릅니다. 너비·높이를 입력해 크기도 바꿉니다. SVG 는 자르거나 크기를 바꿀 수 없습니다.</li>
+<li>커서가 문서 옆 그림 위에 있으면 같은 창에 그 그림이 열립니다.</li>
 </ul>
-<h3 id="표-편집-창">표 편집 창</h3>
-<table>
-<thead>
-<tr>
-<th>동작</th>
-<th>방법</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>셀 편집</td>
-<td>글자를 치거나(한글도 바로) F2 · 더블클릭. Enter = 확정 후 이동(도구 모음 <strong>Enter</strong> 에서 제자리·오른쪽 셀·아래 행), Tab = 오른쪽 셀, Esc = 셀 편집 취소, Shift+Enter = 셀 안 줄바꿈(<code>&lt;br&gt;</code>)</td>
-</tr>
-<tr>
-<td>행 추가·삭제</td>
-<td>도구 모음·오른쪽 클릭 메뉴, Alt+Insert(아래에 행 추가), Ctrl+Y(행 삭제). 머리글 행은 삭제할 수 없습니다</td>
-</tr>
-<tr>
-<td>열 추가·삭제</td>
-<td>도구 모음·오른쪽 클릭 메뉴, Alt+Shift+Insert(오른쪽에 열 추가), Ctrl+Shift+Y(열 삭제). 마지막 한 열은 남습니다</td>
-</tr>
-<tr>
-<td>행·열 옮기기</td>
-<td>Ctrl+Alt+↑/↓(행), Ctrl+Alt+←/→(열)</td>
-</tr>
-<tr>
-<td>정렬</td>
-<td>왼쪽·가운데·오른쪽 정렬·정렬 해제(선택한 열 모두)</td>
-</tr>
-<tr>
-<td>복사·붙여넣기</td>
-<td>Ctrl+C = 선택한 범위를 탭 구분 텍스트로(Excel 에 붙여넣기). Ctrl+V = Excel·TSV·CSV 범위를 선택한 셀부터 덮어쓰고 모자라면 행·열을 늘립니다</td>
-</tr>
-<tr>
-<td>내용 지우기</td>
-<td>Delete</td>
-</tr>
-<tr>
-<td>실행 취소</td>
-<td>Ctrl+Z / Ctrl+Shift+Z(창 안)</td>
-</tr>
-</tbody>
-</table>
+<h3 id="붙여넣기와-끌어-놓기">붙여넣기와 끌어 놓기</h3>
 <ul>
-<li>[확인]은 표를 한 번에 되씁니다(문서에서 Ctrl+Z 한 번). 고친 것이 없으면 문서를 건드리지 않습니다. 고친 뒤 Esc·[취소]는 버릴지 묻습니다.</li>
-<li>셀 안의 <code>|</code> 는 <code>\|</code> 로, 줄바꿈은 <code>&lt;br&gt;</code> 로 적습니다.</li>
-<li><strong>HTML 표로 바꾸기</strong>(왼쪽 아래)는 열 폭을 정할 수 있는 HTML 표로 바꿉니다(되돌아오지 않음).</li>
-<li>커서가 HTML 표(<code>&lt;table&gt;</code>) 안이면 같은 창이 HTML 표를 엽니다. 범위를 선택하고 <strong>셀 병합</strong>, <strong>병합 해제</strong>, 첫 줄 머리글, 커서 열의 폭을 고칠 수 있습니다. 병합된 셀에 덮인 자리는 고칠 수 없고, 병합이 있으면 행·열을 옮기거나 마크다운 표로 바꿀 수 없습니다. 셀에는 HTML 원문이 보이며 붙여넣은 텍스트는 이스케이프합니다.</li>
-<li>소스 편집기 문맥 메뉴: <strong>표 맞추기·표 압축</strong>, <strong>표를 탭 구분 텍스트로 복사</strong>.</li>
-<li>코드 블록 안 상자 그림(┌─┐)은 <strong>박스 표 맞추기</strong>(Ctrl+Shift+B)로 선을 다시 맞춥니다.</li>
+<li>클립보드에 그림만 있으면 Ctrl+V 로 같은 방식으로 들어갑니다. 텍스트가 함께 있으면(엑셀 셀 등) 텍스트가 붙습니다.</li>
+<li>파일 탐색기에서 그림 파일을 편집기로 끌어 놓아도 복사해 넣습니다. 여러 개면 한 줄에 하나씩 들어갑니다.</li>
+<li>한 번에 2,000장, 한 장 100MB, 합계 1GB 를 넘는 그림은 건너뛰고 「상한을 넘은 그림」 알림이 나옵니다.</li>
 </ul>
-<h2 id="그림">그림</h2>
+<h2 id="웹-그림-내려받기">웹 그림 내려받기</h2>
+<p><code>![](https://…)</code> 처럼 웹 주소로 건 그림을 문서 옆 폴더로 내려받고 링크를 상대 경로로 바꿉니다.</p>
+<ol type="1">
+<li>문서를 저장합니다.</li>
+<li><strong>도구 &gt; 웹 그림 다운로드</strong>를 클릭합니다.</li>
+<li>알림에 저장한 그림 수가 나옵니다. 실행 취소(Ctrl+Z) 한 번에 원래 주소로 돌아옵니다.</li>
+</ol>
 <ul>
-<li><strong>서식 &gt; 그림...</strong>: 그림 파일을 선택하면 <code>&lt;문서&gt;.assets/</code> 폴더로 복사하고 링크를 넣습니다. 커서가 그림 위면 대체 텍스트·주소·제목을 고칩니다. 저장하지 않은 문서에는 넣을 수 없습니다.</li>
-<li>클립보드에 그림만 있으면 Ctrl+V 로 같은 길로 들어갑니다.</li>
+<li>내려받지 못한 그림은 웹 주소 그대로 남습니다. 한 번에 100개, 한 장 20MB, 합계 200MB 를 넘는 그림은 건너뜁니다.</li>
+<li><strong>도구 &gt; 설정 &gt; 문서</strong>의 「붙여넣은 텍스트의 웹 그림을 문서 옆에 다운로드」를 켜면, 붙여넣은 텍스트 속 웹 그림을 자동으로 내려받습니다.</li>
 </ul>
-<h2 id="링크기호다이어그램">링크·기호·다이어그램</h2>
+<h2 id="링크-넣기">링크 넣기</h2>
+<ol type="1">
+<li>링크로 만들 텍스트를 선택합니다.</li>
+<li><strong>서식 &gt; 링크</strong>를 클릭합니다. 「링크 삽입」 창이 열립니다.</li>
+<li>「주소」에 <code>https://…</code> 또는 <code>문서.md#제목</code> 을 입력합니다. 「글자」와 「설명」은 필요하면 고칩니다.</li>
+<li>**[확인]**을 클릭합니다.</li>
+</ol>
+<p><code>[글자](주소 "설명")</code> 가 들어갑니다. 주소를 비우면 「주소를 적어 주세요.」가 나옵니다. 커서가 링크나 그림 위에 있으면 Ctrl+Enter 로도 그 링크·그림을 고치는 창이 열립니다.</p>
+<p>링크를 오른쪽 클릭하면 「링크 따라가기」·「링크 편집」·「주소 복사」·「링크 해제(텍스트만 남김)」가, 그림을 오른쪽 클릭하면 「그림 편집」·「그림 파일 열기」·「경로 복사」·「파일 탐색기에서 보기」가 나옵니다.</p>
+<h2 id="깨진-링크-찾기">깨진 링크 찾기</h2>
+<p>저장한 문서에서 가리키는 파일이나 그림이 문서 폴더에 없으면 깨진 링크입니다.</p>
 <ul>
-<li><strong>서식 &gt; 링크...</strong>: 커서의 <code>[텍스트](주소 "제목")</code> 을 세 입력란에서 고칩니다. 깨진 링크와 그림은 <strong>문제</strong> 창(MD057)에 나오고, 명령 팔레트(Ctrl+K)의 <strong>깨진 링크·그림 찾기</strong>로도 봅니다.</li>
-<li><strong>서식 &gt; 기호...</strong>(Ctrl+.): 기호 673자를 종류별로, 최근 쓴 것이 앞에 옵니다.</li>
-<li><strong>서식 &gt; 다이어그램</strong>: 순서도 예제가 든 <code>```mermaid</code> 코드 블록을 넣습니다. 다른 종류는 블록 첫 줄을 바꿉니다 — <code>sequenceDiagram</code>(시퀀스), <code>classDiagram</code>(클래스), <code>stateDiagram-v2</code>(상태). 실시간 미리보기에서는 그림만 보이고, 그림을 두 번 클릭하면 코드를 편집합니다.</li>
+<li>문제 창과 편집기 밑줄에 「링크한 파일을 찾을 수 없습니다.」가 나옵니다(<a href="03-layout.html">화면 구성</a>). 문제를 오른쪽 클릭해 「이 문제 수정」을 선택하면 「링크 해제(텍스트만 남김)」 또는 「그림 제거」를 선택할 수 있습니다.</li>
+<li>한꺼번에 보려면 명령 팔레트(Ctrl+K)에서 「깨진 링크·그림 찾기」를 실행합니다. 방향키로 이동하고 Enter 를 누르면 그 줄로 갑니다.</li>
+<li>웹 주소, <code>#제목</code> 링크, 드라이브·네트워크 경로, 코드 블록 안은 검사하지 않습니다.</li>
+</ul>
+<h2 id="기호-넣기">기호 넣기</h2>
+<ol type="1">
+<li><strong>서식 &gt; 기호</strong>(Ctrl+.)를 클릭합니다. 「기호 삽입」 창이 열립니다.</li>
+<li>왼쪽에서 「최근 쓴 것」·「전체」·종류를 선택하고, 격자에서 기호를 선택합니다.</li>
+<li>더블클릭하거나 Space 를 눌러 「삽입할 기호」 칸에 모읍니다.</li>
+<li>**[확인]**을 클릭합니다.</li>
+</ol>
+<p>모은 기호가 없으면 선택한 기호 하나를 넣습니다.</p>
+<h2 id="다이어그램-그리기">다이어그램 그리기</h2>
+<p><strong>서식 &gt; 다이어그램</strong>은 커서 자리에 순서도 예제가 든 코드 블록을 넣습니다. 예제를 고쳐 씁니다.</p>
+<pre class="markdown"><code>```mermaid
+flowchart TD
+    A[시작] --&gt; B[처리]
+    B --&gt; C[끝]
+```</code></pre>
+<ul>
+<li>코드 블록 언어가 <code>mermaid</code> 면 mermaid, <code>dot</code>·<code>graphviz</code> 면 Graphviz 로 그립니다.</li>
+<li>미리보기에서 다이어그램에 마우스를 올리면 「그림으로 복사」 아이콘이 나옵니다.</li>
+<li>실시간 미리보기에서는 그림을 더블클릭하면 코드를 편집하고, 커서가 블록을 나가면 다시 그림이 됩니다.</li>
+<li>그릴 수 없는 코드는 그림 대신 원문 그대로 보입니다.</li>
+</ul>
+<h2 id="수식-쓰기">수식 쓰기</h2>
+<p>수식을 넣는 메뉴는 없습니다. LaTeX 로 직접 입력합니다.</p>
+<ul>
+<li>문장 안: <code>$a^2+b^2=c^2$</code></li>
+<li>블록: <code>$$</code> 줄 사이에 쓰거나 <code>```math</code> 코드 블록에 씁니다.</li>
+<li><code>$</code> 바로 뒤나 닫는 <code>$</code> 바로 앞이 공백이거나 닫는 <code>$</code> 바로 뒤가 숫자면 수식이 아닙니다. <code>$5 그리고 $10</code> 같은 금액은 그대로 둡니다.</li>
+</ul>
+<h2 id="관련-페이지">관련 페이지</h2>
+<ul>
+<li>표 삽입과 편집은 <a href="15-tables.html">표</a>를 봅니다.</li>
+<li>마크다운 문법은 <a href="52-markdown.html">마크다운 문법 요약</a>을 봅니다.</li>
+<li>그림이 든 문서를 주고받는 방법은 <a href="31-textbundle.html">TextBundle·TextPack</a>을 봅니다.</li>
 </ul>
 
-<p class="pn"><a href="14-editing.html">← 편집과 이동</a> &nbsp;·&nbsp; <a href="18-templates.html">템플릿과 스니펫 →</a></p>
+<p class="pn"><a href="15-tables.html">← 표</a> &nbsp;·&nbsp; <a href="18-templates.html">템플릿과 스니펫 →</a></p>
 </article>
 </div></main>
 <footer class="site"><div class="wrap">앱 안 설명서(F1)와 같은 내용입니다. 앱 버전에 따라 화면이 조금 다를 수 있습니다. 「부록: 단축키」 쪽은 앱 안에서만 볼 수 있습니다(현재 키맵 그대로 나옵니다). · <a href="../privacy.html">개인정보 처리방침</a> · <a href="../terms.html">이용약관</a></div></footer>
