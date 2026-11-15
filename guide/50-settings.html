@@ -44,92 +44,402 @@
 <li><a href="50-settings.html" aria-current="page">설정</a></li>
 <li><a href="51-keymap.html">단축키 바꾸기</a></li>
 <li><a href="52-markdown.html">마크다운 문법 요약</a></li>
+<li><a href="53-context-menus.html">문맥 메뉴</a></li>
 </ul>
 </nav>
 <article>
 <h1 id="설정">설정</h1>
-<p><strong>도구 &gt; 설정...</strong>(Ctrl+Alt+S)은 <strong>[확인]을 클릭해야 반영되는</strong> 창입니다. 창이 열려 있는 동안 바꾼 값은 글꼴·편집기 모양처럼 화면에 바로 미리 보이지만, 파일에는 [확인]·Enter에서만 써집니다. [취소]·Esc·×는 연 때의 값으로 되돌립니다. 틀린 값은 빨간 글로 알리고, 그동안 [확인]은 창을 닫지 않습니다. 단, 다음은 클릭하는 즉시 실행되며 [취소]로 되돌릴 수 없습니다: AI 페이지에서 하는 일(제공자 추가·편집·삭제, API 키 저장·지우기, 연결 시험), MCP 토큰 새로 만들기, 파일 연결 [적용](이 묶음이 있는 판).</p>
+<p>설정 창에서 글꼴·저장·편집기·미리보기 같은 앱 동작을 바꿉니다. 이 페이지의 기본값 표는 처음 설치했을 때의 값입니다.</p>
+<h2 id="설정-창-열기">설정 창 열기</h2>
+<ol type="1">
+<li><strong>도구 &gt; 설정</strong>(Ctrl+Alt+S)을 클릭합니다. Ctrl+, 를 눌러도 됩니다.</li>
+<li>왼쪽 목록에서 페이지를 선택합니다. 처음에는 「일반」이, 다음부터는 마지막으로 본 페이지가 열립니다.</li>
+<li>값을 바꾸고 **[확인]**을 클릭합니다.</li>
+</ol>
+<ul>
+<li>페이지는 일반 · 문서 · 편집기 · 단축키 · 미리보기 · 구문 색 · AI · MCP · 시스템 · 터미널 순서입니다.</li>
+<li>창이 열린 동안 바꾼 값은 화면에 바로 보이고, 파일에는 **[확인]**이나 Enter 로만 저장됩니다.</li>
+<li>**[취소]**나 Esc 는 창을 열 때의 값으로 돌려놓습니다.</li>
+<li>틀린 값이 있으면 빨간 문구가 나오고 **[확인]**을 눌러도 창이 닫히지 않습니다.</li>
+<li>단축키 변경, API 키 저장, MCP 토큰 새로 만들기는 바로 적용되어 **[취소]**로 취소되지 않습니다.</li>
+<li>**[설정 파일 열기]**는 설정 파일 <code>config.toml</code> 을 엽니다.</li>
+</ul>
+<h2 id="기본값">기본값</h2>
+<h3 id="일반">일반</h3>
 <table>
 <thead>
 <tr>
-<th>페이지</th>
-<th>무엇</th>
+<th>항목</th>
+<th>설명</th>
+<th>기본값</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>일반</td>
-<td>사용자 정보(이름·소속·이메일 — 템플릿 토큰에 쓰임), 글꼴과 글꼴 크기, 시작</td>
+<td>「이름」·「소속」·「이메일」</td>
+<td>템플릿의 작성자·소속·이메일</td>
+<td>비어 있음</td>
 </tr>
 <tr>
-<td>문서</td>
-<td>저장(BOM, 줄 끝, 탭 폭, 자동 저장 간격, 외부에서 고쳤을 때), 그림(넣을 때 둘 폴더와 이름), 폴더(기본 문서 폴더, 최근 파일 개수), 파일 연결(Microsoft Store 판에는 없습니다 — 파일 형식을 이 프로그램으로 여는 연결은 Windows 가 맡습니다. Store 밖 배포판에서만: .md·.textpack·.txt·.json·.xml 을 이 프로그램으로 열기, .lumiplugin 을 두 번 클릭하면 <a href="42-plugins.html">플러그인 설치</a> 확인)</td>
+<td>「UI 글꼴」·「편집기 글꼴」</td>
+<td>메뉴·창 글꼴 / 편집기·코드 글꼴</td>
+<td>맑은 고딕 / D2Coding</td>
 </tr>
 <tr>
-<td>편집기</td>
-<td>표시(줄 번호, 접기 여백, 들여쓰기 안내선, 자동 줄 바꿈, 미니 도구 모음, 줄 간격·여백, 현재 줄 강조), 기능(린트, 실시간 미리보기), 자동 완성</td>
+<td>「UI 글꼴 크기」·「편집기 글꼴 크기」</td>
+<td></td>
+<td>13 / 13</td>
 </tr>
 <tr>
-<td>단축키</td>
-<td>모든 명령의 단축키 찾기·바꾸기(바로 저장, <a href="51-keymap.html">단축키 바꾸기</a>)</td>
+<td>「확대 상한」</td>
+<td>글꼴 크게의 한도</td>
+<td>「최대」</td>
 </tr>
 <tr>
-<td>미리보기</td>
-<td>미리보기 폭, 문서 속성 표시, 표 도구·스크롤·줄 바꿈, 편집기와 맞춰 스크롤</td>
+<td>「확대 비율 기억」</td>
+<td></td>
+<td>켬</td>
+</tr>
+<tr>
+<td>「창 위치와 크기 기억」</td>
+<td></td>
+<td>켬</td>
+</tr>
+<tr>
+<td>「문서를 미리보기로 열기」</td>
+<td>연 문서를 미리보기만 보기로</td>
+<td>끔</td>
+</tr>
+<tr>
+<td>「시작할 때 홈 탭 열기」</td>
+<td></td>
+<td>켬</td>
+</tr>
+</tbody>
+</table>
+<h3 id="문서">문서</h3>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>설명</th>
+<th>기본값</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>「저장할 때 BOM」·「저장할 때 줄 끝」</td>
+<td>새 문서의 줄 끝은 CRLF</td>
+<td>「연 파일을 따름」</td>
+</tr>
+<tr>
+<td>「탭 폭」</td>
+<td>1~16, 새로 여는 탭부터</td>
+<td>4</td>
+</tr>
+<tr>
+<td>「자동 저장 간격(초)」</td>
+<td>0~3600, 0 은 끔, 저장한 적 있는 문서만</td>
+<td>0(끔)</td>
+</tr>
+<tr>
+<td>「외부에서 수정했을 때」</td>
+<td>편집 중인 문서를 다른 프로그램이 고쳤을 때</td>
+<td>「묻기」</td>
+</tr>
+<tr>
+<td>「붙여넣은 텍스트의 웹 그림을 문서 옆에 다운로드」</td>
+<td></td>
+<td>끔</td>
+</tr>
+<tr>
+<td>「내보내기 수식」</td>
+<td>HTML·PDF 로 내보낼 때 수식 모양</td>
+<td>「그림(조판)」</td>
+</tr>
+<tr>
+<td>「기본 문서 폴더」</td>
+<td>비우면 지난번 폴더</td>
+<td>비어 있음</td>
+</tr>
+<tr>
+<td>「최근 파일 개수」</td>
+<td>1~8</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<h3 id="편집기">편집기</h3>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>설명</th>
+<th>기본값</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>「줄 번호 표시」·「접기 여백 표시」·「들여쓰기 안내선 표시」</td>
+<td></td>
+<td>켬</td>
+</tr>
+<tr>
+<td>「자동 줄 바꿈」·「미니 도구 모음 표시」·「커서 줄 강조」</td>
+<td></td>
+<td>켬</td>
+</tr>
+<tr>
+<td>「줄 간격」</td>
+<td>글자 크기의 배수, 1~3</td>
+<td>1.5</td>
+</tr>
+<tr>
+<td>「오른쪽 안내선」</td>
+<td>열 수, 0 은 없음</td>
+<td>0</td>
+</tr>
+<tr>
+<td>「찾은 텍스트 색」·「현재 일치 색」</td>
+<td></td>
+<td>「테마 기본」</td>
+</tr>
+<tr>
+<td>「박스 트리 선 모양」</td>
+<td></td>
+<td>「괘선(├─)」</td>
+</tr>
+<tr>
+<td>「마크다운 린트(편집기 밑줄·문제 창)」</td>
+<td><a href="22-problems.html">문제</a> 표시</td>
+<td>켬</td>
+</tr>
+<tr>
+<td>「실시간 미리보기(편집기만 보기)」</td>
+<td></td>
+<td>끔</td>
+</tr>
+<tr>
+<td>「입력하는 동안 자동으로 열기(끄면 Ctrl+Space 로만)」</td>
+<td>자동 완성 목록</td>
+<td>켬</td>
+</tr>
+<tr>
+<td>자동 완성 종류 다섯 가지</td>
+<td>언어 이름·문법 스니펫·이모지·링크 대상·스니펫</td>
+<td>모두 켬</td>
+</tr>
+</tbody>
+</table>
+<h3 id="미리보기">미리보기</h3>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>설명</th>
+<th>기본값</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>「본문 폭」</td>
+<td>최대 폭(px), 0 은 창 너비에 맞춤</td>
+<td>0</td>
+</tr>
+<tr>
+<td>「문서 위 속성 표시」</td>
+<td>문서 속성(프런트매터)을 위에 표시</td>
+<td>켬</td>
+</tr>
+<tr>
+<td>「표 도구(정렬·복사·편집)」</td>
+<td></td>
+<td>켬</td>
+</tr>
+<tr>
+<td>「표 열 최소 폭 유지(160px)」</td>
+<td></td>
+<td>끔</td>
+</tr>
+<tr>
+<td>「표 셀 줄 바꿈(끄면 한 줄, 늘 가로로 스크롤)」</td>
+<td></td>
+<td>켬</td>
+</tr>
+<tr>
+<td>「임베드 ![[문서]] 펼치기」</td>
+<td></td>
+<td>켬</td>
+</tr>
+<tr>
+<td>「미리보기를 스크롤하면 편집기도 따라 스크롤」</td>
+<td></td>
+<td>켬</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ai--mcp--시스템--터미널">AI · MCP · 시스템 · 터미널</h3>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>설명</th>
+<th>기본값</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>「최대 출력 토큰」</td>
+<td>AI, 256~64000</td>
+<td>4096</td>
+</tr>
+<tr>
+<td>「답이 끝날 때마다 채팅 기록에 저장」</td>
+<td>AI</td>
+<td>켬</td>
+</tr>
+<tr>
+<td>「보존 기간(일, 0 = 계속)」</td>
+<td>AI 채팅 기록</td>
+<td>30</td>
+</tr>
+<tr>
+<td>「MCP 서버 켜기」·「쓰기 도구 허용」</td>
+<td>MCP</td>
+<td>끔</td>
+</tr>
+<tr>
+<td>「AI 앱에 사용자 정보(이름·소속·이메일) 제공」</td>
+<td>MCP</td>
+<td>끔</td>
+</tr>
+<tr>
+<td>「포트」</td>
+<td>MCP, 1024~65535</td>
+<td>7710</td>
+</tr>
+<tr>
+<td>「프록시」</td>
+<td>시스템</td>
+<td>「시스템 설정 따르기(권장)」</td>
+</tr>
+<tr>
+<td>「Pandoc 사용」</td>
+<td>시스템</td>
+<td>끔</td>
+</tr>
+<tr>
+<td>「이름 찾기 색인」</td>
+<td>시스템</td>
+<td>「폴더 직접 검색」</td>
+</tr>
+<tr>
+<td>「진단 로그 남기기」</td>
+<td>시스템</td>
+<td>켬</td>
+</tr>
+<tr>
+<td>「로그 수준」·「로그 보관 일수」</td>
+<td>시스템</td>
+<td>info / 14</td>
+</tr>
+<tr>
+<td>「크래시 증거(미니덤프)」</td>
+<td>시스템</td>
+<td>「남기고 다음 시작 때 묻기」</td>
+</tr>
+<tr>
+<td>「셸」</td>
+<td>터미널</td>
+<td>「자동」</td>
+</tr>
+<tr>
+<td>「스크롤백 줄 수」</td>
+<td>터미널</td>
+<td>5000</td>
+</tr>
+<tr>
+<td>「현재 문서 경로를 환경 변수로 전달」</td>
+<td>터미널</td>
+<td>끔</td>
+</tr>
+</tbody>
+</table>
+<h3 id="설정-창-밖">설정 창 밖</h3>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>바꾸는 곳</th>
+<th>기본값</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>테마</td>
+<td>제목 표시줄의 「테마 전환」 버튼</td>
+<td>다크</td>
+</tr>
+<tr>
+<td>보기 형태</td>
+<td><strong>보기 &gt; 보기 형태</strong></td>
+<td>편집기 + 미리보기</td>
 </tr>
 <tr>
 <td>구문 색</td>
-<td>편집기·코드 블록의 구문 색</td>
-</tr>
-<tr>
-<td>AI</td>
-<td>제공자·주소·모델·최대 토큰, API 키(키 저장소)</td>
-</tr>
-<tr>
-<td>MCP</td>
-<td>서버 켜기·포트·쓰기 도구 허용</td>
-</tr>
-<tr>
-<td>시스템</td>
-<td>프록시, 외부 도구(Pandoc 사용·경로), 이름 찾기 색인, 진단(로그, 크래시 덤프)</td>
-</tr>
-<tr>
-<td>터미널</td>
-<td>셸(목록에서 선택), 글꼴, 줄 수(<a href="44-terminal.html">터미널</a>)</td>
+<td><strong>도구 &gt; 설정 &gt; 구문 색</strong></td>
+<td>비어 있음(테마 색)</td>
 </tr>
 </tbody>
 </table>
-<p>나머지 값은 **[설정 파일 열기]**로 <code>config.toml</code> 을 직접 고칩니다. 단축키 저장도 [취소]로 되돌릴 수 없습니다.</p>
 <h2 id="설정-파일-위치">설정 파일 위치</h2>
+<p>설정은 설정 폴더의 <code>config.toml</code>, 바꾼 단축키는 <code>keymap.toml</code> 에 저장됩니다. 폴더 경로는 <strong>도구 &gt; 설정 &gt; 문서</strong>의 「설정 폴더」에 나오고, **[폴더 열기]**로 엽니다.</p>
+<ul>
+<li>같은 줄의 버튼으로 포터블(프로그램 옆 <code>config</code> 폴더)과 설치형(사용자별 설정 폴더)을 바꿉니다. 바뀐 자리는 다음 시작부터 씁니다.</li>
+<li>환경 변수 <code>MDSTUDIO_CONFIG_DIR</code> 에 폴더를 지정하면 그 폴더를 설정 폴더로 씁니다.</li>
+</ul>
+<h2 id="명령줄-시작-옵션">명령줄 시작 옵션</h2>
+<p><code>MDStudio.exe [옵션] [파일...]</code> 꼴로 실행합니다. 옵션 앞에는 <code>--</code>·<code>-</code>·<code>/</code> 를 붙일 수 있습니다.</p>
 <table>
 <thead>
 <tr>
-<th>파일</th>
-<th>무엇</th>
+<th>옵션</th>
+<th>동작</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>config.toml</code></td>
-<td>설정</td>
+<td>파일 경로</td>
+<td>그 문서를 엽니다. 여러 개를 줄 수 있습니다</td>
 </tr>
 <tr>
-<td><code>keymap.toml</code></td>
-<td>바꾼 단축키</td>
+<td><code>--clean</code></td>
+<td>지난 탭과 복구 사본을 다시 열지 않고 시작합니다</td>
 </tr>
 <tr>
-<td><code>templates/</code>·<code>snippets/</code></td>
-<td>내 템플릿·스니펫(<code>.hidden</code> = 숨긴 기본 템플릿 목록)</td>
+<td><code>--size 1280x800</code></td>
+<td>창 크기(가로 x 세로, 각 320~8192)</td>
 </tr>
 <tr>
-<td><code>plugins/</code></td>
-<td>플러그인</td>
+<td><code>--pos X,Y</code></td>
+<td>창 위치. 음수도 됩니다</td>
+</tr>
+<tr>
+<td><code>--monitor N</code></td>
+<td>창을 둘 모니터 번호(1~16). <code>--pos</code> 가 없으면 그 모니터 가운데</td>
 </tr>
 </tbody>
 </table>
-<p>윈도우에서는 <code>%APPDATA%\MDStudio</code> 입니다.</p>
 <ul>
-<li><strong>한영 변환</strong>: 자판 상태를 잘못 두고 친 글을 바꿉니다. 커서 바로 앞 단어(또는 선택한 텍스트)에서 <strong>도구 &gt; 한영 변환</strong>(Ctrl+Alt+H)을 누르면 <code>gksrmf</code> 는 <code>한글</code> 로, <code>ㅅ뮤ㅣㄷ</code> 는 <code>table</code> 로 바뀝니다. 자동으로 바꾸지는 않습니다. Ctrl+Z 로 되돌립니다.</li>
+<li><code>--size=1280x800</code> 처럼 <code>=</code> 로 써도 됩니다. 값이 틀리면 그 옵션만 무시합니다.</li>
+<li>MDStudio 가 이미 실행 중이면 파일을 실행 중인 창에 넘깁니다.</li>
+</ul>
+<h2 id="관련-페이지">관련 페이지</h2>
+<ul>
+<li><a href="12-recovery.html">세션 복원·자동 저장·복구 사본</a></li>
+<li><a href="20-preview.html">미리보기와 보기 형태</a></li>
+<li><a href="51-keymap.html">단축키 바꾸기</a></li>
+<li><a href="44-terminal.html">터미널</a></li>
 </ul>
 
 <p class="pn"><a href="44-terminal.html">← 터미널</a> &nbsp;·&nbsp; <a href="51-keymap.html">단축키 바꾸기 →</a></p>
