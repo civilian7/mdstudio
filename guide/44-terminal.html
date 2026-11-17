@@ -39,7 +39,8 @@
 <li><a href="31-textbundle.html">TextBundle·TextPack</a></li>
 <li><a href="40-ai.html">AI</a></li>
 <li><a href="41-mcp.html">AI 에이전트 연결(MCP)</a></li>
-<li><a href="42-plugins.html">플러그인</a></li>
+<li><a href="42-plugins.html">플러그인 사용하기</a></li>
+<li><a href="43-plugin-dev.html">플러그인 만들기</a></li>
 <li><a href="44-terminal.html" aria-current="page">터미널</a></li>
 <li><a href="50-settings.html">설정</a></li>
 <li><a href="51-keymap.html">단축키 바꾸기</a></li>
@@ -49,15 +50,23 @@
 </nav>
 <article>
 <h1 id="터미널">터미널</h1>
-<p>아래 도구 창의 <strong>터미널</strong> 탭에서 셸(PowerShell·cmd·bash …)을 바로 씁니다. SQLStudio 와 같은 내장 터미널입니다. 도구 창이라 다른 도크로 옮기거나 다른 탭과 묶을 수 있습니다.</p>
-<ul>
-<li>열기: <strong>보기 &gt; 도구 창 &gt; 터미널</strong> (<code>Ctrl+` </code>), 새 터미널은 <strong>보기 &gt; 도구 창 &gt; 새 터미널</strong> (<code>Ctrl+Shift+` </code>). 처음 열면 터미널 하나가 자동으로 뜹니다.</li>
-<li>시작 폴더는 <strong>현재 문서가 있는 폴더</strong>입니다. 저장하지 않은 문서면 탐색기의 첫 폴더, 그것도 없으면 홈 폴더입니다.</li>
-<li>여러 터미널: 도구 모음의 <strong>+</strong> 가 새 터미널, 옆 <strong>▾</strong> 가 셸 선택입니다. 칩의 <strong>×</strong> 로 닫습니다(돌고 있는 셸과 그 자식 프로세스도 끝납니다).</li>
-<li>셸이 끝나면 아래 줄에 <code>종료됨 · 코드 N</code>과 <strong>다시 시작</strong>이 보입니다.</li>
-</ul>
+<p>아래 도구 창의 <strong>터미널</strong> 탭에서 셸(PowerShell, cmd, Git Bash 등)을 바로 실행합니다. 다른 자리로 옮기거나 다른 탭과 묶을 수 있습니다.</p>
+<h2 id="열기와-닫기">열기와 닫기</h2>
+<ol type="1">
+<li><strong>보기 &gt; 도구 창 &gt; 터미널</strong>(Ctrl+`)을 클릭합니다.</li>
+<li>처음 열면 터미널이 하나 자동으로 뜹니다.</li>
+<li>Ctrl+`를 다시 누르면 닫힙니다. 초점은 직전 자리(없으면 편집기)로 돌아갑니다.</li>
+</ol>
+<h2 id="새-터미널과-셸">새 터미널과 셸</h2>
+<ol type="1">
+<li><strong>보기 &gt; 도구 창 &gt; 새 터미널</strong>(Ctrl+Shift+`)을 클릭합니다.</li>
+<li>도구 모음의 <strong>+</strong> 버튼은 설정한 셸로 새 터미널을 엽니다.</li>
+<li><strong>▾</strong> 버튼을 누르면 「셸 선택」 목록이 나오고, 거기서 다른 셸을 고릅니다.</li>
+<li>터미널 이름 옆의 <strong>×</strong>(「닫기」)를 누르면 그 터미널이 닫힙니다. 돌고 있는 셸과 그 자식 프로세스도 함께 끝납니다.</li>
+<li>셸이 끝나면 아래 줄에 종료 알림과 「다시 시작」 버튼이 나옵니다. 같은 설정으로 다시 시작합니다.</li>
+</ol>
 <h2 id="키">키</h2>
-<p>터미널에 초점이 있으면 <strong>키는 모두 셸로 갑니다</strong>(<code>Ctrl+C</code> 중단, <code>Ctrl+D</code>, <code>Ctrl+Z</code>, <code>Tab</code>, <code>Esc</code>, <code>Alt+숫자</code> …). 앱 단축키는 가려지고, 아래 키만 앱으로 통과합니다.</p>
+<p>터미널에 초점이 있으면 키는 모두 셸로 갑니다. Ctrl+C 중단, Ctrl+D, Ctrl+Z, Tab, Esc, Alt+숫자도 셸이 받습니다. 앱으로 넘어오는 키는 아래뿐입니다.</p>
 <table>
 <thead>
 <tr>
@@ -67,43 +76,56 @@
 </thead>
 <tbody>
 <tr>
-<td><code>F1</code></td>
+<td>F1</td>
 <td>도움말</td>
 </tr>
 <tr>
-<td><code>Ctrl+Tab</code> / <code>Ctrl+Shift+Tab</code></td>
+<td>Ctrl+Tab, Ctrl+Shift+Tab</td>
 <td>문서 탭 이동</td>
 </tr>
 <tr>
-<td><code>Ctrl+F4</code> / <code>Alt+F4</code></td>
+<td>Ctrl+F4, Alt+F4</td>
 <td>문서·창 닫기</td>
 </tr>
 <tr>
-<td><code>Ctrl+` </code></td>
-<td>터미널 열기/닫기</td>
+<td>Ctrl+`</td>
+<td>터미널 열기·닫기</td>
 </tr>
 <tr>
-<td><code>Ctrl+Shift+` </code></td>
+<td>Ctrl+Shift+`</td>
 <td>새 터미널</td>
 </tr>
 <tr>
-<td><code>Ctrl+Shift+F</code></td>
-<td>터미널 안 찾기(터미널 밖에서는 파일 찾기)</td>
+<td>Ctrl+Shift+F</td>
+<td>터미널 안에서 찾기. 터미널 밖에서는 <a href="17-find.html">파일에서 찾기</a></td>
 </tr>
 </tbody>
 </table>
-<p>터미널 안 전용 키: <code>Ctrl+Shift+C</code> 복사 · <code>Ctrl+Shift+V</code> 붙여넣기 · <code>Ctrl+Shift+A</code> 모두 선택(<code>Ctrl+Insert</code>/<code>Shift+Insert</code>도 됩니다) · <code>Shift+PageUp</code>/<code>PageDown</code> 스크롤백(전체 화면 프로그램 안에서는 프로그램에게 갑니다).</p>
+<p>터미널 안에서 쓰는 키는 Ctrl+Shift+C 복사, Ctrl+Shift+V 붙여넣기, Ctrl+Shift+A 모두 선택입니다. Ctrl+Insert와 Shift+Insert도 같습니다. Shift+PageUp·Shift+PageDown은 스크롤백을, Shift+Home·Shift+End는 맨 위·맨 아래로 옮깁니다. 전체 화면 프로그램에서는 그 프로그램이 받습니다.</p>
 <blockquote>
-<p><code>Ctrl+C</code>는 복사가 아니라 <strong>중단</strong>입니다. 복사는 <code>Ctrl+Shift+C</code>.</p>
+<p><strong>참고:</strong> Ctrl+C는 복사가 아니라 중단입니다. 복사는 Ctrl+Shift+C입니다.</p>
 </blockquote>
 <h2 id="찾기">찾기</h2>
-<p><code>Ctrl+Shift+F</code>로 찾기 줄을 엽니다(선택한 텍스트가 있으면 미리 채움). 스크롤백까지 전체에서 <strong>글자 그대로</strong> 찾아 강조하고, <code>Enter</code>/<code>F3</code> 다음, <code>Shift+Enter</code>/<code>Shift+F3</code> 이전, <code>Aa</code> 대소문자 구분, <code>Esc</code> 닫기(초점은 터미널로)입니다. 찾기 줄에 있는 동안 키는 셸로 가지 않습니다.</p>
+<ol type="1">
+<li>터미널에서 Ctrl+Shift+F를 누릅니다. 선택한 글이 있으면 검색어로 들어갑니다.</li>
+<li>검색어를 입력합니다. 스크롤백 전체에서 글자 그대로 찾아 강조합니다.</li>
+<li>Enter 또는 F3은 다음 일치, Shift+Enter 또는 Shift+F3은 이전 일치로 갑니다.</li>
+<li><strong>Aa</strong> 버튼(「대소문자 구분」)을 누르면 대소문자를 구분합니다.</li>
+<li>Esc를 누르면 찾기 줄이 닫히고 초점이 터미널로 돌아갑니다.</li>
+</ol>
+<p>찾기 줄에 초점이 있는 동안 입력한 키는 셸로 가지 않습니다.</p>
 <h2 id="마우스">마우스</h2>
-<p>끌면 텍스트를 선택합니다(더블 클릭 = 단어, 트리플 = 줄, <code>Alt</code>+끌기 = 사각형). 휠은 스크롤백을 움직이고, 오른쪽 스크롤 막대를 끌거나 막대 바깥을 클릭해 한 화면씩 움직입니다. vim·less 같은 프로그램이 마우스를 켜면 클릭·휠이 프로그램으로 가며, <code>Shift</code>를 누르면 다시 텍스트 선택입니다. 가운데 버튼은 붙여넣기, 오른쪽 클릭 메뉴에 복사·붙여넣기·모두 선택·스크롤백 지우기가 있습니다. 링크는 열지 않습니다.</p>
+<ul>
+<li>끌면 텍스트를 고릅니다. 더블클릭은 단어, 세 번 클릭은 줄, Alt를 누른 채 끌면 사각형입니다.</li>
+<li>휠은 스크롤백을 움직입니다. 오른쪽 스크롤 막대를 끌거나 막대 바깥을 클릭하면 한 화면씩 움직입니다.</li>
+<li>vim, less처럼 마우스를 쓰는 프로그램 안에서는 클릭과 휠이 그 프로그램으로 갑니다. Shift를 누른 채 쓰면 다시 텍스트를 선택합니다.</li>
+<li>가운데 버튼은 붙여넣기입니다. 오른쪽 클릭 메뉴에는 「복사」, 「붙여넣기」, 「모두 선택」, 「스크롤백 지우기」가 있습니다.</li>
+</ul>
 <h2 id="붙여넣기">붙여넣기</h2>
-<p>여러 줄은 줄마다 실행될 수 있어 먼저 묻습니다(설정에서 끌 수 있음). 줄 끝은 CR 하나로 바꾸고 ESC 등 제어 문자는 뺍니다.</p>
+<p>여러 줄을 붙여넣으면 줄마다 실행될 수 있으므로 「여러 줄을 붙여넣을까요?」 창이 먼저 뜹니다. **[붙여넣기]**를 누르면 붙여넣습니다. 줄 끝은 CR 하나로 바뀌고, 탭 외의 제어 문자(ESC 등)는 빠집니다.</p>
 <h2 id="설정">설정</h2>
-<p><strong>도구 &gt; 설정 &gt; 터미널</strong> (<code>[terminal]</code>)</p>
+<p><strong>도구 &gt; 설정 &gt; 터미널</strong>에서 바꿉니다. 설정 파일에서는 <code>[terminal]</code> 항목입니다. 바꾼 값은 「새 터미널부터 적용됩니다.」</p>
+<p>기본값은 <a href="50-settings.html">설정</a>의 기본값 표에서 봅니다.</p>
 <table>
 <thead>
 <tr>
@@ -114,43 +136,50 @@
 <tbody>
 <tr>
 <td>셸</td>
-<td><code>auto</code>(PowerShell 7 → Windows PowerShell → cmd), <code>pwsh</code>·<code>powershell</code>·<code>cmd</code>·<code>gitbash</code>, 또는 실행 파일 경로</td>
+<td><code>auto</code>(PowerShell 7, Windows PowerShell, cmd 순서로 찾음), <code>pwsh</code>, <code>powershell</code>, <code>cmd</code>, <code>gitbash</code>, 또는 실행 파일 경로</td>
 </tr>
 <tr>
 <td>스크롤백 줄 수</td>
-<td>500~100,000 (기본 5,000)</td>
+<td>500~100,000 줄</td>
 </tr>
 <tr>
 <td>글꼴 크기</td>
-<td>8~40, 0 = 편집기 글꼴 크기(기본, 확대·축소를 따름)</td>
+<td>8~40. 0이면 편집기 글꼴 크기(확대·축소를 따름)</td>
 </tr>
 <tr>
 <td>커서 깜빡임</td>
-<td>기본 켬</td>
+<td>커서를 깜빡일지 정합니다</td>
 </tr>
 <tr>
 <td>여러 줄 붙여넣기 확인</td>
-<td>기본 켬</td>
+<td>끄면 여러 줄을 바로 붙여넣습니다</td>
 </tr>
 <tr>
 <td>현재 문서가 있는 폴더에서 시작</td>
-<td>기본 켬. 끄면 홈 폴더</td>
+<td>끄면 홈 폴더에서 시작합니다</td>
 </tr>
 <tr>
 <td>현재 문서 경로를 환경 변수로 전달</td>
-<td>기본 끔. 켜면 <code>LUMI_DOC</code> 에 현재 문서 경로(저장한 문서만)를 넣습니다. 다른 정보·비밀은 전달하지 않습니다.</td>
+<td>켜면 <code>LUMI_DOC</code>에 저장한 문서의 경로를 넣습니다. 다른 정보나 비밀은 넘기지 않습니다</td>
 </tr>
 </tbody>
 </table>
-<p>새 터미널부터 적용됩니다. 글꼴은 편집기 글꼴(고정폭)을 따릅니다.</p>
+<p>저장하지 않은 문서면 탐색기의 첫 폴더, 그것도 없으면 홈 폴더입니다.</p>
 <h2 id="알아-둘-것">알아 둘 것</h2>
 <ul>
-<li>입력은 <strong>사용자가 낸 것만</strong> 셸로 갑니다. AI·플러그인·MCP가 터미널에 텍스트를 보내는 길은 없습니다.</li>
-<li>Windows 10 1809(빌드 17763) 이상이 필요합니다(ConPTY).</li>
-<li>한글 조합은 입력기 경로로 들어오며 조합 중 글은 밑줄로 보입니다. PowerShell 5.1(<code>powershell.exe</code>)은 이모지를 못 내보냅니다 — PowerShell 7(<code>pwsh</code>)을 쓰세요.</li>
+<li>셸에 글을 보내는 것은 사용자 입력뿐입니다. AI, 플러그인, MCP는 터미널에 글을 보낼 수 없습니다.</li>
+<li>Windows 10 1809 이상이 필요합니다.</li>
+<li>한글 조합 중인 글은 밑줄로 보입니다.</li>
+<li>PowerShell 5.1(<code>powershell.exe</code>)은 이모지를 내보내지 못합니다. PowerShell 7(<code>pwsh</code>)을 쓰세요.</li>
+</ul>
+<h2 id="관련-페이지">관련 페이지</h2>
+<ul>
+<li><a href="24-tabs-windows.html">탭·탭 그룹·도구 창</a></li>
+<li><a href="17-find.html">찾기와 바꾸기</a></li>
+<li><a href="50-settings.html">설정</a></li>
 </ul>
 
-<p class="pn"><a href="42-plugins.html">← 플러그인</a> &nbsp;·&nbsp; <a href="50-settings.html">설정 →</a></p>
+<p class="pn"><a href="43-plugin-dev.html">← 플러그인 만들기</a> &nbsp;·&nbsp; <a href="50-settings.html">설정 →</a></p>
 </article>
 </div></main>
 <footer class="site"><div class="wrap">앱 안 설명서(F1)와 같은 내용입니다. 앱 버전에 따라 화면이 조금 다를 수 있습니다. 「부록: 단축키」 쪽은 앱 안에서만 볼 수 있습니다(현재 키맵 그대로 나옵니다). · <a href="../privacy.html">개인정보 처리방침</a> · <a href="../terms.html">이용약관</a></div></footer>
