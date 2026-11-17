@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>문제 해결과 자주 묻는 질문 — MDStudio 사용 설명서</title>
+<meta name="description" content="MDStudio 사용 설명서: 문제 해결과 자주 묻는 질문">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="../">MDStudio</a>
+<a href="../#features">기능</a>
+<a href="01-start.html" aria-current="page">사용 설명서</a>
+<a href="../privacy.html">처리방침</a>
+<a href="../terms.html">이용약관</a>
+</div></header>
+<main><div class="wrap guide">
+<nav class="toc" aria-label="설명서 목차">
+<ul>
+<li><a href="01-start.html">시작하기</a></li>
+<li><a href="02-first-document.html">첫 문서 만들기</a></li>
+<li><a href="03-layout.html">화면 구성</a></li>
+<li><a href="10-documents.html">문서 열기와 저장</a></li>
+<li><a href="11-import.html">다른 형식 문서 열기</a></li>
+<li><a href="12-recovery.html">세션 복원·자동 저장·복구 사본</a></li>
+<li><a href="13-format.html">서식</a></li>
+<li><a href="14-editing.html">편집</a></li>
+<li><a href="15-tables.html">표</a></li>
+<li><a href="16-insert.html">그림·링크·기호·다이어그램·수식</a></li>
+<li><a href="17-find.html">찾기와 바꾸기</a></li>
+<li><a href="18-templates.html">템플릿과 스니펫</a></li>
+<li><a href="20-preview.html">미리보기와 보기 형태</a></li>
+<li><a href="21-outline.html">목차</a></li>
+<li><a href="22-problems.html">문제와 자동 수정</a></li>
+<li><a href="23-explorer.html">탐색기</a></li>
+<li><a href="24-tabs-windows.html">탭·탭 그룹·도구 창</a></li>
+<li><a href="30-export.html">내보내기</a></li>
+<li><a href="31-textbundle.html">TextBundle·TextPack</a></li>
+<li><a href="40-ai.html">AI</a></li>
+<li><a href="41-mcp.html">AI 에이전트 연결(MCP)</a></li>
+<li><a href="42-plugins.html">플러그인 사용하기</a></li>
+<li><a href="43-plugin-dev.html">플러그인 만들기</a></li>
+<li><a href="44-terminal.html">터미널</a></li>
+<li><a href="50-settings.html">설정</a></li>
+<li><a href="51-keymap.html">단축키 바꾸기</a></li>
+<li><a href="52-markdown.html">마크다운 문법 요약</a></li>
+<li><a href="53-context-menus.html">문맥 메뉴</a></li>
+<li><a href="60-troubleshooting.html" aria-current="page">문제 해결과 자주 묻는 질문</a></li>
+<li><a href="61-data.html">내 데이터와 보안</a></li>
+<li><a href="62-glossary.html">용어집</a></li>
+</ul>
+</nav>
+<article>
+<h1 id="문제-해결과-자주-묻는-질문">문제 해결과 자주 묻는 질문</h1>
+<p>자주 겪는 문제를 증상별로 모았습니다. 알림에 나온 문구로 찾습니다.</p>
+<h2 id="문서가-깨져-보이거나-열리지-않을-때">문서가 깨져 보이거나 열리지 않을 때</h2>
+<p><strong>글자가 깨져 보입니다.</strong> 인코딩은 BOM, UTF-8, CP949 차례로 알아봅니다. 그 밖의 인코딩으로 쓴 문서는 글자가 깨지거나 읽기 전용으로 열릴 수 있습니다. 원래 프로그램에서 UTF-8 로 저장한 뒤 다시 엽니다.</p>
+<p><strong>읽기 전용으로 열려 고칠 수 없습니다.</strong></p>
+<ul>
+<li>「읽을 수 없는 바이트가 있어 읽기 전용으로 열었습니다」가 나왔으면 손상된 문서입니다. <strong>파일 &gt; 다른 이름으로 저장...</strong>(Ctrl+Shift+S)으로 사본을 만들어 고칩니다.</li>
+<li>그 알림이 없었으면 <strong>편집 &gt; 읽기 전용</strong>이 켜져 있습니다. 상태 표시줄의 자물쇠 아이콘을 클릭해 끕니다.</li>
+</ul>
+<p><strong>문서가 열리지 않습니다.</strong></p>
+<ul>
+<li>「파일이 너무 커서 열 수 없습니다」: 열 수 있는 크기를 넘은 파일입니다.</li>
+<li>「응답이 없어 열기를 중단했습니다」: 파일을 읽는 데 너무 오래 걸렸습니다. 잠시 뒤 다시 엽니다.</li>
+<li>「파일을 찾을 수 없어 최근 목록에서 뺐습니다」: 파일이 옮겨졌거나 지워졌습니다. <strong>파일 &gt; 열기...</strong>(Ctrl+O)로 새 위치에서 엽니다.</li>
+</ul>
+<h2 id="다른-형식-문서를-가져오지-못할-때">다른 형식 문서를 가져오지 못할 때</h2>
+<ul>
+<li>「이 PDF에는 텍스트 레이어가 없습니다」: 스캔한 PDF 입니다. 글자 인식(OCR)을 거친 PDF 나 원본 문서를 엽니다.</li>
+<li>「암호가 맞지 않습니다」: 암호를 다시 입력합니다. 암호가 걸린 Word·엑셀 문서는 원래 프로그램에서 암호를 푼 뒤 엽니다.</li>
+<li>「배포용 문서는 본문이 암호화되어 있어 가져올 수 없습니다」: 아래한글 배포용 문서는 열지 못합니다.</li>
+<li>「이 형식은 Pandoc으로 가져옵니다」: ODT·EPUB 같은 문서는 「Pandoc 사용」을 켜고 Pandoc 을 찾을 수 있어야 열립니다.</li>
+<li>「문서가 너무 큽니다」나 그림 일부가 빠진 경우는 <a href="11-import.html">다른 형식 문서 열기</a>의 한도를 봅니다.</li>
+</ul>
+<h2 id="저장하지-못할-때">저장하지 못할 때</h2>
+<p><strong>저장 실패 알림이 나옵니다.</strong> 알림에 파일 경로와 운영체제가 알려 준 이유가 나옵니다. 저장에 실패해도 디스크의 파일은 그대로이고 탭은 수정됨으로 남습니다. <strong>파일 &gt; 다른 이름으로 저장...</strong>(Ctrl+Shift+S)으로 쓸 수 있는 폴더에 저장합니다.</p>
+<p><strong>「지금 내용으로 덮어쓸까요?」라고 묻습니다.</strong> 저장하기 전에 다른 프로그램이 파일을 바꿨습니다. **[덮어쓰기]**는 지금 내용을 쓰고, **[다시 불러오기]**는 디스크 내용으로 바꿉니다.</p>
+<p><strong>「UTF-8로 바뀌어 저장되었습니다」가 나옵니다.</strong> CP949·UTF-16 문서도 저장은 UTF-8 로만 합니다. 원래 인코딩이 꼭 필요하면 다른 프로그램에서 변환합니다.</p>
+<h2 id="다른-프로그램이-파일을-바꿨다는-알림">다른 프로그램이 파일을 바꿨다는 알림</h2>
+<ul>
+<li>「외부에서 바뀌어 다시 불러왔습니다」: 고치지 않은 문서라 새 내용을 불러왔습니다.</li>
+<li>「파일이 바뀌었습니다」 창: 앱에서도 고친 문서입니다. **[예]**는 다시 불러오기, **[아니요]**는 지금 내용을 그대로 둡니다.</li>
+<li>「디스크에서 사라졌습니다. 저장하면 다시 만들어집니다.」: 탭의 내용은 그대로 남습니다.</li>
+</ul>
+<p>묻는 방식은 「외부에서 수정했을 때」 설정으로 바꿉니다(<a href="12-recovery.html">세션 복원·자동 저장·복구 사본</a>).</p>
+<h2 id="저장하지-않은-내용과-비정상-종료">저장하지 않은 내용과 비정상 종료</h2>
+<ul>
+<li>비정상 종료 뒤 다시 실행하면 복구 사본이 저절로 되살아납니다. 「내용을 확인하고 저장하세요」가 나오면 확인하고 저장합니다.</li>
+<li>「저장 안 함」을 선택해 닫은 문서는 되살릴 수 없습니다. 복구 사본은 탭을 닫거나 정상적으로 끝내면 지워집니다.</li>
+<li>「복구 사본을 암호화할 수 없어 만들지 못했습니다」가 나오면 그 실행 동안 복구 사본이 없습니다. 자주 저장합니다.</li>
+<li>「지난 실행이 비정상 종료되었습니다」가 나오면 진단 파일이 이 PC 에 남은 것입니다. 자동으로 보내지 않습니다. <strong>도구 &gt; 설정 &gt; 시스템</strong>의 「로그 폴더 열기」·「크래시 폴더 열기」로 위치를 엽니다.</li>
+</ul>
+<blockquote>
+<p><strong>참고:</strong> 진단 파일에는 문서 내용이 들어갈 수 있습니다. 문의할 때는 무엇을 하다가 어떤 문구가 보였는지 적습니다.</p>
+</blockquote>
+<h2 id="내보낸-pdf-와-그림">내보낸 PDF 와 그림</h2>
+<ul>
+<li>「한글 글꼴을 찾지 못했습니다」: PDF 에 넣을 한글 글꼴이 없습니다. 맑은 고딕·Noto Sans CJK KR·나눔고딕 중 하나를 설치합니다.</li>
+<li>「찾지 못해 넣지 않았습니다」: 없는 그림이나 문서 폴더 밖의 그림은 PDF 에 넣지 않습니다.</li>
+<li>웹 주소로 건 그림은 PDF 에 들어가지 않습니다. <strong>도구 &gt; 웹 그림 다운로드</strong>로 문서 옆에 내려받은 뒤 내보냅니다.</li>
+<li>미리보기에서 그림이 깨진 그림 표시로 나오면 문서를 저장하고 그림을 문서 폴더 안에 둡니다. 웹 주소, 폴더 밖, 저장하지 않은 문서의 그림은 미리보기에 보이지 않습니다.</li>
+</ul>
+<h2 id="ai-가-응답하지-않을-때">AI 가 응답하지 않을 때</h2>
+<ul>
+<li>「키가 없습니다」: <strong>도구 &gt; 설정 &gt; AI</strong>에서 키를 저장합니다. **[연결 테스트]**를 클릭해 「연결됨」이 나오는지 확인합니다.</li>
+<li>「설정 &gt; AI에서 [다시 찾기]를 클릭하세요」: 쓰려는 CLI 가 설치돼 있는지 확인하고 <strong>도구 &gt; 설정 &gt; AI</strong>에서 **[다시 찾기]**를 클릭합니다.</li>
+<li>「먼저 AI로 다룰 텍스트를 선택하세요」: 편집기에서 텍스트를 선택한 뒤 다시 실행합니다.</li>
+<li>「답이 출력 한도에서 잘렸습니다」: 「최대 출력 토큰」을 늘립니다.</li>
+</ul>
+<h2 id="ai-앱이-mdstudio-에-연결되지-않을-때">AI 앱이 MDStudio 에 연결되지 않을 때</h2>
+<ul>
+<li>상태 표시줄의 서버 아이콘에 「MCP 서버 꺼짐」이 나오면 <strong>도구 &gt; MCP 서버</strong>를 클릭해 켭니다.</li>
+<li>「MCP 서버를 열 수 없습니다」: 포트가 다른 프로그램과 겹칠 수 있습니다. <strong>도구 &gt; 설정 &gt; MCP</strong>에서 「포트」를 바꾸고 **[복사]**로 연결 설정을 다시 붙여 넣습니다.</li>
+<li>문서를 고치는 도구가 보이지 않으면 「쓰기 도구 허용」을 선택합니다.</li>
+</ul>
+<h2 id="관련-페이지">관련 페이지</h2>
+<ul>
+<li><a href="10-documents.html">문서 열기와 저장</a></li>
+<li><a href="30-export.html">내보내기</a></li>
+<li><a href="40-ai.html">AI</a></li>
+<li><a href="41-mcp.html">AI 에이전트 연결(MCP)</a></li>
+<li><a href="50-settings.html">설정</a></li>
+</ul>
+
+<p class="pn"><a href="53-context-menus.html">← 문맥 메뉴</a> &nbsp;·&nbsp; <a href="61-data.html">내 데이터와 보안 →</a></p>
+</article>
+</div></main>
+<footer class="site"><div class="wrap">앱 안 설명서(F1)와 같은 내용입니다. 앱 버전에 따라 화면이 조금 다를 수 있습니다. 「부록: 단축키」 쪽은 앱 안에서만 볼 수 있습니다(현재 키맵 그대로 나옵니다). · <a href="../privacy.html">개인정보 처리방침</a> · <a href="../terms.html">이용약관</a></div></footer>
+</body>
+</html>
