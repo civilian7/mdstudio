@@ -36,6 +36,7 @@
 <li><a href="16-insert.html">그림·링크·기호·다이어그램·수식</a></li>
 <li><a href="17-find.html">찾기와 바꾸기</a></li>
 <li><a href="18-templates.html">템플릿과 스니펫</a></li>
+<li><a href="19-template-blocks.html">템플릿 반복과 조건</a></li>
 <li><a href="20-preview.html">미리보기와 보기 형태</a></li>
 <li><a href="21-outline.html">목차</a></li>
 <li><a href="22-problems.html">문제와 자동 수정</a></li>
@@ -522,7 +523,7 @@ sc.operation(&#39;run&#39;, async ({ doc }) =&gt; {
 <tr>
 <td><code>template.list</code></td>
 <td><code>app.read</code></td>
-<td><code>{kind?, query?}</code> → <code>{items: [{name, kind, category, summary, user, tokens}]}</code>. <code>kind</code> 는 <code>template</code> 또는 <code>snippet</code> 이고 생략하면 둘 다입니다. <code>tokens</code> 는 사용자 정의 토큰 이름, <code>blocks</code> 는 반복·조건 블록(<code>{name, kind: "each", fields}</code>·<code>{name, kind: "if"}</code>)입니다</td>
+<td><code>{kind?, query?}</code> → <code>{items: [{name, kind, category, summary, user, tokens, blocks}]}</code>. <code>kind</code> 는 <code>template</code> 또는 <code>snippet</code> 이고 생략하면 둘 다입니다. <code>tokens</code> 는 사용자 정의 토큰 이름, <code>blocks</code> 는 반복·조건 블록(<code>{name, kind: "each", fields}</code>·<code>{name, kind: "if"}</code>)입니다</td>
 </tr>
 <tr>
 <td><code>template.new</code></td>
@@ -561,6 +562,27 @@ sc.operation(&#39;run&#39;, async () =&gt; {
   const made = await sc.invoke(&#39;template.new&#39;, { name: items[0].name, title: &#39;주간 회의&#39; });
   return { doc: made.doc, unfilled: made.tokens.unfilled };
 });</code></pre>
+<p>선택한 목록 줄로 기본 템플릿 <code>체크리스트</code> 를 채우는 예입니다. 반복 블록 <code>{{#each 항목}}</code> 에는 텍스트 배열을 넘깁니다. 줄 앞의 <code>-</code>, <code>1.</code>, <code>[x]</code> 는 떼어 냅니다.</p>
+<pre class="js"><code>/**
+ * @name 선택한 목록으로 체크리스트
+ * @permissions text.read document.write
+ */
+
+sc.operation(&#39;run&#39;, async () =&gt; {
+  const sel = await sc.invoke(&#39;text.selection&#39;, {});
+  const items = sel.text
+    .split(/\r?\n/)
+    .map((line) =&gt; line.replace(/^\s*(?:[-*+]|\d+[.)])\s+(?:\[[ xX]\]\s+)?/, &#39;&#39;).trim())
+    .filter((line) =&gt; line !== &#39;&#39;);
+  if (items.length === 0) throw new sc.UsageError(&#39;목록 줄을 먼저 선택하세요.&#39;);
+  const made = await sc.invoke(&#39;template.new&#39;, {
+    name: &#39;체크리스트&#39;,
+    title: &#39;준비물&#39;,
+    values: { 제목: &#39;준비물&#39;, 항목: items },
+  });
+  return { doc: made.doc, repeats: made.tokens.repeats };
+});</code></pre>
+<p>필드가 여러 개인 반복 블록에는 <code>{ 이름: '키보드', 수량: '2' }</code> 같은 객체 배열을 넘깁니다. 합계 같은 계산은 템플릿이 하지 않으므로 플러그인에서 계산해 <code>values</code> 에 넣습니다.</p>
 <h2 id="sc-api-설정-기억">sc API: 설정 기억</h2>
 <p>플러그인마다 실행 사이에 남는 작은 저장소가 있습니다. 다른 플러그인의 값은 읽을 수 없습니다.</p>
 <table>
