@@ -48,7 +48,7 @@
 <li><a href="42-plugins.html">플러그인 사용하기</a></li>
 <li><a href="43-plugin-dev.html">플러그인 만들기</a></li>
 <li><a href="44-terminal.html">터미널</a></li>
-<li><a href="45-tut-claude.html">Claude 로 MDStudio 조작하기</a></li>
+<li><a href="45-tut-agents.html">AI 에이전트(Claude·Codex·Gemini CLI)로 MDStudio 조작하기</a></li>
 <li><a href="50-settings.html">설정</a></li>
 <li><a href="51-keymap.html">단축키 바꾸기</a></li>
 <li><a href="52-markdown.html">마크다운 문법 요약</a></li>
@@ -60,8 +60,8 @@
 </nav>
 <article>
 <h1 id="ai-에이전트-연결mcp">AI 에이전트 연결(MCP)</h1>
-<p>Claude Desktop·Claude Code 같은 AI 에이전트가 MDStudio에서 열린 문서를 읽고, 허락하면 고치게 합니다. 표준 MCP(Model Context Protocol)를 씁니다.</p>
-<p>처음 연결한다면 따라하기 <a href="45-tut-claude.html">Claude 로 MDStudio 조작하기</a>에서 설정과 예제 요청을 차례대로 해 봅니다.</p>
+<p>Claude Desktop·Claude Code·Codex CLI·Gemini CLI 같은 AI 에이전트가 MDStudio에서 열린 문서를 읽고, 허락하면 고치게 합니다. 표준 MCP(Model Context Protocol)를 씁니다.</p>
+<p>처음 연결한다면 따라하기 <a href="45-tut-agents.html">AI 에이전트(Claude·Codex·Gemini CLI)로 MDStudio 조작하기</a>에서 설정과 예제 요청을 차례대로 해 봅니다.</p>
 <h2 id="서버-켜기">서버 켜기</h2>
 <ol type="1">
 <li><strong>도구 &gt; 설정 &gt; MCP</strong>를 열고 「MCP 서버 켜기」를 선택합니다.</li>
@@ -72,15 +72,51 @@
 <h2 id="ai-앱-연결하기">AI 앱 연결하기</h2>
 <p>AI 앱은 MDStudio 폴더의 <code>MDStudio.MCP</code> 프로그램을 거쳐 접속합니다. 이 프로그램이 이 PC의 키 저장소에서 토큰을 읽어 서버에 보냅니다.</p>
 <ol type="1">
-<li><strong>도구 &gt; 설정 &gt; MCP</strong>의 「AI 앱 연결」에서 쓰는 앱(Claude Desktop, Claude Code, Codex)의 <strong>[복사]</strong> 버튼을 클릭합니다.</li>
-<li>앱에 맞게 붙여 넣습니다.
-<ul>
-<li>Claude Desktop: 설정 파일 <code>claude_desktop_config.json</code>에 붙여 넣고 다시 시작합니다.</li>
-<li>Claude Code: 복사한 명령을 터미널에서 실행합니다.</li>
-<li>Codex: <code>~/.codex/config.toml</code>에 붙여 넣습니다.</li>
-</ul></li>
-<li>서버를 켠 상태에서 AI 앱을 엽니다. 도구 목록에 <code>mdstudio</code>가 나오면 연결된 것입니다.</li>
+<li><strong>도구 &gt; 설정 &gt; MCP</strong>의 「AI 앱 연결」에서 쓰는 앱 줄의 <strong>[복사]</strong> 버튼을 클릭합니다.</li>
+<li>아래 표대로 붙여 넣습니다.</li>
+<li>서버를 켠 상태에서 AI 앱을 엽니다. 「확인」 칸의 목록에 <code>mdstudio</code>가 나오면 연결된 것입니다.</li>
 </ol>
+<table>
+<thead>
+<tr>
+<th>앱(설정 창의 줄)</th>
+<th>복사되는 것</th>
+<th>붙여 넣는 곳</th>
+<th>확인</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Claude Desktop</td>
+<td><code>mcpServers</code> 설정</td>
+<td><code>%APPDATA%\Claude\claude_desktop_config.json</code>에 넣고 Claude Desktop 다시 시작</td>
+<td>Claude Desktop 의 도구 목록</td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td><code>claude mcp add --scope user mdstudio -- …</code> 명령</td>
+<td>터미널에서 실행</td>
+<td><code>claude mcp list</code></td>
+</tr>
+<tr>
+<td>Codex</td>
+<td><code>[mcp_servers.mdstudio]</code> 설정</td>
+<td><code>%USERPROFILE%\.codex\config.toml</code> 끝</td>
+<td><code>codex mcp list</code></td>
+</tr>
+<tr>
+<td>Gemini CLI</td>
+<td><code>mcpServers</code> 설정</td>
+<td><code>%USERPROFILE%\.gemini\settings.json</code>에 넣음</td>
+<td>Gemini CLI 에서 <code>/mcp</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>파일에 이미 <code>mcpServers</code>가 있으면 그 안에 <code>mdstudio</code> 항목만 넣습니다. Codex 파일에 <code>[mcp_servers.mdstudio]</code>가 이미 있으면 그 부분을 지우고 붙여 넣습니다.</li>
+<li>Gemini CLI 설정에는 도구 확인을 건너뛰는 <code>trust</code>를 넣지 않습니다. MDStudio 의 확인 창은 에이전트 설정과 상관없이 뜹니다.</li>
+<li>에이전트마다 자세한 단계는 따라하기 <a href="45-tut-agents.html">AI 에이전트(Claude·Codex·Gemini CLI)로 MDStudio 조작하기</a>의 2단계를 봅니다.</li>
+</ul>
 <p>복사한 글에는 토큰 값이 없습니다. Claude Desktop 설정은 명령 팔레트(Ctrl+K)의 「Claude Desktop 연결 설정 복사」로도 복사합니다.</p>
 <p>「연결」의 「토큰」에는 앞뒤 네 글자만 보입니다. <strong>[보기]</strong> 버튼으로 전체를 보고, <strong>[새로 만들기]</strong> 버튼으로 새 토큰을 만듭니다. 새로 만들면 켜진 서버가 새 토큰으로 다시 열립니다. 토큰을 직접 넣어 둔 연결만 다시 설정하면 됩니다.</p>
 <blockquote>
@@ -151,7 +187,7 @@
 </blockquote>
 <h2 id="관련-페이지">관련 페이지</h2>
 <ul>
-<li><a href="45-tut-claude.html">Claude 로 MDStudio 조작하기</a></li>
+<li><a href="45-tut-agents.html">AI 에이전트(Claude·Codex·Gemini CLI)로 MDStudio 조작하기</a></li>
 <li><a href="40-ai.html">AI</a></li>
 <li><a href="50-settings.html">설정</a></li>
 <li><a href="22-problems.html">문제와 자동 수정</a></li>
