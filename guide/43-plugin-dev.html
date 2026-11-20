@@ -522,7 +522,7 @@ sc.operation(&#39;run&#39;, async ({ doc }) =&gt; {
 <tr>
 <td><code>template.list</code></td>
 <td><code>app.read</code></td>
-<td><code>{kind?, query?}</code> → <code>{items: [{name, kind, category, summary, user, tokens}]}</code>. <code>kind</code> 는 <code>template</code> 또는 <code>snippet</code> 이고 생략하면 둘 다입니다. <code>tokens</code> 는 사용자 정의 토큰 이름입니다</td>
+<td><code>{kind?, query?}</code> → <code>{items: [{name, kind, category, summary, user, tokens}]}</code>. <code>kind</code> 는 <code>template</code> 또는 <code>snippet</code> 이고 생략하면 둘 다입니다. <code>tokens</code> 는 사용자 정의 토큰 이름, <code>blocks</code> 는 반복·조건 블록(<code>{name, kind: "each", fields}</code>·<code>{name, kind: "if"}</code>)입니다</td>
 </tr>
 <tr>
 <td><code>template.new</code></td>
@@ -543,6 +543,7 @@ sc.operation(&#39;run&#39;, async ({ doc }) =&gt; {
 </table>
 <ul>
 <li><code>values</code> 는 <code>{ "고객": "ACME" }</code> 처럼 사용자 정의 토큰 이름과 텍스트입니다. 100개, 값 하나 10,000자까지이고 값 안의 <code>{{…}}</code> 는 다시 채우지 않습니다. 값을 주지 않은 토큰은 그대로 남고 결과의 <code>tokens</code> 에 <code>filled</code>, <code>unfilled</code>, <code>unknown</code> 으로 나옵니다.</li>
+<li>반복 블록(<code>{{#each 품목}}</code>)에는 텍스트 배열이나 <code>{ "이름": "키보드" }</code> 같은 객체 배열을 넣습니다. 500개까지이고 배열 안에 배열은 넣을 수 없습니다. 결과의 <code>tokens.repeats</code> 에 반복 횟수가 나옵니다. 짝이 맞지 않는 블록 태그가 있거나 결과가 1MB를 넘으면 오류가 납니다.</li>
 <li>날짜, 시각, 작성자, 소속, 이메일, 커서 같은 기본 토큰은 앱이 채우며 <code>values</code> 에 넣으면 오류가 납니다.</li>
 <li>작성자, 소속, 이메일은 설정 &gt; MCP 의 「AI 앱에 사용자 정보(이름·소속·이메일) 제공」이 켜져 있을 때만 채우고 꺼져 있으면 빈 값입니다. 플러그인도 인터넷으로 텍스트를 보낼 수 있어 AI 앱과 같은 규칙을 따릅니다.</li>
 <li>새 문서와 넣은 스니펫은 <code>{{커서}}</code> 자리에 커서를 둡니다. <code>caret</code> 은 그 자리의 <code>{line, column, offset}</code> 이고 <code>offset</code> 은 UTF-16 위치입니다. <code>template.expand</code> 는 <code>{{커서}}</code> 를 지우고 자리만 돌려주며 없으면 <code>null</code> 입니다.</li>

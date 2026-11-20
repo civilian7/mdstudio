@@ -162,6 +162,7 @@
 <li><code>select</code>에 <code>block</code>을 주면 편집기의 열 블록처럼 사각형으로 선택합니다. 한글은 두 칸으로 셉니다.</li>
 <li><code>delete_range</code>는 줄·칸으로 지정한 범위를 지웁니다. 확인 창에 지울 텍스트가 나옵니다.</li>
 <li><code>new_from_template</code>·<code>insert_snippet</code>은 <code>values</code>로 템플릿의 사용자 정의 토큰을 채웁니다. 작성자·소속·이메일 같은 기본 토큰은 채울 수 없습니다. <code>list_library</code>가 템플릿마다 사용자 정의 토큰 목록을 알려 줍니다.</li>
+<li>반복 블록(<code>{{#each 품목}}</code>)에는 목록을 넘깁니다. 글 목록(<code>["김민수", "이영희"]</code>)이나 필드 객체 목록(<code>[{"이름": "키보드", "수량": "2"}]</code>)이고 500개까지입니다. 조건 블록(<code>{{#if 비고}}</code>)은 값이 비어 있지 않으면 참입니다. <code>list_library</code>의 <code>blocks</code>가 블록 이름과 필드를 알려 줍니다. 짝이 맞지 않는 블록 태그가 있으면 줄 번호와 함께 오류가 납니다.</li>
 <li>「AI 앱에 사용자 정보(이름·소속·이메일) 제공」을 선택해야 <code>get_user_info</code>가 사용자 정보를 돌려줍니다.</li>
 <li>AI 앱의 요청과 응답은 아래 도구 창의 「메시지」 탭에 한 줄씩 남습니다.</li>
 </ul>
