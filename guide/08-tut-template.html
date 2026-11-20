@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>매주 쓰는 보고를 템플릿으로 — MDStudio 사용 설명서</title>
+<meta name="description" content="MDStudio 사용 설명서: 매주 쓰는 보고를 템플릿으로">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="../">MDStudio</a>
+<a href="../#features">기능</a>
+<a href="01-start.html" aria-current="page">사용 설명서</a>
+<a href="../privacy.html">처리방침</a>
+<a href="../terms.html">이용약관</a>
+</div></header>
+<main><div class="wrap guide">
+<nav class="toc" aria-label="설명서 목차">
+<ul>
+<li><a href="01-start.html">시작하기</a></li>
+<li><a href="02-tutorials.html">따라하기</a></li>
+<li><a href="03-layout.html">화면 구성</a></li>
+<li><a href="04-tut-first.html">새 문서를 만들어 저장하기</a></li>
+<li><a href="05-tut-report.html">보고서 꾸미기: 표·그림·링크</a></li>
+<li><a href="06-tut-export.html">PDF·Word 로 내보내기</a></li>
+<li><a href="07-tut-import.html">받은 한글·Word 문서를 가져와 고치기</a></li>
+<li><a href="08-tut-template.html" aria-current="page">매주 쓰는 보고를 템플릿으로</a></li>
+<li><a href="09-tut-recover.html">실수했을 때 되살리기</a></li>
+<li><a href="10-documents.html">문서 열기와 저장</a></li>
+<li><a href="11-import.html">다른 형식 문서 열기</a></li>
+<li><a href="12-recovery.html">세션 복원·자동 저장·복구 사본</a></li>
+<li><a href="13-format.html">서식</a></li>
+<li><a href="14-editing.html">편집</a></li>
+<li><a href="15-tables.html">표</a></li>
+<li><a href="16-insert.html">그림·링크·기호·다이어그램·수식</a></li>
+<li><a href="17-find.html">찾기와 바꾸기</a></li>
+<li><a href="18-templates.html">템플릿과 스니펫</a></li>
+<li><a href="20-preview.html">미리보기와 보기 형태</a></li>
+<li><a href="21-outline.html">목차</a></li>
+<li><a href="22-problems.html">문제와 자동 수정</a></li>
+<li><a href="23-explorer.html">탐색기</a></li>
+<li><a href="24-tabs-windows.html">탭·탭 그룹·도구 창</a></li>
+<li><a href="30-export.html">내보내기</a></li>
+<li><a href="31-textbundle.html">TextBundle·TextPack</a></li>
+<li><a href="40-ai.html">AI</a></li>
+<li><a href="41-mcp.html">AI 에이전트 연결(MCP)</a></li>
+<li><a href="42-plugins.html">플러그인 사용하기</a></li>
+<li><a href="43-plugin-dev.html">플러그인 만들기</a></li>
+<li><a href="44-terminal.html">터미널</a></li>
+<li><a href="50-settings.html">설정</a></li>
+<li><a href="51-keymap.html">단축키 바꾸기</a></li>
+<li><a href="52-markdown.html">마크다운 문법 요약</a></li>
+<li><a href="53-context-menus.html">문맥 메뉴</a></li>
+<li><a href="60-troubleshooting.html">문제 해결과 자주 묻는 질문</a></li>
+<li><a href="61-data.html">내 데이터와 보안</a></li>
+<li><a href="62-glossary.html">용어집</a></li>
+</ul>
+</nav>
+<article>
+<h1 id="매주-쓰는-보고를-템플릿으로">매주 쓰는 보고를 템플릿으로</h1>
+<p>매주 쓰는 주간 보고를 내 템플릿으로 저장하고, 그 템플릿으로 다음 주 보고를 새로 만듭니다. 작성일은 만드는 날의 날짜로 저절로 채워집니다. 약 7분 걸립니다.</p>
+<blockquote>
+<p><strong>참고:</strong> 연습 파일은 앱에서 F1 로 이 페이지를 열면 받을 수 있습니다(<strong>연습 파일 열기</strong> 링크).</p>
+</blockquote>
+<h2 id="만들-결과">만들 결과</h2>
+<ul>
+<li>내 템플릿 「우리 팀 주간 보고」</li>
+<li>그 템플릿으로 만든 <code>우리 팀 주간 보고.md</code>(작성일이 오늘 날짜)</li>
+</ul>
+<h2 id="준비">준비</h2>
+<ol type="1">
+<li>위의 <strong>연습 파일 열기</strong> 링크를 클릭합니다.</li>
+</ol>
+<p><strong>이렇게 보입니다:</strong> <code>MDStudio 따라하기\08-tut-template</code> 폴더의 <code>주간 보고.md</code> 탭이 열립니다. 제목 아래 줄이 <code>작성일: 2026-11-16</code> 입니다.</p>
+<h2 id="1단계-날짜를-토큰으로-바꾸고-복사하기">1단계: 날짜를 토큰으로 바꾸고 복사하기</h2>
+<ol type="1">
+<li><code>작성일:</code> 뒤의 <code>2026-11-16</code> 을 마우스로 끌어 선택합니다.</li>
+<li><code>{{날짜}}</code> 를 입력합니다.</li>
+<li>Ctrl+A 를 눌러 모두 선택하고 Ctrl+C 를 눌러 복사합니다.</li>
+</ol>
+<p><strong>이렇게 보입니다:</strong> 그 줄이 <code>작성일: {{날짜}}</code> 로 바뀝니다. <code>{{날짜}}</code> 는 템플릿으로 문서를 만들 때 오늘 날짜로 바뀌는 토큰입니다.</p>
+<h2 id="2단계-내-템플릿-만들기">2단계: 내 템플릿 만들기</h2>
+<ol type="1">
+<li><strong>파일 &gt; 템플릿으로 새 문서</strong>(Ctrl+Shift+N)를 클릭합니다. 「템플릿으로 새 문서」 창이 열립니다.</li>
+<li>창 위 도구 줄의 「새 템플릿」 버튼을 클릭합니다.</li>
+<li>이름에 <code>우리 팀 주간 보고</code> 를 입력하고 <strong>[확인]</strong> 버튼을 클릭합니다.</li>
+<li>도구 줄의 「편집기에서 열어 편집」 버튼을 클릭합니다.</li>
+</ol>
+<p><strong>이렇게 보입니다:</strong> 창이 닫히고 <code>우리 팀 주간 보고.md</code> 탭이 열립니다. 내용은 <code># {{커서}}</code> 한 줄입니다.</p>
+<blockquote>
+<p><strong>막히면:</strong> 「편집기에서 열어 편집」 버튼이 흐리면 목록에서 방금 만든 「우리 팀 주간 보고」가 선택돼 있지 않은 것입니다. 목록에서 클릭해 선택합니다. → <a href="18-templates.html">템플릿과 스니펫</a></p>
+</blockquote>
+<h2 id="3단계-템플릿에-보고-내용-넣기">3단계: 템플릿에 보고 내용 넣기</h2>
+<ol type="1">
+<li>Ctrl+A 를 눌러 <code># {{커서}}</code> 를 모두 선택합니다.</li>
+<li>Ctrl+V 를 눌러 1단계에서 복사한 보고를 붙여넣습니다.</li>
+<li><strong>파일 &gt; 저장</strong>(Ctrl+S)을 클릭합니다.</li>
+</ol>
+<p><strong>이렇게 보입니다:</strong> 템플릿 탭에 <code>작성일: {{날짜}}</code> 가 든 보고가 저장됩니다. 템플릿 파일은 설정 폴더의 <code>templates</code> 폴더에 있습니다.</p>
+<h2 id="4단계-템플릿으로-다음-주-보고-만들기">4단계: 템플릿으로 다음 주 보고 만들기</h2>
+<ol type="1">
+<li><strong>파일 &gt; 템플릿으로 새 문서</strong>(Ctrl+Shift+N)를 클릭합니다.</li>
+<li>찾기 칸에 <code>우리 팀</code> 을 입력합니다. 목록에서 「우리 팀 주간 보고」가 선택됩니다.</li>
+<li><strong>[만들기]</strong> 버튼을 클릭합니다.</li>
+</ol>
+<p><strong>이렇게 보입니다:</strong> 새 문서 탭이 열리고 <code>작성일:</code> 뒤가 오늘 날짜(예: <code>2026-11-20</code>)로 채워져 있습니다.</p>
+<h2 id="5단계-새-보고-저장하기">5단계: 새 보고 저장하기</h2>
+<ol type="1">
+<li><strong>파일 &gt; 저장</strong>(Ctrl+S)을 클릭합니다.</li>
+<li>저장 창에서 <code>MDStudio 따라하기\08-tut-template</code> 폴더를 선택하고 파일 이름이 <code>우리 팀 주간 보고.md</code> 인지 확인합니다.</li>
+<li>저장 창의 저장 버튼을 클릭합니다.</li>
+</ol>
+<p><strong>이렇게 보입니다:</strong> 탭 이름이 <code>우리 팀 주간 보고.md</code> 로 바뀝니다.</p>
+<h2 id="다-했습니다">다 했습니다</h2>
+<ul>
+<li>다음 주부터는 4단계만 하면 오늘 날짜가 든 새 보고가 바로 만들어집니다.</li>
+<li>다음 따라하기: <a href="09-tut-recover.html">실수했을 때 되살리기</a></li>
+<li>다른 토큰(시각·요일·작성자)과 템플릿 이름 바꾸기·삭제는 <a href="18-templates.html">템플릿과 스니펫</a>을 봅니다.</li>
+</ul>
+
+<p class="pn"><a href="07-tut-import.html">← 받은 한글·Word 문서를 가져와 고치기</a> &nbsp;·&nbsp; <a href="09-tut-recover.html">실수했을 때 되살리기 →</a></p>
+</article>
+</div></main>
+<footer class="site"><div class="wrap">앱 안 설명서(F1)와 같은 내용입니다. 앱 버전에 따라 화면이 조금 다를 수 있습니다. 「부록: 단축키」 쪽은 앱 안에서만 볼 수 있습니다(현재 키맵 그대로 나옵니다). · <a href="../privacy.html">개인정보 처리방침</a> · <a href="../terms.html">이용약관</a></div></footer>
+</body>
+</html>
