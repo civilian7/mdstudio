@@ -5,7 +5,7 @@
 
 - 설명서 폴더: lumiStudio 저장소의 `apps/md-studio/resources/help/ko`
 - 변환은 Pandoc(gfm → html5)이 한다. 결과 HTML 을 커밋하므로 Pandoc 은 이 스크립트를 돌릴 때만 필요하다.
-- 쪽 사이 링크(`03-layout.md`)는 `03-layout.html` 로 고친다. 앱이 실행 중에 만드는 「부록: 단축키」 쪽은 파일이 없어 여기에 없다.
+- 쪽 사이 링크(`03-layout.md`)는 `03-layout.html` 로 고친다. 앱 안에서만 동작하는 연습 파일 링크(`mdstudio-tutorial:`)는 안내 글로 바꾼다. 앱이 실행 중에 만드는 「부록: 단축키」 쪽은 파일이 없어 여기에 없다.
 """
 import argparse, html, re, shutil, subprocess, sys
 from pathlib import Path
@@ -27,6 +27,19 @@ def pandoc(exe: str, md: str) -> str:
         input=md.encode("utf-8"), capture_output=True, check=True,
     )
     return r.stdout.decode("utf-8")
+
+
+TUTORIAL_NOTE = "연습 파일은 앱에서 F1 로 이 페이지를 열면 받을 수 있습니다(**연습 파일 열기** 링크)."
+
+
+def tutorial_links(md: str) -> str:
+    """앱 안에서만 동작하는 연습 파일 링크(`[연습 파일 열기](mdstudio-tutorial:05-tut-report)`)를 안내 글로 바꾼다.
+    링크만 있는 줄은 참고 상자로, 문장 속 링크는 링크 글자만 남긴다(웹에서는 누를 곳이 없다)."""
+    # [해 보기](mdstudio-tutorial:<편>/<k>) 는 앱 메뉴 명령을 실행하는 링크라 웹에서는 지운다
+    md = re.sub(r"[ \t]*\[[^\]]*\]\(mdstudio-tutorial:[A-Za-z0-9_-]+/\d+\)", "", md)
+    link = r"\[([^\]]*)\]\(mdstudio-tutorial:[A-Za-z0-9_-]+\)"
+    md = re.sub(r"(?m)^[ \t]*" + link + r"[ \t]*$", "> **참고:** " + TUTORIAL_NOTE, md)
+    return re.sub(link, r"\1", md)
 
 
 def fix_links(body: str) -> str:
@@ -78,7 +91,7 @@ def main() -> int:
         return 1
     pages = []
     for p in files:
-        md = p.read_text(encoding="utf-8")
+        md = tutorial_links(p.read_text(encoding="utf-8"))
         pages.append((p.stem, title_of(md, p.stem), md))
     OUT.mkdir(exist_ok=True)
     for old in OUT.glob("*.html"):

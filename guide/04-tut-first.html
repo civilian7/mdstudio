@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>첫 문서 만들기 — MDStudio 사용 설명서</title>
-<meta name="description" content="MDStudio 사용 설명서: 첫 문서 만들기">
+<title>새 문서를 만들어 저장하기 — MDStudio 사용 설명서</title>
+<meta name="description" content="MDStudio 사용 설명서: 새 문서를 만들어 저장하기">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -19,8 +19,11 @@
 <nav class="toc" aria-label="설명서 목차">
 <ul>
 <li><a href="01-start.html">시작하기</a></li>
-<li><a href="02-first-document.html" aria-current="page">첫 문서 만들기</a></li>
+<li><a href="02-tutorials.html">따라하기</a></li>
 <li><a href="03-layout.html">화면 구성</a></li>
+<li><a href="04-tut-first.html" aria-current="page">새 문서를 만들어 저장하기</a></li>
+<li><a href="05-tut-report.html">보고서 꾸미기: 표·그림·링크</a></li>
+<li><a href="06-tut-export.html">PDF·Word 로 내보내기</a></li>
 <li><a href="10-documents.html">문서 열기와 저장</a></li>
 <li><a href="11-import.html">다른 형식 문서 열기</a></li>
 <li><a href="12-recovery.html">세션 복원·자동 저장·복구 사본</a></li>
@@ -52,13 +55,12 @@
 </ul>
 </nav>
 <article>
-<h1 id="첫-문서-만들기">첫 문서 만들기</h1>
-<p>주간 보고 문서 하나를 처음부터 만들어 저장하고 PDF 로 내보냅니다. 마크다운 기호를 몰라도 메뉴와 단축키만으로 따라 할 수 있습니다.</p>
+<h1 id="새-문서를-만들어-저장하기">새 문서를 만들어 저장하기</h1>
+<p>주간 보고 문서 하나를 새로 만들어 저장합니다. 마크다운 기호를 몰라도 메뉴와 단축키만으로 따라 할 수 있습니다. 약 5분 걸립니다.</p>
 <h2 id="만들-결과">만들 결과</h2>
 <ul>
-<li>제목 한 줄, 할 일 목록 세 줄, 3행 × 3열 표가 든 문서</li>
+<li>제목 한 줄과 할 일 목록 세 줄이 든 문서</li>
 <li>그 문서를 저장한 <code>주간 보고.md</code> 파일</li>
-<li>같은 폴더에 내보낸 <code>주간 보고.pdf</code> 파일</li>
 </ul>
 <h2 id="준비">준비</h2>
 <ol type="1">
@@ -66,7 +68,7 @@
 <li><strong>보기 &gt; 보기 형태 &gt; 편집기 + 미리보기</strong>를 선택합니다.</li>
 </ol>
 <p><strong>이렇게 보입니다:</strong> 가운데가 왼쪽 소스 편집기와 오른쪽 미리보기로 나뉩니다.</p>
-<p><img src="img/02-first-document-result.png" alt="MDStudio 창 가운데에 소스 편집기와 미리보기가 나란히 열린 화면" /></p>
+<p><img src="img/04-tut-first-result.png" alt="MDStudio 창 가운데에 소스 편집기와 미리보기가 나란히 열린 화면" /></p>
 <h2 id="1단계-새-문서-열기">1단계: 새 문서 열기</h2>
 <ol type="1">
 <li><strong>파일 &gt; 새 문서</strong>(Ctrl+N)를 클릭합니다.</li>
@@ -77,50 +79,33 @@
 <li><code>주간 보고</code> 를 입력합니다.</li>
 <li><strong>서식 &gt; 제목 &gt; 제목 1</strong>(Alt+1)을 클릭합니다.</li>
 </ol>
-<p><strong>이렇게 보입니다:</strong> 줄 앞에 <code># </code> 이 붙습니다. 미리보기에는 큰 글씨의 제목이 나옵니다.</p>
+<p><strong>이렇게 보입니다:</strong> 줄 앞에 <code># </code> 이 붙어 <code># 주간 보고</code> 가 됩니다.</p>
 <h2 id="3단계-할-일-목록-만들기">3단계: 할 일 목록 만들기</h2>
 <ol type="1">
 <li>제목 줄 끝에서 Enter 를 눌러 줄을 바꿉니다.</li>
-<li><code>회의 자료 정리</code>, <code>고객 메일 회신</code>, <code>다음 주 일정 확인</code> 을 한 줄에 하나씩 입력합니다.</li>
+<li><code>회의 자료 정리</code>, <code>고객 메일 회신</code>, <code>다음 주 일정 확인</code> 을 한 줄에 하나씩 입력합니다. 줄은 Enter 로 바꿉니다.</li>
 <li>세 줄을 마우스로 끌어 선택합니다.</li>
 <li><strong>서식 &gt; 글머리 기호 목록</strong>(Alt+7)을 클릭합니다.</li>
 </ol>
-<p><strong>이렇게 보입니다:</strong> 세 줄 앞에 모두 <code>- </code> 가 붙습니다. 미리보기에는 글머리 기호가 달린 목록이 나옵니다.</p>
-<h2 id="4단계-표-넣기">4단계: 표 넣기</h2>
-<ol type="1">
-<li>목록 마지막 줄 끝을 클릭해 커서를 둡니다.</li>
-<li><strong>서식 &gt; 표...</strong> 를 클릭합니다. 「표 삽입」 창에 칸 격자가 나옵니다.</li>
-<li>격자의 셋째 줄 셋째 칸을 클릭합니다.</li>
-<li>표의 첫 칸에 놓인 커서 자리에 <code>항목</code> 을 입력합니다.</li>
-<li>나머지 칸도 하나씩 클릭해 텍스트를 입력합니다.</li>
-</ol>
-<p><strong>이렇게 보입니다:</strong> 목록 아래에 빈 줄을 하나 두고 3행 × 3열 표가 들어갑니다. 첫 행은 머리글입니다. 미리보기에는 표가 그려지고, 머리글 행에는 옅은 바탕이 깔립니다.</p>
-<p><img src="img/02-table-grid.png" alt="표 삽입 창의 칸 격자에서 3행 3열을 고른 모습" /></p>
-<h2 id="5단계-저장하기">5단계: 저장하기</h2>
+<p><strong>이렇게 보입니다:</strong> 세 줄 앞에 모두 <code>- </code> 가 붙습니다.</p>
+<blockquote>
+<p><strong>막히면:</strong> 목록 서식은 선택한 줄에만 붙습니다. 한 줄에만 <code>- </code> 가 붙었다면 세 줄을 모두 선택했는지 확인합니다. → <a href="13-format.html">서식</a></p>
+</blockquote>
+<h2 id="4단계-저장하기">4단계: 저장하기</h2>
 <ol type="1">
 <li><strong>파일 &gt; 저장</strong>(Ctrl+S)을 클릭합니다.</li>
-<li>저장 창에서 폴더를 정하고 파일 이름에 <code>주간 보고.md</code> 를 입력합니다.</li>
+<li>저장 창에서 폴더를 선택하고 파일 이름에 <code>주간 보고.md</code> 를 입력합니다.</li>
 <li>저장 창의 저장 버튼을 클릭합니다.</li>
 </ol>
 <p><strong>이렇게 보입니다:</strong> 탭 이름이 <code>주간 보고.md</code> 로 바뀝니다.</p>
-<h2 id="6단계-pdf-로-내보내기">6단계: PDF 로 내보내기</h2>
-<ol type="1">
-<li><strong>파일 &gt; 내보내기...</strong>(Ctrl+E)를 클릭합니다. 「내보내기」 창이 열립니다.</li>
-<li>왼쪽 목록에서 「PDF 파일」을 선택합니다.</li>
-<li>「폴더」가 문서를 저장한 폴더인지 확인합니다.</li>
-<li>「파일 이름」이 <code>주간 보고.pdf</code> 인지 확인합니다.</li>
-<li>**[확인]**을 클릭합니다.</li>
-</ol>
-<p><strong>이렇게 보입니다:</strong> 창이 닫히고 「저장했습니다」 알림에 PDF 파일 경로가 나옵니다. PDF 는 미리보기 모양대로 만들어지고, 한글 글꼴이 함께 들어갑니다.</p>
-<h2 id="관련-페이지">관련 페이지</h2>
+<h2 id="다-했습니다">다 했습니다</h2>
 <ul>
-<li>그림은 저장한 문서에 넣을 수 있습니다. 넣는 법은 <a href="16-insert.html">삽입</a>을 봅니다.</li>
-<li>굵게·인용·코드 블록 같은 다른 서식은 <a href="13-format.html">서식</a>을 봅니다.</li>
-<li>PDF 밖의 형식과 내보내기 창의 칸은 <a href="30-export.html">내보내기</a>를 봅니다.</li>
-<li>화면의 각 영역은 <a href="03-layout.html">화면 구성</a>을 봅니다.</li>
+<li>선택한 폴더에 <code>주간 보고.md</code> 파일이 생겼습니다.</li>
+<li>다음 따라하기: <a href="05-tut-report.html">보고서 꾸미기: 표·그림·링크</a></li>
+<li>다른 서식은 <a href="13-format.html">서식</a>, 열기와 저장은 <a href="10-documents.html">문서 열기와 저장</a>을 봅니다.</li>
 </ul>
 
-<p class="pn"><a href="01-start.html">← 시작하기</a> &nbsp;·&nbsp; <a href="03-layout.html">화면 구성 →</a></p>
+<p class="pn"><a href="03-layout.html">← 화면 구성</a> &nbsp;·&nbsp; <a href="05-tut-report.html">보고서 꾸미기: 표·그림·링크 →</a></p>
 </article>
 </div></main>
 <footer class="site"><div class="wrap">앱 안 설명서(F1)와 같은 내용입니다. 앱 버전에 따라 화면이 조금 다를 수 있습니다. 「부록: 단축키」 쪽은 앱 안에서만 볼 수 있습니다(현재 키맵 그대로 나옵니다). · <a href="../privacy.html">개인정보 처리방침</a> · <a href="../terms.html">이용약관</a></div></footer>
