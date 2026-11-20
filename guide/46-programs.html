@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>외부 프로그램 — MDStudio 사용 설명서</title>
+<meta name="description" content="MDStudio 사용 설명서: 외부 프로그램">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="../">MDStudio</a>
+<a href="../#features">기능</a>
+<a href="01-start.html" aria-current="page">사용 설명서</a>
+<a href="../privacy.html">처리방침</a>
+<a href="../terms.html">이용약관</a>
+</div></header>
+<main><div class="wrap guide">
+<nav class="toc" aria-label="설명서 목차">
+<ul>
+<li><a href="01-start.html">시작하기</a></li>
+<li><a href="02-tutorials.html">따라하기</a></li>
+<li><a href="03-layout.html">화면 구성</a></li>
+<li><a href="04-tut-first.html">새 문서를 만들어 저장하기</a></li>
+<li><a href="05-tut-report.html">보고서 꾸미기: 표·그림·링크</a></li>
+<li><a href="06-tut-export.html">PDF·Word 로 내보내기</a></li>
+<li><a href="07-tut-import.html">받은 한글·Word 문서를 가져와 고치기</a></li>
+<li><a href="08-tut-template.html">매주 쓰는 보고를 템플릿으로</a></li>
+<li><a href="09-tut-recover.html">실수했을 때 되살리기</a></li>
+<li><a href="10-documents.html">문서 열기와 저장</a></li>
+<li><a href="11-import.html">다른 형식 문서 열기</a></li>
+<li><a href="12-recovery.html">세션 복원·자동 저장·복구 사본</a></li>
+<li><a href="13-format.html">서식</a></li>
+<li><a href="14-editing.html">편집</a></li>
+<li><a href="15-tables.html">표</a></li>
+<li><a href="16-insert.html">그림·링크·기호·다이어그램·수식</a></li>
+<li><a href="17-find.html">찾기와 바꾸기</a></li>
+<li><a href="18-templates.html">템플릿과 스니펫</a></li>
+<li><a href="20-preview.html">미리보기와 보기 형태</a></li>
+<li><a href="21-outline.html">목차</a></li>
+<li><a href="22-problems.html">문제와 자동 수정</a></li>
+<li><a href="23-explorer.html">탐색기</a></li>
+<li><a href="24-tabs-windows.html">탭·탭 그룹·도구 창</a></li>
+<li><a href="30-export.html">내보내기</a></li>
+<li><a href="31-textbundle.html">TextBundle·TextPack</a></li>
+<li><a href="40-ai.html">AI</a></li>
+<li><a href="41-mcp.html">AI 에이전트 연결(MCP)</a></li>
+<li><a href="42-plugins.html">플러그인 사용하기</a></li>
+<li><a href="43-plugin-dev.html">플러그인 만들기</a></li>
+<li><a href="44-terminal.html">터미널</a></li>
+<li><a href="45-tut-agents.html">AI 에이전트(Claude·Codex·Gemini CLI)로 MDStudio 조작하기</a></li>
+<li><a href="46-programs.html" aria-current="page">외부 프로그램</a></li>
+<li><a href="50-settings.html">설정</a></li>
+<li><a href="51-keymap.html">단축키 바꾸기</a></li>
+<li><a href="52-markdown.html">마크다운 문법 요약</a></li>
+<li><a href="53-context-menus.html">문맥 메뉴</a></li>
+<li><a href="60-troubleshooting.html">문제 해결과 자주 묻는 질문</a></li>
+<li><a href="61-data.html">내 데이터와 보안</a></li>
+<li><a href="62-glossary.html">용어집</a></li>
+</ul>
+</nav>
+<article>
+<h1 id="외부-프로그램">외부 프로그램</h1>
+<p>자주 쓰는 프로그램을 등록해 두고 도구 메뉴에서 바로 실행합니다. 지금 문서의 경로나 선택한 텍스트를 인자로 넘길 수 있고, 프로그램의 출력을 메시지 창이나 새 문서로 받을 수 있습니다.</p>
+<h2 id="프로그램-등록하기">프로그램 등록하기</h2>
+<ol type="1">
+<li><strong>도구 &gt; 외부 프로그램 설정</strong>을 클릭합니다. 등록한 프로그램이 있으면 이 명령은 「외부 프로그램」 하위 메뉴 맨 아래에 있습니다.</li>
+<li><strong>[추가]</strong> 버튼을 클릭합니다.</li>
+<li>「프로그램」 칸 옆의 <strong>[찾아보기...]</strong> 버튼을 클릭해 실행 파일(.exe)을 선택합니다. 「이름」은 실행 파일 이름으로 채워지며 바꿀 수 있습니다.</li>
+<li>「인자」에 프로그램에 넘길 값을 적습니다. <strong>[매크로]</strong> 버튼을 클릭하면 아래 표의 매크로를 끝에 넣습니다.</li>
+<li>필요하면 「작업 폴더」·「출력」을 정하고 「실행 전에 현재 문서 저장」을 켭니다.</li>
+<li><strong>[저장]</strong> 버튼을 클릭합니다. <strong>[취소]</strong> 버튼을 누르면 고친 내용을 버립니다.</li>
+</ol>
+<p>목록의 <strong>[위로]</strong>·<strong>[아래로]</strong> 버튼으로 순서를 바꾸고, <strong>[삭제]</strong> 버튼으로 지웁니다. 20개까지 등록할 수 있습니다.</p>
+<h2 id="실행하기">실행하기</h2>
+<ul>
+<li>도구 메뉴의 「외부 프로그램」 하위 메뉴에서 프로그램 이름을 클릭합니다.</li>
+<li>명령 팔레트(Ctrl+K)에서 <code>외부 프로그램:</code> 다음에 이름을 입력해 찾습니다.</li>
+<li>단축키를 지정하려면 <a href="51-keymap.html">단축키 바꾸기</a>에서 「외부 프로그램 1」~「외부 프로그램 20」 명령에 키를 지정합니다. 번호는 설정 창 목록의 순서입니다. 순서를 바꾸면 키는 그 번호 자리에 남습니다.</li>
+</ul>
+<h2 id="매크로">매크로</h2>
+<p>인자와 작업 폴더에 쓸 수 있습니다. 이름의 대소문자는 가리지 않습니다.</p>
+<table>
+<thead>
+<tr>
+<th>매크로</th>
+<th>값</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$(FilePath)</code></td>
+<td>현재 문서의 전체 경로</td>
+</tr>
+<tr>
+<td><code>$(FileDir)</code></td>
+<td>현재 문서의 폴더</td>
+</tr>
+<tr>
+<td><code>$(FileName)</code></td>
+<td>현재 문서의 파일 이름</td>
+</tr>
+<tr>
+<td><code>$(FileBase)</code></td>
+<td>확장자를 뺀 파일 이름</td>
+</tr>
+<tr>
+<td><code>$(SelText)</code></td>
+<td>선택한 텍스트</td>
+</tr>
+<tr>
+<td><code>$(Line)</code></td>
+<td>커서 줄 번호</td>
+</tr>
+<tr>
+<td><code>$(Column)</code></td>
+<td>커서 칸 번호</td>
+</tr>
+<tr>
+<td><code>$(WorkspaceDir)</code></td>
+<td>탐색기 작업 폴더</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>인자는 빈칸으로 나뉩니다. 빈칸이 든 값은 <code>"…"</code>로 묶습니다. 매크로 값은 빈칸이 있어도 인자 하나로 넘어갑니다.</li>
+<li>글자 <code>$(</code>를 그대로 넘기려면 <code>$$(</code>로 적습니다.</li>
+<li>파일 매크로는 저장한 문서에서만 쓸 수 있습니다. 모르는 매크로가 있으면 저장하지 않습니다.</li>
+<li>「작업 폴더」를 비우면 문서 폴더에서 실행합니다. 저장하지 않은 문서면 프로그램이 있는 폴더입니다.</li>
+</ul>
+<h2 id="출력-받기">출력 받기</h2>
+<table>
+<thead>
+<tr>
+<th>출력</th>
+<th>동작</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>받지 않음</td>
+<td>프로그램을 띄우기만 합니다. 콘솔 프로그램은 자기 창을 엽니다.</td>
+</tr>
+<tr>
+<td>메시지 창</td>
+<td>아래 도구 창의 <strong>메시지</strong> 탭에 출력과 종료 코드를 적습니다.</td>
+</tr>
+<tr>
+<td>새 문서</td>
+<td>출력을 저장하지 않은 새 문서 탭으로 엽니다.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>출력은 1MB까지 받고, 120초가 지나면 프로그램을 끝냅니다. 도중에 멈추려면 「외부 프로그램」 하위 메뉴의 <strong>실행 중지</strong>를 클릭합니다.</li>
+<li>출력은 UTF-8로 읽고, 아니면 한국어 Windows 인코딩(CP949)으로 읽습니다.</li>
+</ul>
+<h2 id="안전하게-쓰기">안전하게 쓰기</h2>
+<ul>
+<li>프로그램은 셸(명령 프롬프트)을 거치지 않고 실행합니다. 배치 파일(.bat, .cmd)이나 스크립트는 등록할 수 없습니다.</li>
+<li>명령 프롬프트·PowerShell 같은 셸이나 스크립트 실행기를 등록한 경우, 넘길 매크로 값에 <code>&amp;</code>·<code>|</code>·<code>"</code>·<code>%</code> 같은 특수 문자가 있으면 실행하지 않습니다.</li>
+<li>값이 <code>-</code>로 시작하는 매크로가 인자 맨 앞에 오면 옵션으로 읽힐 수 있어 실행하지 않습니다.</li>
+<li>설정 파일을 직접 고쳐 넣은 항목은 처음 실행할 때 명령을 보여 주고 확인을 받습니다.</li>
+<li>네트워크 경로의 프로그램은 실행하지 않습니다.</li>
+</ul>
+<blockquote>
+<p><strong>참고:</strong> AI 채팅·MCP·플러그인은 외부 프로그램을 실행할 수 없습니다.</p>
+</blockquote>
+<h2 id="관련-페이지">관련 페이지</h2>
+<ul>
+<li><a href="44-terminal.html">터미널</a></li>
+<li><a href="51-keymap.html">단축키 바꾸기</a></li>
+<li><a href="50-settings.html">설정</a></li>
+</ul>
+
+<p class="pn"><a href="45-tut-agents.html">← AI 에이전트(Claude·Codex·Gemini CLI)로 MDStudio 조작하기</a> &nbsp;·&nbsp; <a href="50-settings.html">설정 →</a></p>
+</article>
+</div></main>
+<footer class="site"><div class="wrap">앱 안 설명서(F1)와 같은 내용입니다. 앱 버전에 따라 화면이 조금 다를 수 있습니다. 「부록: 단축키」 쪽은 앱 안에서만 볼 수 있습니다(현재 키맵 그대로 나옵니다). · <a href="../privacy.html">개인정보 처리방침</a> · <a href="../terms.html">이용약관</a></div></footer>
+</body>
+</html>
